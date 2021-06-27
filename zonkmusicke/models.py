@@ -2,8 +2,8 @@ from django.db import models
 
 # Create your models here.
 class HomeLanding(models.Model):
-    landingbackground = models.ImageField(upload_to = 'home')
-    landinglogo = models.ImageField(upload_to = 'home')
+    landingbackground = models.FileField(upload_to = 'home')
+    landinglogo = models.FileField(upload_to = 'home')
     landingheading = models.CharField(max_length=100)
     landingtext = models.TextField()
 
@@ -13,7 +13,7 @@ class HomeLanding(models.Model):
         return homland
 
 class HomeAbout(models.Model):
-    #aboutimg = models.ImageField(upload_to = 'home')
+    aboutimg = models.FileField(upload_to = 'home')
     abouttitle = models.CharField(max_length= 60)
     aboutpara1 = models.TextField()    
     aboutpara2 = models.TextField()    
