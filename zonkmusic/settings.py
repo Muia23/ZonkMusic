@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'tinymce',
     'zonkmusicke.apps.ZonkmusickeConfig',    
     'django.contrib.admin',
     'django.contrib.auth',
