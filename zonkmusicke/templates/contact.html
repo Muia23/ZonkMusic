@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}   
+    {% block styles %}
+        <link href="{% static 'css/contact.css' %}" rel="stylesheet"/>               
+    {% endblock %}
+{% block content %}   
+    {{block.super}}                    
+    {% include "nav.html" %}    
+    <div class="landing">
+        <div class="container">        
+            <h2 class="landing-title">Contact Us</h2>
+            <p class="landing-text-1">Home  / </p>
+            <p class="landing-text-2"> Contact</p>
+        </div>
+    </div>  
+    <div class="contact">
+        <br><br>
+        <div class="container">
+            <h5 class="contact-title1">Have a question ?</h5>
+            <h4 class="contact-title2">Talk to us</h4>
+            <form>
+                <div class="form-group">
+                    <label for="username">User Name</label>
+                    <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="User Name">                    
+                </div>                    
+                <div class="form-group">
+                    <label for="EmailInput">Email address</label>
+                    <input type="email" class="form-control" id="EmailInput" aria-describedby="emailHelp" placeholder="Enter A Valid Email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="messageTextarea">Enter Message</label>
+                    <textarea class="form-control" id="messageTextarea" rows="3"></textarea>
+                </div>
+
+            <button class="btn btn-danger" type="button">Submit</button>           
+            </form>
+            <hr style="background: white;">
+            <br><br>
+        </div>        
+    </div>    
+    <div class="map">
+        <br><br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="container map-img"></div>
+                </div>
+                <div class="col">
+                    <br><br>
+                    <h4 class="map-head">Contact Info</h4>
+                    <h6 class="map-title"> Location</h6>
+                    <p class="map-text">@  Shelter Afrique House,</p>
+                    <p class="map-text" style="margin-top: -15px;">Nairobi, Kenya.</p>
+                    <h6 class="map-title"> Phone</h6>
+                    <p class="map-text">@ +254724990517</p>
+                    <h6 class="map-title"> Email</h6>
+                    <p class="map-text">@  info@zonkmusicke.com</p>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+    
+    {% include "footer.html" %}    
+
+    <style>
+        .landing {
+            height: 55vh;
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/recos.95899684.jpg' %}");
+            background-repeat: repeat;
+            background-attachment: fixed;            
+            background-size: cover;
+            -webkit-animation: backgroundScroll 15s linear 1;
+            -webkit-animation-fill-mode: forwards;
+            animation: backgroundScroll 15s linear 1;
+            animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes backgroundScroll {
+            from {background-position: 0 25%;}
+            to {background-position: 0 -180px;}            
+        }
+
+        @keyframes backgroundScroll {
+            from {background-position: 0 25%;}
+            to {background-position: 0 -180px;}            
+        }        
+
+    </style>
+{% endblock %}

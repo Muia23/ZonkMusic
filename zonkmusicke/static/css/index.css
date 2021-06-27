@@ -1,0 +1,267 @@
+.videowrapper {
+    position: relative;
+    overflow: hidden;
+    min-height: 70vh;
+    height: 70vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: gray;            
+}
+.first-icon {
+    height: 80px;
+    width: 80px;                        
+}
+
+.landing-heading {            
+    font-weight: 700;
+}
+
+.landing{
+    color: white;
+    margin-top: 10vh;
+}
+
+#videobg {
+    width: 100%;           
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #videobg {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    #videobg {                
+        width: 100%;
+        height: auto;
+    }
+}
+
+.video-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.33);
+}
+
+.genre-background {
+    background-color: #575757;
+    text-align: center;
+}
+
+.genre-text {
+    font-size: 55px;
+    color: #c2c2c5;
+    padding-bottom: 0;
+}
+
+.slider {
+    background: black;   
+    margin-top: -8px;         
+}
+.slider-img {
+    width: 100%;
+    height: auto;            
+
+}
+
+.slider-title {
+    color: rgb(143, 6, 211);
+    position: absolute;
+    bottom: 10px;
+}
+
+.slider-text {
+    color: white;
+    position: absolute;
+    bottom: 5px;
+}
+
+.about {
+    background: rgb(58, 58, 58);
+}
+
+.about-title {
+    color: #e42f5f;
+}
+
+.about-text {
+    color: white;
+}
+
+.about-button {
+    margin-top: 35px;
+}
+
+
+.shows-title {
+    text-align: center;
+    color: white;
+}
+
+.shows-table {
+    width: 100%;
+    color: white;
+}
+
+.shows-row {
+    border-bottom: solid white 1px;
+    height: 16vh;            
+}
+
+.blogs {
+    background: black;
+}
+
+.date-text {
+    color: rgb(11, 235, 130);            
+    margin-top: -30px;
+}
+
+.row-show {
+    width: 20vw;
+}
+
+.show-name {
+    font-weight: 600;
+    padding-top: 10px; 
+    padding-right: 30px;
+}
+
+.row-time {
+    width: 15vw;
+}
+
+.show-time {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.row-detail {
+    width: 15vw;
+}
+
+.blog-title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 200px;
+    color: white;
+    padding: 10px 5px;
+}
+
+.card-date-1 {
+    color: rgb(2, 213, 90);
+    position: absolute;
+    top: 10%;
+    left: 30px;
+    font-weight: 600px;
+}
+
+.card-title-1 {
+    color: rgb(218, 115, 197);
+    position: absolute;
+    bottom: 30%;
+    left: 30px;
+    font-weight: 700;
+}
+
+.card-text-1 {
+    color: white;
+    position: absolute;
+    bottom: 24%;
+    left: 30px;
+}
+
+.card-date-2 {
+    color: rgb(2, 213, 90);
+    padding: 45px 25px;
+    font-weight: 600px;
+}
+
+.card-title-2 {
+    color: #d5467d;
+    padding: 20px 0 0 25px;
+    font-weight: 700;
+}
+
+.card-text-2 {
+    color: white;
+    padding: 0 0 0 25px ;
+    margin-top: -10px;
+}
+
+.card-date-3 {
+    color: rgb(2, 213, 90);
+    padding: 45px 25px;
+    font-weight: 600px;
+}
+
+.card-title-3 {
+    color: #d5467d;
+    padding: 20px 0 0 25px;
+    font-weight: 700;
+}
+
+.card-text-3 {
+    color: white;
+    padding: 0 0 0 25px ;
+    margin-top: -10px;
+}
+
+.people {
+    background: black;           
+    height: max-content; 
+}
+
+.people-title {
+    color:#d5467d;
+    font-weight: 700;
+    padding: 0 15px;
+}
+
+.people-img {
+    height: 100px;
+    width: 100px;
+    margin-left: 30px;
+}
+
+.people-text {
+    color: white;
+    font-size: 14px;
+    padding: 20px 85px;
+}
+
+.instagram {
+    background: rgb(58, 58, 58);
+}
+
+.instagram-title {
+    color: white;
+    font-size: 50px;            
+}
+
+.insta-pic {    
+    padding: 5px;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.map {
+    background: #575757;
+    height: 50vh;
+}
+
+.map-text {
+    color: white;
+    padding: 24vh 40vw;
+}

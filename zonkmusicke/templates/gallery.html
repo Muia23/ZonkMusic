@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block styles %}
+        <link href="{% static 'css/gallery.css' %}" rel="stylesheet"/>               
+    {% endblock %}
+{% block content %}                     
+    {{block.super}}     
+    {% include "nav.html" %}    
+
+    <div class="landing">
+        <div class="container">        
+            <h2 class="landing-title">Gallery</h2>
+            <p class="landing-text-1">Home  / </p>
+            <p class="landing-text-2"> Gallery</p>
+        </div>
+    </div>    
+    <div class="images">
+        <br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="row">
+                        <div class="over-lay">
+                            <div class="container gal-img">
+                                <img class="gallery-img" src="{% static 'images/back.80078029.jpg' %}">                          
+                                <div class="social">
+                                    <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
+                                    <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
+                                </div>                                
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="over-lay">
+                            <div class="container gal-img">
+                                <img class="gallery-img" src="{% static 'images/inst3.0775580f.jpg' %}">  
+                                <div class="social">
+                                    <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
+                                    <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="over-lay">
+                        <div class="container gal-img">
+                            <img class="gallery-img" src="{% static 'images/zonk3.bede8716.jpg' %}">  
+                            <div class="social">
+                                <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
+                                <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
+                            </div>                                
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="row">
+                        <div class="over-lay">
+                            <div class="container gal-img">
+                                <img class="gallery-img" src="{% static 'images/inst2.b18d0733.jpg' %}">  
+                                <div class="social">
+                                    <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
+                                    <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
+                                </div>     
+                            </div>
+                        </div>                
+                    </div>
+                    <div class="row">
+                        <div class="over-lay">
+                            <div class="container gal-img">
+                                <img class="gallery-img" src="{% static 'images/inst1.beaa679f.jpg' %}">  
+                                <div class="social">
+                                    <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
+                                    <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
+                                </div>     
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="over-lay">
+                        <div class="container gal-img">
+                            <img class="gallery-img" src="{% static 'images/3gs.1180f2f2.jpg' %}">   
+                            <div class="social">
+                                <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
+                                <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="row">
+                        <div class="over-lay">
+                            <div class="container gal-img">
+                                <img class="gallery-img" src="{% static 'images/event2.efc7aa12.jpg' %}">                          
+                                <div class="social">
+                                    <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
+                                    <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="over-lay">
+                            <div class="container gal-img">
+                                <img class="gallery-img" src="{% static 'images/zonk1.1774abb0.jpg' %}">                          
+                                <div class="social">
+                                    <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
+                                    <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                   <div class="row">
+                        <div class="over-lay">
+                            <div class="container gal-img">
+                                <img class="gallery-img" src="{% static 'images/monchoka.2863542a.jpg' %}">                          
+                                <div class="social">
+                                    <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
+                                    <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
+                                </div>
+                            </div>
+                        </div>
+                   </div> 
+                   <div class="row">
+                        <div class="over-lay">
+                            <div class="container gal-img">
+                                <img class="gallery-img" src="{% static 'images/house.6bee06fc.jpg' %}">                         
+                                <div class="social">
+                                    <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
+                                    <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+
+    {% include "footer.html" %}    
+
+    <style>
+        .landing {
+            height: 55vh;
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/recos.95899684.jpg' %}");
+            background-repeat: repeat;
+            background-attachment: fixed;            
+            background-size: cover;
+            -webkit-animation: backgroundScroll 15s linear 1;
+            -webkit-animation-fill-mode: forwards;
+            animation: backgroundScroll 15s linear 1;
+            animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes backgroundScroll {
+            from {background-position: 0 0;}
+            to {background-position: 0 -180px;}            
+        }
+
+        @keyframes backgroundScroll {
+            from {background-position: 0 0;}
+            to {background-position: 0 -180px;}            
+        }                   
+    </style>
+{% endblock %}

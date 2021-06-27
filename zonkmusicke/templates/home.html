@@ -1,0 +1,706 @@
+{% extends 'base.html' %}
+{% load static %}    
+
+            {% block styles %}      
+                <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/> -->
+                <link href="{% static 'css/index.css' %}" rel="stylesheet"/>           
+            {% endblock %}                                 
+        
+            {% block content %}    
+            {{block.super}}      
+            {% include "nav.html" %}    
+            <br><br>
+
+            <div class="videowrapper">        
+                <video id="videobg" role="presentation" preload="auto" playsinline crossorigin="anonymous" autoplay muted loop>
+                    <source src="{% static 'images/vidone.0c01e9ca.mp4' %}" type="video/mp4">
+                </video>
+                <div class="video-overlay">
+                    <div class="container-fluid" >
+                        <img class="first-icon" src="{{homland.landinglogo}}">
+                    </div>
+                    <div class="container landing">
+                        <h3 class="landing-heading">{{homland.landingheading}}</h3>
+                        <h5 class="landing-text">{{homland.landingtext}}</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid genre-background">
+                <h1 class="genre-text">Music Genres</h1>
+            </div>   
+
+            <div class="container-fluid slider"> 
+                <div id="genreCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img class="d-block w-100" src="{% static 'images/pic.44405192.png' %}" alt="First slide">
+                        <p class="slider-title">Genre</p>
+                        <h5 class="slider-text">Gospel Music.</h5>
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'images/monchoka.2863542a.jpg' %}" alt="Second slide">
+                        <p class="slider-title">Genre</p>
+                        <h5 class="slider-text">HipHop Music.</h5>
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'images/3gs.1180f2f2.jpg' %}" alt="Third slide">
+                        <p class="slider-title">Genre</p>
+                        <h5 class="slider-text">Trap Music.</h5>
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#genreCarousel" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#genreCarousel" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                </div>                                                                    
+            </div>
+
+            <div class="container-fluid about">
+                <br><br>
+                <div class="container">
+                    <hr style="border-color: white;width: 100%;">
+                    <div class="row" style="padding: 10px;">
+                        <div class="col">
+                            <img class="about-img" src="{% static 'images/bl2.6084eded.jpg' %}">        
+                        </div>
+                        <div class="col">
+                            <br>
+                            <h1 class="about-title">{{homabout.abouttitle}}</h1>
+                            <p class="about-text">{{homabout.aboutpara1}}</p>
+                            <p class="about-text">{{homabout.aboutpara2}}</p>                        
+                            <a href="{% url 'about'%}" ><button class="btn btn-danger about-button">Curious?</button></a>
+                        </div>
+                    </div>
+                    <br><br>    
+                </div>        
+            </div>
+            
+            <div class="shows">        
+                <br><br>
+                <div class="container">
+                <h1 class="shows-title">Your Fav Shows</h1>            
+                <table class="shows-table">
+                    {% for homshow in homshows %}
+                    <tr class="shows-row">
+                        <td class="row-date">
+                            <p class="date-text">{{homshow.showdate}}</p>
+                        </td>
+                        <td class="row-show">
+                            <h4 class="show-name">{{homshow.showtitle}}</h4>
+                            <p class="show-host">{{homshow.showhost}}</p>
+                        </td>  
+                        <td class="row-time">
+                            <p class="show-time">{{homshow.eattime}}</p>
+                            <p class="show-time">{{homshow.cattime}}</p>
+                        </td>                                      
+                        <td class="row-detail">
+                            <button class="btn details-btn">Find Details</button>
+                        </td>
+                    </tr> 
+                    {% endfor %}               
+                    <!--<tr class="shows-row">                    
+                    <td class="row-date">
+                        <p class="date-text">MON-FRI</p>
+                    </td>
+                    <td class="row-show">
+                        <h4 class="show-name">Morning Jungle with John</h4>
+                        <p class="show-host">John</p>
+                    </td>  
+                    <td class="row-time">
+                        <p class="show-time">4:00AM - 7:00AM EAT</p>
+                        <p class="show-time">3:00AM - 6:00PM CAT</p>
+                    </td>                                      
+                    <td class="row-detail">
+                        <button class="btn details-btn">Find Details</button>
+                    </td>                  
+                </tr>
+                <tr class="shows-row">
+                    <td class="row-date">
+                        <p class="date-text">MON-SUN</p>
+                    </td>
+                    <td class="row-show">
+                        <h4 class="show-name">3G's</h4>
+                        <p class="show-host">Teddy, Honey and Gigi</p>
+                    </td>  
+                    <td class="row-time">
+                        <p class="show-time">1:00PM - 4:00PM EAT</p>
+                        <p class="show-time">12:00PM - 3:00PM CAT</p>
+                    </td>                                      
+                    <td class="row-detail">
+                        <button class="btn details-btn">Find Details</button>
+                    </td>
+                </tr>
+                <tr class="shows-row">                                        
+                    <td class="row-date">
+                        <p class="date-text">MON-FRI</p>
+                    </td>
+                    <td class="row-show">
+                        <h4 class="show-name">Monchoka</h4>
+                        <p class="show-host">Zozo, Kyle & Jeff</p>
+                    </td>  
+                    <td class="row-time">
+                        <p class="show-time">4:00PM - 7:00PM EAT</p>
+                        <p class="show-time">3:00PM - 6:00PM CAT</p>
+                    </td>                                      
+                    <td class="row-detail">
+                        <button class="btn details-btn">Find Details</button>
+                    </td>
+                </tr>
+                <tr class="shows-row">
+                    <td class="row-date">
+                        <p class="date-text">MON-FRI & SAT-SUN</p>
+                    </td>
+                    <td class="row-show">
+                        <h4 class="show-name">Them Boys</h4>
+                        <p class="show-host">Tim and Pablo</p>
+                    </td>  
+                    <td class="row-time">
+                        <p class="show-time">1:00AM - 4:00AM EAT</p>
+                        <p class="show-time">12:00PM - 3:00AM CAT</p>
+                    </td>                                      
+                    <td class="row-detail">
+                        <button class="btn details-btn">Find Details</button>
+                    </td>
+                </tr>
+                <tr class="shows-row">
+                    <td class="row-date">
+                        <p class="date-text">SAT-SUN</p>
+                    </td>
+                    <td class="row-show">
+                        <h4 class="show-name">PINTO IQ ON THE DECKS</h4>
+                        <p class="show-host">Pinto</p>
+                    </td>  
+                    <td class="row-time">
+                        <p class="show-time">10PM - 1AM</p>                        
+                    </td>                                      
+                    <td class="row-detail">
+                        <button class="btn details-btn">Find Details</button>
+                    </td>
+                </tr>-->
+                </table> 
+                <br><br>  
+                </div>             
+            </div>
+
+            <div class="blogs">
+                <br>
+                <p class="blog-title"> Blogs & Articles</p>
+                <div class="container">
+            <div class="row" >
+                <div class="col">
+                    <div class="card mag-card-1">
+                        <p class="card-date-1">May 13, Saturday</p>
+                        <h4 class="card-title-1">Zonk Magazine</h4>
+                        <p class="card-text-1">Maiden Issue</p>
+                    </div>                    
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="card mag-card-2">
+                            <p class="card-date-2">Coming soon</p>
+                            <h4 class="card-title-2">ZOPI LOUNGE</h4>
+                            <p class="card-text-2">Defined by status</p>
+                        </div>                    
+                    </div>
+                    <div class="row">
+                        <div class="card mag-card-3">
+                            <p class="card-date-3">August 04, Friday</p>
+                            <h4 class="card-title-3">Zonk Music</h4>
+                            <p class="card-text-3">New Studio Launch</p>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+                </div>
+                <br><br>
+            </div>
+
+            <div class="people">
+                <br>
+                <div class="container">
+                    <h4 class="people-title">What people say</h4>
+                    <br>                    
+                    <div id="peopleCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="catousel-inner">
+                            <div class="carousel-item active">                                
+                                <div class="row">
+                                    <div class="col-sm-1"></div>                                 
+                                    <div class="col-sm-1 col-md-1">
+                                        <img class="people-img" src="{% static 'images/imga.c22b55ad.jpg' %}">
+                                    </div>
+                                    <div class="col-sm-10 col-md-10">
+                                        <p class="people-text"> "Revolutionary. One Of the Best recording label in Africa. 
+                                            Taking African Music to the next levels. Great in Promoting African culture to 
+                                            the world through Music. By Africa, for Africa. In Africa"
+                                        </p>
+                                    </div>
+                                </div>                                
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">   
+                                    <div class="col-sm-1"></div>                                 
+                                    <div class="col-md-1">
+                                        <img class="people-img" src="{% static 'images/imgb.6f9f456d.jpg' %}">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <p class="people-text"> "Revolutionary. One Of the Best recording label in Africa. 
+                                            Taking African Music to the next levels. Great in Promoting African culture to 
+                                            the world through Music. By Africa, for Africa. In Africa"
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">        
+                                    <div class="col-sm-1"></div>
+                                    <div class="col-md-1">
+                                        <img class="people-img" src="{% static 'images/imgd.6084eded.jpg' %}">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <p class="people-text"> "Revolutionary. One Of the Best recording label in Africa. 
+                                            Taking African Music to the next levels. Great in Promoting African culture to 
+                                            the world through Music. By Africa, for Africa. In Africa"
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#peopleCarousel" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#peopleCarousel" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                    </div>                    
+                    <br><br><br><br><br><br><br><br>
+                </div>        
+                <br><br>
+            </div>
+
+            <div class="instagram">
+                <br><br>
+                <div class="container">                    
+                    <div class="row" style="width: 100%;">
+                        <div class=" col-md-8">                            
+                            <h3 class="instagram-title"> Instagram </h3>                            
+                        </div>
+                        <div class="col-md-4">
+                            <button  class="btn instagram-btn">Follow Us</button>
+                        </div>  
+                    </div> 
+                    <br><br>
+                    <div class="container">
+                    <div class="row" style="padding-bottom: 5vh;">   
+                        <div class="col-md-3 col-sm-6">
+                            <img src="{% static 'images/inst1.beaa679f.jpg' %}" class="insta-pic">                
+                        </div>                                         
+                        <div class="col-md-3 col-sm-6">
+                            <img src="{% static 'images/inst2.b18d0733.jpg' %}" class="insta-pic">                
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <img src="{% static 'images/inst3.0775580f.jpg' %}" class="insta-pic">                
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <img src="{% static 'images/inst4.60a6347c.jpg' %}" class="insta-pic">                
+                        </div>
+                    </div>       
+                    </div>
+                </div>        
+            </div>
+
+            <div class="map">
+                <p class="map-text">Use ctrl + scroll to zoom the map</p>
+            </div>
+
+            {% include "footer.html" %}    
+
+            <style>
+                .shows {
+                    background:linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/pic.c1745088.jpg' %}");
+                    background-size: cover;
+                    background-position: center;
+                    background-attachment: fixed;
+                    height: max-content;
+                }
+
+                .details-btn {            
+                    margin-top: -50px;
+                    background: black;
+                    color: white;
+                }
+
+                .mag-card-1 {
+                    background:linear-gradient(#0a0a0ab3,#0a0a0ab3,#0a0a0ab3),url("{% static 'images/sec4d.55be5228.jpg' %}");
+                    background-position: 50% 42%;
+                    height: 65vh;
+                    border-radius: 0;
+                }
+
+                .mag-card-2 {
+                    background:linear-gradient(#0a0a0ab3,#0a0a0ab3,#0a0a0ab3),url("{% static 'images/cool1.64138fc0.jpg' %}");
+                    background-position: 50% 55%;
+                    background-size: cover;
+                    height: 31vh; 
+                    width: 30vw;           
+                    margin-left: 15px;      
+                    border-radius: 0;
+                }
+                .mag-card-3 {
+                    background:linear-gradient(#0a0a0ab3,#0a0a0ab3,#0a0a0ab3),url("{% static 'images/sec4c.ae7c09db.webp' %}");
+                    background-position: 50% 42%;
+                    background-size: cover;
+                    height: 31vh;
+                    margin-top: 25px;
+                    width: 30vw;     
+                    margin-left: 15px;      
+                    border-radius: 0;
+                }
+
+                .instagram-btn {
+                    background: black;
+                    color: white;
+                    margin: 5px 0 0 70%; 
+                    padding: 10px;
+                }
+            </style>
+            <!--<style>        
+            .videowrapper {
+                position: relative;
+                overflow: hidden;
+                min-height: 70vh;
+                height: 70vh;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                background-color: gray;            
+            }
+            .first-icon {
+                height: 80px;
+                width: 80px;                        
+            }
+
+            .landing-heading {            
+                font-weight: 700;
+            }
+
+            .landing{
+                color: white;
+                margin-top: 10vh;
+            }
+
+            #videobg {
+                width: 100%;           
+                height: auto;
+                margin: auto;
+                display: block;
+            }
+
+            @media (min-aspect-ratio: 16/9) {
+                #videobg {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            @media (max-aspect-ratio: 16/9) {
+                #videobg {                
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .video-overlay {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.33);
+            }
+
+            .genre-background {
+                background-color: #575757;
+                text-align: center;
+            }
+
+            .genre-text {
+                font-size: 55px;
+                color: #c2c2c5;
+                padding-bottom: 0;
+            }
+
+            .slider {
+                background: black;   
+                margin-top: -8px;         
+            }
+            .slider-img {
+                width: 100%;
+                height: auto;            
+
+            }
+
+            .slider-title {
+                color: rgb(143, 6, 211);
+                position: absolute;
+                bottom: 10px;
+            }
+
+            .slider-text {
+                color: white;
+                position: absolute;
+                bottom: 5px;
+            }
+
+            .about {
+                background: rgb(58, 58, 58);
+            }
+
+            .about-title {
+                color: #e42f5f;
+            }
+
+            .about-text {
+                color: white;
+            }
+
+            .about-button {
+                margin-top: 35px;
+            }
+
+            .shows {
+                background:linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/pic.c1745088.jpg' %}");
+                background-size: cover;
+                height: max-content;
+            }
+
+            .shows-title {
+                text-align: center;
+                color: white;
+            }
+
+            .shows-table {
+                width: 100%;
+                color: white;
+            }
+
+            .shows-row {
+                border-bottom: solid white 1px;
+                height: 16vh;            
+            }
+
+            .blogs {
+                background: black;
+            }
+
+            .date-text {
+                color: rgb(11, 235, 130);            
+                margin-top: -30px;
+            }
+
+            .row-show {
+                width: 20vw;
+            }
+
+            .show-name {
+                font-weight: 600;
+                padding-top: 10px; 
+                padding-right: 30px;
+            }
+
+            .row-time {
+                width: 15vw;
+            }
+
+            .show-time {
+                font-weight: 600;
+                font-size: 18px;
+            }
+
+            .row-detail {
+                width: 15vw;
+            }
+        
+            .details-btn {            
+                margin-top: -50px;
+                background: black;
+                color: white;
+            }
+        
+            .blog-title {
+                text-align: center;
+                font-size: 50px;
+                font-weight: 200px;
+                color: white;
+                padding: 10px 5px;
+            }
+        
+            .mag-card-1 {
+                background:linear-gradient(#0a0a0ab3,#0a0a0ab3,#0a0a0ab3),url("{% static 'images/sec4d.55be5228.jpg' %}");
+                background-position: 0 42%;
+                height: 65vh;
+                border-radius: 0;
+            }
+            
+            .card-date-1 {
+                color: rgb(2, 213, 90);
+                padding: 45px 25px;
+                font-weight: 600px;
+            }
+        
+            .card-title-1 {
+                color: rgb(218, 115, 197);
+                padding: 220px 0 0 25px;
+                font-weight: 700;
+            }
+        
+            .card-text-1 {
+                color: white;
+                padding: 0 0 0 25px ;
+                margin-top: -10px;
+            }
+        
+            .mag-card-2 {
+                background:linear-gradient(#0a0a0ab3,#0a0a0ab3,#0a0a0ab3),url("{% static 'images/cool1.64138fc0.jpg' %}");
+                background-position: 0 55%;
+                background-size: cover;
+                height: 31vh; 
+                width: 30vw;           
+                margin-left: 15px;      
+                border-radius: 0;
+            }
+        
+            .card-date-2 {
+                color: rgb(2, 213, 90);
+                padding: 45px 25px;
+                font-weight: 600px;
+            }
+        
+            .card-title-2 {
+                color: #d5467d;
+                padding: 20px 0 0 25px;
+                font-weight: 700;
+            }
+        
+            .card-text-2 {
+                color: white;
+                padding: 0 0 0 25px ;
+                margin-top: -10px;
+            }
+        
+            .mag-card-3 {
+                background:linear-gradient(#0a0a0ab3,#0a0a0ab3,#0a0a0ab3),url("{% static 'images/sec4c.ae7c09db.webp' %}");
+                background-position: 0 42%;
+                background-size: cover;
+                height: 31vh;
+                margin-top: 25px;
+                width: 30vw;     
+                margin-left: 15px;      
+                border-radius: 0;
+            }
+        
+            .card-date-3 {
+                color: rgb(2, 213, 90);
+                padding: 45px 25px;
+                font-weight: 600px;
+            }
+        
+            .card-title-3 {
+                color: #d5467d;
+                padding: 20px 0 0 25px;
+                font-weight: 700;
+            }
+        
+            .card-text-3 {
+                color: white;
+                padding: 0 0 0 25px ;
+                margin-top: -10px;
+            }
+        
+            .people {
+                background: black;            
+            }
+        
+            .people-title {
+                color:#d5467d;
+                font-weight: 700;
+                padding: 0 15px;
+            }
+        
+            .people-img {
+                height: 100px;
+                width: 100px;
+                margin-left: 15px;
+            }
+        
+            .people-text {
+                color: white;
+                font-size: 14px;
+                padding: 20px 85px;
+            }
+        
+            .instagram {
+                background: rgb(58, 58, 58);
+            }
+        
+            .instagram-title {
+                color: white;
+                font-size: 50px;            
+            }
+        
+            .instagram-btn {
+                background: black;
+                color: white;
+                margin-top: 5px; 
+                padding: 10px;
+            }
+        
+            .insta-pic-1 {
+                padding: 12px;
+                width: 16.3vw;
+                height: 33vh;
+                display: inline-block;
+            }
+        
+            .insta-pic-2 {
+                padding: 12px;
+                width: 16.3vw;
+                height: 33vh;
+                display: inline-block;
+            }
+        
+            .insta-pic-3 {
+                padding: 12px;
+                width: 16.3vw;
+                height: 33vh;
+                display: inline-block;
+            }
+        
+            .insta-pic-4 {
+                padding: 12px;
+                width: 16.3vw;
+                height: 38vh;
+                display: inline-block;
+            }
+        
+            .map {
+                background: #575757;
+                height: 50vh;
+            }
+        
+            .map-text {
+                color: white;
+                padding: 24vh 40vw;
+            }
+        
+            </style>-->
+
+        {% endblock %}
+        

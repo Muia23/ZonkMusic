@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}  
+    {% block styles %}
+        <link href="{% static 'css/about.css' %}" rel="stylesheet"/>               
+    {% endblock %}  
+{% block content %}  
+    {{block.super}}                   
+    {% include "nav.html" %}    
+    <div class="landing">
+        <div class="container">        
+            <h2 class="landing-title">About Us</h2>
+            <p class="landing-text-1">Home  / </p>
+            <p class="landing-text-2"> About</p>
+        </div>
+    </div>  
+    <div class="about-content">
+        <div class="container" style="text-align: center;">
+            <br><br>
+            <h1 class="about-title">OUR MISSION</h1>
+            <p class="about-text">Growing Entertainment market across the world through the production, promotion and recording of high quaility entertainment</p>
+            <br><br>
+            <h1 class="about-title">MARKETING</h1>
+            <p class="about-text">Zonk Music will distribute, produce, manufacture, market, promote and enforce its masters owne|</p>
+            <br><br>
+            <h1 class="about-title">EXECUTIVE SUMMARY</h1>
+            <p class="about-text">Zonk Music, chairman Andrew Chimpondah a qualified chartered accountant who will oversee all our|</p>            
+        </div>    
+        <br>    
+    </div>
+    <div class="staff">
+        <br><br>
+        <div class="container">
+            <h5 class="staff-title1">Meet the Team</h5>
+            <h1 class="staff-title2">Our Staff</h1>
+
+            <div class="row">                      
+                <div class="col-md-4" style="text-align: center;">
+                    <img class="staff-img" src="{% static 'images/zonk1.1774abb0.jpg' %}">
+                    <h5 class="staff-name">PINTO IQ</h5>
+                    <p class="staff-pos">Zonkmusic Head</p>
+                </div>
+                <div class="col-md-4">
+                    <img class="staff-img" src="{% static 'images/bl2.6084eded.jpg' %}">
+                    <h5 class="staff-name">Fikile Madinoge</h5>
+                    <p class="staff-pos">Founder</p>
+                </div>
+                <div class="col-md-4">
+                    <img class="staff-img" src="{% static 'images/staf8.e753bf8a.jpg' %}">
+                    <h5 class="staff-name">Winnie Jesca</h5>
+                    <p class="staff-pos">Events Manager</p>
+                </div>                 
+                <div class="col-md-4" style="text-align: center;">
+                    <img class="staff-img" src="{% static 'images/staf5.2cfe582b.jpg' %}">
+                    <h5 class="staff-name">Dj Shinsky</h5>
+                    <p class="staff-pos">Producer</p>
+                </div>
+                <div class="col-md-4">
+                    <img class="staff-img" src="{% static 'images/staf6.cee5c200.jpg' %}">
+                    <h5 class="staff-name">Dj Zozo</h5>
+                    <p class="staff-pos">Videographer</p>
+                </div>
+                <div class="col-md-4">
+                    <img class="staff-img" src="{% static 'images/zonk1.1774abb0.jpg' %}">
+                    <h5 class="staff-name">Dj Flip</h5>
+                    <p class="staff-pos">Photographer</p>
+                </div>                 
+            </div>
+        </div>
+        <br><br>
+    </div>
+    
+    {% include "footer.html" %}    
+    <style>
+        .landing {
+            height: 55vh;
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/zonk1.1774abb0.jpg' %}");
+            background-repeat: repeat;
+            background-attachment: fixed;            
+            background-size: cover;
+            -webkit-animation: backgroundScroll 15s linear 1;
+            -webkit-animation-fill-mode: forwards;
+            animation: backgroundScroll 15s linear 1;
+            animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes backgroundScroll {
+            from {background-position: 0 5%;}
+            to {background-position: 0 -180px;}            
+        }
+
+        @keyframes backgroundScroll {
+            from {background-position: 0 5%;}
+            to {background-position: 0 -180px;}            
+        }        
+    </style>
+{% endblock %}

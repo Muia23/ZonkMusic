@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}    
+{% block styles %}      
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>-->
+
+{% endblock %}
+{% block content %}  
+<div class="footer">
+    <br><br><br><br>
+    <div class="row" style="width: 100%;">
+        <div class="col-md-6">
+            <div class="container">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col">
+                        <img class="footer-icon" src="{% static 'images/zonk-music.d8b24ab9.png' %}">
+                        <p class="rights-text">COPYRIGHT @ ALL RIGHTS RESERVED</p>                                                        
+                        <a href=""><p class="socials-icon"><i class="fab fa-instagram"></i></p></a>
+                        <a href=""><p class="socials-icon"><i class="fab fa-facebook-f"></i></p></a>
+                        <a href=""><p class="socials-icon"><i class="fab fa-twitter"></i></p></a>
+                    </div>
+                    <div class="col"></div>
+                </div>                    
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="container" style="width: 60%;">
+                <div class="row">
+                    <div class="col">
+                        <p class="footer-title">ABOUT</p>
+                        <a href="{% url 'about'%}" ><p class="footer-text">Who we are</p></a>
+                        <a href="{% url 'about'%}" ><p class="footer-text-1">Our staff</p></a>
+                    </div>
+                    <div class="col">
+                        <p class="footer-title">BLOG</p>
+                        <a href="{% url 'blog'%}" ><p class="footer-text">Articles</p></a>                            
+                    </div>
+                    <div class="col">
+                        <p class="footer-title">SHOWS</p>
+                        <a href="{% url 'shows'%}" ><p class="footer-text">Our shows</p></a> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="footer-title">EVENTS</p>
+                        <a href="{% url 'events'%}" ><p class="footer-text">Our Events</p></a>
+                    </div>
+                    <div class="col">
+                        <p class="footer-title">GALLERY</p>
+                        <a href="{% url 'gallery'%}" ><p class="footer-text">Photos</p></a>
+                    </div>
+                    <div class="col">
+                        <p class="footer-title">CONTACTS</p>
+                        <a href="{% url 'contact'%}" ><p class="footer-text">Contact Info</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+</div> 
+
+<style>
+    .footer {
+            background: black;
+        }
+
+        .footer-icon {
+            height: 80px;
+            width: 80px;
+
+        }
+
+        .rights-text {
+            font-size: 10px;
+            font-weight: bold;            
+        }
+
+        .socials-icon {
+            color: white;
+            font-size: 15px;
+            display: inline-block;
+            padding: 2px 0 0 15px;
+        }
+
+        .footer-title {
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .footer-text {
+            color: rgb(100, 100, 100);
+            font-size: 20px;
+            padding: 0;
+            font-weight: 700;
+        }
+
+        .footer-text-1 {
+            color: rgb(100, 100, 100);
+            font-size: 20px;
+            padding: 0;
+            font-weight: 700;
+            margin-top: -15px;
+        }
+</style>   
+{% endblock %}

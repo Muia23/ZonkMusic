@@ -1,0 +1,73 @@
+.landing-title {
+    padding: 25vh 0 0 0;
+    color: white;
+    font-size: 45px;
+}
+
+.landing-text-1 {            
+    color: white;
+    display: inline-block;
+}
+
+.landing-text-2 {
+    color: #0beb82;
+    display: inline-block;
+    padding-left: 15px;
+}
+
+.images {
+    background: #3a3a3a;
+}
+
+.over-lay {
+    padding: 5px;
+}
+
+.gal-img {
+    position: relative;    
+}
+
+.gal-img:hover .gallery-img {
+    opacity: 0.3;
+}
+
+.gal-img:hover .social {
+    opacity: 1;
+}
+
+.gallery-img {
+    opacity: 1;
+    display: block;
+    height: auto;
+    width: 100%;
+    padding: 10px;            
+    border: solid 0.01rem #7b7a7a;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.social {
+   transition: .5 ease; 
+   opacity: 0;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   text-align: center;
+}        
+
+.gram-icon {
+    color: white;
+    padding: 5% 7%;
+    border: solid 0.1rem orange;  
+    display: inline-block;                      
+}
+
+.fb-icon {
+    color: white;
+    padding: 5% 7%;
+    border: solid 0.1rem orange;            
+    display: inline-block;                      
+}  
+

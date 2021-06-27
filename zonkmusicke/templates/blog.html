@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}    
+    {% block styles %}
+        <link href="{% static 'css/blog.css' %}" rel="stylesheet"/>               
+    {% endblock %}
+{% block content %} 
+    {{block.super}}  
+    {% include "nav.html" %}
+    <div class="landing">
+        <div class="container">        
+            <h2 class="landing-title">Blog</h2>
+            <p class="landing-text-1">Home  / </p>
+            <p class="landing-text-2"> Blog</p>
+        </div>
+    </div>
+    <div class="content">
+        <br>
+        <div class="container blog-background">            
+            <div class="row">
+                <div class="col-md-3">
+
+                </div>
+                <div class="col">
+                    <img class="blog-img" src="{% static 'images/rec.95899684.jpg' %}">
+                    <p class="blog-text">thumbnail</p>
+                    <br>
+                    <button class="btn more-btn"> Continue reading...</button>
+                </div>                  
+            </div>
+        </div>
+    </div>
+
+    {% include "footer.html" %}    
+    <style>
+        .landing {
+            height: 55vh;
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/blog.2d8b90d8.png' %}");
+            background-repeat: repeat;
+            background-attachment: fixed;            
+            background-size: cover;
+            -webkit-animation: backgroundScroll 15s linear 1;
+            -webkit-animation-fill-mode: forwards;
+            animation: backgroundScroll 15s linear 1;
+            animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes backgroundScroll {
+            from {background-position: 0 33%;}
+            to {background-position: 0 -180px;}            
+        }
+
+        @keyframes backgroundScroll {
+            from {background-position: 0 33%;}
+            to {background-position: 0 -180px;}            
+        }                
+    </style>
+{% endblock %}

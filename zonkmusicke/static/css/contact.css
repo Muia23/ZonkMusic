@@ -1,0 +1,53 @@
+.landing-title {
+    padding: 25vh 0 0 0;
+    color: white;
+    font-size: 45px;
+}
+
+.landing-text-1 {            
+    color: white;
+    display: inline-block;
+}
+
+.landing-text-2 {
+    color: #0beb82;
+    display: inline-block;
+    padding-left: 15px;
+}
+
+.contact {
+    background: black;
+}
+
+.contact-title1 {
+    color: #d5467d;
+    font-weight: 800;
+}
+
+.contact-title2 {
+    color: #0beb82;          
+}
+
+.map {
+    background: #575757;
+}
+
+.map-img {
+    background: rgb(162, 160, 160);
+    width: 100%;
+    height: 60vh;
+}        
+
+.map-head {
+    color: #d5467d;
+    font-weight: 800;
+}
+
+.map-title{
+    color: #d5467d;
+    font-weight: 545;
+}
+
+.map-text {
+    color: rgb(216, 213, 213);
+}

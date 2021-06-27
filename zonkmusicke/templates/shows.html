@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% load static %}    
+    {% block styles %}
+        <link href="{% static 'css/shows.css' %}" rel="stylesheet"/>               
+    {% endblock %}
+{% block content %}     
+    {{block.super}}                 
+    {% include "nav.html" %}    
+    <div class="landing">
+        <div class="container">        
+            <h2 class="landing-title">Shows</h2>
+            <p class="landing-text-1">Home  / </p>
+            <p class="landing-text-2"> Shows</p>
+        </div>
+    </div>  
+    <div class="shows">
+        <br>
+        <div class="container">
+            <h1 class="section-title">Our Shows</h1>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <img class="show-img" src="{% static 'images/Africa.ffdbe221.jpg' %}">
+                        </div>
+                        <div class="col">
+                            <h4 class="show-title">Africa Connect</h4>
+                            <p class="show-period">Morning Show</p>
+                            <p class="show-time">10AM - 1PM</p>
+                            <p class="show-text">Africa Connect is a morning Show that happens from Monday to Friday. 
+                                From 10 am - 1 pm. It is brought to you with Grace and Charles.</p>
+                            <button class="btn check-btn" type="button">Check Out</button>
+                        </div>
+                        <br><br>                        
+                    </div>                    
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <img class="show-img" src="{% static 'images/monchoka.2863542a.jpg' %}">
+                        </div>
+                        <div class="col">
+                            <h4 class="show-title">Monchoka</h4>
+                            <p class="show-period">Evening Show</p>
+                            <p class="show-time">4pm - 7PM</p>
+                            <p class="show-text">Monchoka is an evening Show that happens from Monday to Sunday. From 4 pm - 7 pm. It is brought to you with Jeff, Kyle and Zozo.</p>
+                            <button class="btn check-btn" type="button">Check Out</button>
+                        </div>
+                        <br><br>                        
+                    </div>                    
+                </div>
+            </div>
+            <hr style=" background:white;">
+            <br>            
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <img class="show-img" src="{% static 'images/house.6bee06fc.jpg' %}">
+                        </div>
+                        <div class="col">
+                            <h4 class="show-title">Pinto IQ on the Decks</h4>
+                            <p class="show-period">Evening Show</p>
+                            <p class="show-time">10pm - 1AM</p>
+                            <p class="show-text">Pinto IQ is a night Show that happens from Friday to Sunday. From 10 pm - 1 am. It is brought to you by Pinto.</p>
+                            <button class="btn check-btn" type="button">Check Out</button>
+                        </div>
+                        <br><br>                        
+                    </div>                    
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <img class="show-img" src="{% static 'images/3gs.1180f2f2.jpg' %}">
+                        </div>
+                        <div class="col">
+                            <h4 class="show-title">3G's</h4>
+                            <p class="show-period">Afternoon Show</p>
+                            <p class="show-time">1pm - 4pm</p>
+                            <p class="show-text">3G's is an afternoon Show that happens from Monday to SUnday. From 1 pm- 4 pm. It is brought to you with Teddy, Honey and GIGI.</p>
+                            <button class="btn check-btn" type="button">Check Out</button>
+                        </div>
+                        <br><br>                        
+                    </div>                    
+                </div>
+            </div>
+            <hr style=" background:white;">
+            <br>
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <img class="show-img" src="{% static 'images/becky.553bf505.jpg' %}">
+                        </div>
+                        <div class="col">
+                            <h4 class="show-title">Praise</h4>
+                            <p class="show-period">Morning Show</p>
+                            <p class="show-time">9AM - 12PM</p>
+                            <p class="show-text">Praise is a morning Show that happens from Monday to Friday. From 10 am- 12 pm. It is brought to you with Becky.</p>
+                            <button class="btn check-btn" type="button">Check Out</button>
+                        </div>
+                        <br><br>                        
+                    </div>                    
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <img class="show-img" src="{% static 'images/behind.cf055133.jpg' %}">
+                        </div>
+                        <div class="col">
+                            <h4 class="show-title">Behind the scenes</h4>
+                            <p class="show-period">Afternoon Show</p>
+                            <p class="show-time">2pm - 4pm</p>
+                            <p class="show-text">Behind the Scenes is an evening Show that happens from Monday to Sunday. From 3 pm - 6 am. It is brought to you with Tim and Amos.</p>
+                            <button class="btn check-btn" type="button">Check Out</button>
+                        </div>
+                        <br><br>                        
+                    </div>                    
+                </div>
+            </div>
+            <hr style=" background:white;">
+            <br>
+        </div>                
+    </div>
+    
+    {% include "footer.html" %}    
+    
+    <style>
+        .landing {
+            height: 55vh;
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/show.c2789dd3.jpg' %}");
+            background-repeat: repeat;
+            background-attachment: fixed;            
+            background-size: cover;
+            -webkit-animation: backgroundScroll 15s linear 1;
+            -webkit-animation-fill-mode: forwards;
+            animation: backgroundScroll 15s linear 1;
+            animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes backgroundScroll {
+            from {background-position: 0 0;}
+            to {background-position: 0 -180px;}            
+        }
+
+        @keyframes backgroundScroll {
+            from {background-position: 0 0;}
+            to {background-position: 0 -180px;}            
+        }
+        
+        .check-btn {
+            background: black;
+            color: white;
+            padding: 5px 10px;
+        }
+    </style>
+{% endblock %}

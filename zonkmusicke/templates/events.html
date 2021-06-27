@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}    
+    {% block styles %}
+        <link href="{% static 'css/events.css' %}" rel="stylesheet"/>               
+    {% endblock %}
+{% block content %}  
+    {{block.super}}                     
+    {% include "nav.html" %}    
+    <div class="landing">
+        <div class="container">        
+            <h2 class="landing-title">Events</h2>
+            <p class="landing-text-1">Home  / </p>
+            <p class="landing-text-2"> Events</p>
+        </div>        
+    </div>  
+
+    <div class="events">
+        <div class="container">
+            <br>
+            <h1 class="section-title">Events</h1>
+            <div class="row">
+                <div class="col">
+                    <img class="event-img" src="{% static 'images/party.6df1c8c1.jpg' %}">
+                    <h5 class="event-name">Village Girls at K.O.G Party</h5>
+                </div>
+                <div class="col">
+                    <img class="event-img" src="{% static 'images/event2.efc7aa12.jpg' %}">
+                    <h5 class="event-name">Opening Party</h5>
+                </div>
+                <div class="col">
+                    <img class="event-img" src="{% static 'images/cool2.893cb390.jpg' %}">
+                    <h5 class="event-name">K.O.G(Kenyans On Gram Party)</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include "footer.html" %}    
+
+    <style>
+        .landing {
+            height: 55vh;
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/show.c2789dd3.jpg' %}");
+            background-repeat: repeat;
+            background-attachment: fixed;            
+            background-size: cover;
+            -webkit-animation: backgroundScroll 15s linear 1;
+            -webkit-animation-fill-mode: forwards;
+            animation: backgroundScroll 15s linear 1;
+            animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes backgroundScroll {
+            from {background-position: 0 5%;}
+            to {background-position: 0 -180px;}            
+        }
+
+        @keyframes backgroundScroll {
+            from {background-position: 0 5%;}
+            to {background-position: 0 -180px;}            
+        }
+        
+    </style>
+{% endblock %}

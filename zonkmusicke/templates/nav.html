@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}    
+{% block styles %}      
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>-->
+
+{% endblock %}
+{% block content %}                         
+    <div class="nav">
+        <div class="container" >
+            <a href="{% url 'home'%}" ><h6 class="nav-head">ZonkMusic</h6></a>
+            <a href="{% url 'home'%}" ><h6 class="nav-title">Home</h6></a>
+            <a href="{% url 'gallery'%}" ><h6 class="nav-title">Gallery</h6></a>
+            <a href="{% url 'shows'%}" ><h6 class="nav-title">Shows</h6></a>
+            <a href="{% url 'blog'%}" ><h6 class="nav-title">Blog</h6></a>
+            <a href="{% url 'events'%}" ><h6 class="nav-title">Events</h6></a>
+            <a href="{% url 'about'%}" ><h6 class="nav-title">About Us</h6></a>
+            <a href="{% url 'contact'%}" ><h6 class="nav-title">Contact Us</h6></a>
+        </div>
+    </div>
+
+    <style>
+        .nav {
+            background: black;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .nav-head {
+            display: inline-block; 
+            padding: 15px 0 15px 0; 
+            font-weight: 700; 
+            color: #c7c7c7;
+        }
+        .nav-title {
+            display: inline-block; 
+            padding: 15px 0 15px 10px; 
+            font-weight: 700; 
+            color: #c7c7c7;
+        }
+    </style>
+{% endblock %}
