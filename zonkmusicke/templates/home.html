@@ -13,11 +13,11 @@
 
             <div class="videowrapper">        
                 <video id="videobg" role="presentation" preload="auto" playsinline crossorigin="anonymous" autoplay muted loop>
-                    <source src="{% static 'images/vidone.0c01e9ca.mp4' %}" type="video/mp4">
+                    <source src="{{homland.landingbackground}}" type="video/mp4">
                 </video>
                 <div class="video-overlay">
                     <div class="container-fluid" >
-                        <img class="first-icon" src="{% static 'images/zonk-music.d8b24ab9.png' %}">
+                        <img class="first-icon" src="{{homland.landinglogo}}">
                     </div>
                     <div class="container landing">
                         <h3 class="landing-heading">{{homland.landingheading}}</h3>
