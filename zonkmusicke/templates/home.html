@@ -31,13 +31,13 @@
             </div>   
             
             <div class="container-fluid slider">         
-                <div id="genreCarousel" class="carousel slide" data-ride="carousel">
+                <div id="genreCarousel" class="carousel slide container-fluid" data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                          <div class="row">
+                          <div class="row" style="width: 100%;">
                               <div class="col">
-                                    <!--<h5 class="slider-text">Genre</h5>-->
-                                    <h5 class="slider-title">Gospel Music.</h5>
+                                    <!--<h5 class="slider-title">Genre</h5>-->
+                                    <h5 class="slider-text">R&B and HipHop</h5>
                               </div>
                               <div class="col-sm-12 col-md-4">
                                 <div class="card slider-card">
@@ -48,33 +48,61 @@
                           </div>                          
                       </div>
                       <div class="carousel-item">                            
-                                <div class="row">
-                                    <div class="col">
-                                        <!--<h5 class="slider-text">Genre</h5>-->
-                                        <h5 class="slider-title">HipHop Music.</h5>
+                            <div class="row">
+                                <div class="col">
+                                    <!--<h5 class="slider-text">Genre</h5>-->
+                                    <h5 class="slider-text">House and Pop</h5>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <div class="card slider-card">
+                                        <img class="d-block slider-img" src="{% static 'images/zonk2.0775580f.jpg' %}" alt="Second slide">                                                                                        
                                     </div>
-                                    <div class="col-sm-12 col-md-4">
-                                        <div class="card slider-card">
-                                            <img class="d-block slider-img" src="{% static 'images/monchoka.2863542a.jpg' %}" alt="Second slide">                                                                                        
-                                        </div>
-                                    </div>
-                                    <div class="col"></div>
-                                </div>                                                            
+                                </div>
+                                <div class="col"></div>
+                            </div>                                                            
                       </div>
                       <div class="carousel-item">
                           <div class="row">
                               <div class="col">
                                 <!--<h5 class="slider-text">Genre</h5>-->
-                                <h5 class="slider-title">Trap Music.</h5>
+                                <h5 class="slider-text">Gospel Music</h5>
                               </div>
                               <div class="col-sm-12 col-md-4">
                                     <div class="card slider-card">
-                                        <img class="d-block slider-img" src="{% static 'images/3gs.1180f2f2.jpg' %}" alt="Third slide">                                                                            
+                                        <img class="d-block slider-img" src="{% static 'images/monchoka.2863542a.jpg' %}" alt="Third slide">                                                                            
                                     </div>
                               </div>
                               <div class="col"></div>
                           </div>                            
                       </div>
+                      <div class="carousel-item">                            
+                        <div class="row">
+                            <div class="col">
+                                <!--<h5 class="slider-text">Genre</h5>-->
+                                <h5 class="slider-text">Jazz Music</h5>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <div class="card slider-card">
+                                    <img class="d-block slider-img" src="{% static 'images/zonk1.1774abb0.jpg' %}" alt="Second slide">                                                                                        
+                                </div>
+                            </div>
+                            <div class="col"></div>
+                        </div>                                                            
+                        </div>
+                        <div class="carousel-item">                            
+                            <div class="row">
+                                <div class="col">
+                                    <!--<h5 class="slider-text">Genre</h5>-->
+                                    <h5 class="slider-text">Rock Music</h5>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <div class="card slider-card">
+                                        <img class="d-block slider-img" src="{% static 'images/3gs.1180f2f2.jpg' %}" alt="Second slide">                                                                                        
+                                    </div>
+                                </div>
+                                <div class="col"></div>
+                            </div>                                                            
+                        </div>
                     </div>
                     <a class="carousel-control-prev" href="#genreCarousel" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -112,7 +140,7 @@
                 <div class="container">
                     <h1 class="shows-title">Your Fav Shows</h1>            
                     <div class="shows-table">
-                        {% for homshow in homshows %}
+                        {% for homshow in homshows %}                        
                         <div class="row shows-row">
                             <div class="col-md-3 row-date">
                                 <p class="date-text">{{homshow.showdate}}</p>
@@ -126,9 +154,9 @@
                                 <p class="show-time">{{homshow.cattime}}</p>
                             </div>                                      
                             <div class="col-md-3 row-detail">
-                                <button class="btn details-btn">Find Details</button>
-                            </div>
-                        </div> 
+                                <button class="btn details-btn">Find Details</button>                                
+                            </div>                            
+                        </div>                                                 
                         {% endfor %}               
                         <!--<tr class="shows-row">                    
                             <td class="row-date">
@@ -219,22 +247,22 @@
                 <p class="blog-title"> Blogs & Articles</p>
                 <div class="container">
             <div class="row" >
-                <div class="col">
+                <div class="col-md-6 col-sm-12">
                     <div class="card mag-card-1">
                         <p class="card-date-1">May 13, Saturday</p>
                         <h4 class="card-title-1">Zonk Magazine</h4>
                         <p class="card-text-1">Maiden Issue</p>
                     </div>                    
-                </div>
-                <div class="col">
-                    <div class="row">
+                </div>                
+                <div class="col-md-6 col-sm-12">
+                    <div class="row" style="width: 100%;">
                         <div class="card mag-card-2">
                             <p class="card-date-2">Coming soon</p>
                             <h4 class="card-title-2">ZOPI LOUNGE</h4>
                             <p class="card-text-2">Defined by status</p>
                         </div>                    
                     </div>
-                    <div class="row">
+                    <div class="row" style="width: 100%;">
                         <div class="card mag-card-3">
                             <p class="card-date-3">August 04, Friday</p>
                             <h4 class="card-title-3">Zonk Music</h4>
@@ -251,48 +279,53 @@
                 <br>
                 <div class="container">
                     <h4 class="people-title">What people say</h4>
-                    <br>                    
-                    <div id="peopleCarousel" class="carousel slide" data-ride="carousel">
-                        <div class="catousel-inner">
-                            <div class="carousel-item active">                                
-                                <div class="row">
-                                    <div class="col-sm-1"></div>                                 
-                                    <div class="col-sm-1 col-md-1">
-                                        <img class="people-img" src="{% static 'images/imga.c22b55ad.jpg' %}">
-                                    </div>
-                                    <div class="col-sm-10 col-md-10">
-                                        <p class="people-text"> "Revolutionary. One Of the Best recording label in Africa. 
-                                            Taking African Music to the next levels. Great in Promoting African culture to 
-                                            the world through Music. By Africa, for Africa. In Africa"
-                                        </p>
-                                    </div>
-                                </div>                                
+                    <br> 
+                </div>                   
+                <div class="container-fluid">
+                    <div id="peopleCarousel" class="carousel slide" data-ride="carousel" style="width: 100%; height: fit-content;">
+                        <div class="catousel-inner ">
+                            <div class="carousel-item active" style="margin-top: -50px;">                                
+                                <div class="container">
+                                    <div class="row ">                                    
+                                        <div class="col-sm-3 col-md-2">
+                                            <img class="people-img" src="{% static 'images/imga.c22b55ad.jpg' %}">
+                                        </div>
+                                        <div class="col-sm-9 col-md-10">
+                                            <p class="people-text"> "Revolutionary. One Of the Best recording label in Africa. 
+                                                Taking African Music to the next levels. Great in Promoting African culture to 
+                                                the world through Music. By Africa, for Africa. In Africa"
+                                            </p>
+                                        </div>
+                                    </div> 
+                                </div>                               
                             </div>
-                            <div class="carousel-item">
-                                <div class="row">   
-                                    <div class="col-sm-1"></div>                                 
-                                    <div class="col-md-1">
-                                        <img class="people-img" src="{% static 'images/imgb.6f9f456d.jpg' %}">
-                                    </div>
-                                    <div class="col-md-10">
-                                        <p class="people-text"> "Revolutionary. One Of the Best recording label in Africa. 
-                                            Taking African Music to the next levels. Great in Promoting African culture to 
-                                            the world through Music. By Africa, for Africa. In Africa"
-                                        </p>
+                            <div class="carousel-item" style="margin-top: -50px;">
+                                <div class="container">
+                                    <div class="row">                                                                       
+                                        <div class="col-sm-3 col-md-2">
+                                            <img class="people-img" src="{% static 'images/imgb.6f9f456d.jpg' %}">
+                                        </div>
+                                        <div class="col-sm-9 col-md-10">
+                                            <p class="people-text"> "Revolutionary. One Of the Best recording label in Africa. 
+                                                Taking African Music to the next levels. Great in Promoting African culture to 
+                                                the world through Music. By Africa, for Africa. In Africa"
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <div class="row">        
-                                    <div class="col-sm-1"></div>
-                                    <div class="col-md-1">
-                                        <img class="people-img" src="{% static 'images/imgd.6084eded.jpg' %}">
-                                    </div>
-                                    <div class="col-md-10">
-                                        <p class="people-text"> "Revolutionary. One Of the Best recording label in Africa. 
-                                            Taking African Music to the next levels. Great in Promoting African culture to 
-                                            the world through Music. By Africa, for Africa. In Africa"
-                                        </p>
+                            <div class="carousel-item" style="margin-top: -50px;">
+                                <div class="container">
+                                    <div class="row">                                            
+                                        <div class="col-sm-3 col-md-2">
+                                            <img class="people-img" src="{% static 'images/imgd.6084eded.jpg' %}">
+                                        </div>
+                                        <div class="col-sm-9 col-md-10">
+                                            <p class="people-text"> "Revolutionary. One Of the Best recording label in Africa. 
+                                                Taking African Music to the next levels. Great in Promoting African culture to 
+                                                the world through Music. By Africa, for Africa. In Africa"
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -306,44 +339,13 @@
                           <span class="sr-only">Next</span>
                         </a>
                     </div>                    
-                    <br><br><br><br><br><br><br><br>
+                    <br><br><br><br><br><br>
                 </div>        
                 <br><br>
-            </div>
-
-            <div class="instagram">
-                <br><br>
-                <div class="container">                    
-                    <div class="row" style="width: 100%;">
-                        <div class=" col-md-8">                            
-                            <h3 class="instagram-title"> Instagram </h3>                            
-                        </div>
-                        <div class="col-md-4">
-                            <button  class="btn instagram-btn">Follow Us</button>
-                        </div>  
-                    </div> 
-                    <br><br>
-                    <div class="container">
-                    <div class="row" style="padding-bottom: 5vh;">   
-                        <div class="col-md-3 col-sm-6">
-                            <img src="{% static 'images/inst1.beaa679f.jpg' %}" class="insta-pic">                
-                        </div>                                         
-                        <div class="col-md-3 col-sm-6">
-                            <img src="{% static 'images/inst2.b18d0733.jpg' %}" class="insta-pic">                
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <img src="{% static 'images/inst3.0775580f.jpg' %}" class="insta-pic">                
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <img src="{% static 'images/inst4.60a6347c.jpg' %}" class="insta-pic">                
-                        </div>
-                    </div>       
-                    </div>
-                </div>        
-            </div>
+            </div>            
 
             <div class="map">
-                <p class="map-text">Use ctrl + scroll to zoom the map</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4140.554598842072!2d36.77875000022444!3d-1.2841464773387827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a07377082c1%3A0xf11076ac73674a1d!2sMakueni%20Rd%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1625140241310!5m2!1sen!2ske" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
 
             {% include "footer.html" %}    
@@ -357,8 +359,7 @@
                     height: max-content;
                 }
 
-                .details-btn {            
-                    margin-top: -50px;
+                .details-btn {                                
                     background: black;
                     color: white;
                 }
@@ -368,6 +369,7 @@
                     background-position: 50% 42%;
                     height: 65vh;
                     border-radius: 0;
+                    margin-bottom: 15px;
                 }
 
                 .mag-card-2 {
@@ -375,17 +377,18 @@
                     background-position: 50% 55%;
                     background-size: cover;
                     height: 31vh; 
-                    width: 30vw;           
+                    width: 100%;           
                     margin-left: 15px;      
                     border-radius: 0;
                 }
+
                 .mag-card-3 {
                     background:linear-gradient(#0a0a0ab3,#0a0a0ab3,#0a0a0ab3),url("{% static 'images/sec4c.ae7c09db.webp' %}");
                     background-position: 50% 42%;
                     background-size: cover;
                     height: 31vh;
                     margin-top: 25px;
-                    width: 30vw;     
+                    width: 100%;     
                     margin-left: 15px;      
                     border-radius: 0;
                 }
@@ -398,7 +401,7 @@
                 }
             </style>
             
-            <script src="{% static 'css/home.js' %}"></script>
+            <script src="{% static 'js/home.js' %}"></script>
 
             <!--<style>        
             .videowrapper {
