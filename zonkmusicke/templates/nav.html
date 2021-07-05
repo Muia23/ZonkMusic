@@ -1,68 +1,66 @@
 {% extends 'base.html' %}
 {% load static %}    
-{% block content %}   
-    <nav class="navbar navbar-expand-lg fixed-top nav">
-        <div class="container">
-            <a class="navbar-brand" href="{% url 'home'%}">ZonkMusic</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"><i class="fas fa-sliders-h"></i></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="{% url 'home'%}">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'gallery'%}">Gallery</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'shows'%}">Shows</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'blog'%}">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'events'%}">Events</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about'%}">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'contact'%}">Contact Us</a>
-                </li>
-              </ul>
+    {% block styles %}                    
+        <link href="{% static 'css/nav.scss' %}" rel="stylesheet"/>           
+    {% endblock %}          
+{% block content %}  
+{{block.super}}     
+    <nav class="navbar navbar-expand-sm fixed-top navbar-dark" style="background-color: black; ">        
+        <div class="row" style="width: 100vw;">
+            <div class="col-sm-1 col-md-1"></div>
+            <div class="col-sm-11 col-md-11">
+                <div class="container">
+                    <a class="nav-link" id="icnlink1" href="{% url 'home'%}">ZonkMusic</a>
+                    <a class="btn navbar-toggler" role="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </a>
+                    <div class="navbar-collapse collapse" id="navbarScroll">
+                        <div class="navbar-nav navbar-nav-scroll">                
+                            <a class="nav-link" id="icnlink" aria-current="page" href="{% url 'home'%}">Home <span class="sr-only">(current)</span></a>                               
+                            <a class="nav-link" id="icnlink" href="{% url 'gallery'%}">Gallery</a>                               
+                            <a class="nav-link" id="icnlink" href="{% url 'shows'%}">Shows</a>                                
+                            <a class="nav-link" id="icnlink" href="{% url 'blog'%}">Blog</a>                                
+                            <a class="nav-link" id="icnlink" href="{% url 'events'%}">Events</a>                
+                            <a class="nav-link" id="icnlink" href="{% url 'about'%}">About Us</a>            
+                            <a class="nav-link" id="icnlink" href="{% url 'contact'%}">Contact Us</a>                
+                        </div>
+                    </div>
+                </div>               
             </div>
-        </div>
+        </div>        
     </nav>
+    <style>        
 
-    <style>
-        .nav {
-            background: black !important;            
+        .navbar {
+            width: 100vw !important;
+        }        
+
+        #icnlink1 {
+            color: #a3a8ac;
+            font-weight: 700;
+            padding-left: 10px;
+            font-family: 'Roboto';
+            font-size: 16px;
+        }        
+
+        #icnlink {
+            color: #a3a8ac;
+            font-weight: 700;
+            padding-left: 10px;
+            font-family: 'Roboto';
+            font-size: 16px;
         }
 
-        .navbar-nav li a {                        
-            font-weight: 700; 
-            color: #bbbaba !important;
+        #icnlink1:hover {
+            color: #e43c5c;
+            font-weight: 700;
+            padding-left: 10px;
         }
 
-        .navbar-nav li a:hover {                        
-            font-weight: 700; 
-            color: #ed295d !important;
+        #icnlink:hover {
+            color: #e43c5c;
+            font-weight: 700;
+            padding-left: 10px;
         }
-
-        .navbar-brand {                        
-            font-weight: 700 ; 
-            color: #c7c7c7 !important;
-            font-size: 16px !important;
-        }
-
-        .navbar-toggler {
-            border: 1px solid #b3b2b2 !important;
-        }
-
-        .navbar-toggler-icon {
-            color: #b3b2b2 !important;            
-            padding: 5px;
-        }
-    </style>
+    </style>    
 {% endblock %}

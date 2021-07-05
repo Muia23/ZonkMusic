@@ -10,17 +10,80 @@
 }
 .first-icon {
     height: 80px;
-    width: 80px;                        
+    width: 80px;   
+    padding-left: 6px;
+    padding-top: -30px;        
+    animation: animRotat 5s linear infinite;        
 }
 
-.landing-heading {            
+@keyframes animRotat {
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+       }    
+}
+
+
+.nav-toggler:focus {
+    border: none;
+}
+
+.nav-toggler-icon:focus {
+    border: none;
+}
+
+.word {
+    opacity: 0;
+    width: 100%;
+}
+
+@keyframes w1anim {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes w2anim {
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.w1 {
+    -webkit-animation: w1anim 4s infinite;
+            animation: w1anim 4s infinite;
+}
+
+.w2 {
+    margin-top: -70px;
+    -webkit-animation: w2anim 4s infinite;
+            animation: w2anim 4s infinite;
+}
+
+
+.landing-heading1 {            
     font-weight: 700;
 }
 
 .landing{
     color: #ffffff95;
     margin-top: 10vh;
-    align-items: center;
+    align-items: center;    
 }
 
 #videobg {
@@ -88,7 +151,8 @@
     .slider-card {    
         width: 100%;    
         height: 60.2vh;  
-        border-color: #575757;     
+        border: solid 0.01rem #1c1b1b !important;       
+        background-color: rgb(63, 63, 63);
     }
 
 }
@@ -96,13 +160,16 @@
 @media screen and (min-width: 481px) and (max-width: 1024px){
     .slider-img {
         width: 100%;                  
-        height: 65vh;    
+        height: 65vh; 
+        border: solid 0.01rem #1c1b1b !important;   
+        background-color: rgb(63, 63, 63);              
     }
 
     .slider-card {    
         width: 100%;    
         height: 65.2vh;  
-        border-color: rgb(87, 87, 87) !important;      
+        border: solid 0.01rem #1c1b1b !important;      
+        background-color: rgb(63, 63, 63);   
     }    
 
 }
@@ -116,7 +183,8 @@
     .slider-card {    
         width: 100%;    
         height: 40.2vh;
-        border-color: #575757;    
+        border: solid 0.01rem #1c1b1b !important;    
+        background-color: rgb(63, 63, 63);    
     }
 }
 
@@ -132,11 +200,24 @@
 }
 
 .about {
-    background: rgb(58, 58, 58);
+    background: #3a3a3a;
 }
 
 .about-title {
-    color: #e42f5f;
+    color: #e9528cf8;
+    height: 6vh;
+}
+
+.about-title a {
+    color: #e9528cf8 !important;
+    text-decoration: none !important;
+    animation: blink .8s step-end infinite alternate;
+}
+
+@keyframes blinking {
+    50% {
+        border-color: #3a3a3a;
+    }
 }
 
 .about-text {
@@ -228,38 +309,48 @@
 
 .card-date-2 {
     color: rgb(2, 213, 90);
-    padding: 45px 25px;
+    position: absolute;
+    top: 10%;
+    left: 30px;
     font-weight: 600px;
 }
 
 .card-title-2 {
     color: #d5467d;
-    padding: 20px 0 0 25px;
+    position: absolute;
+    bottom: 17%;
+    left: 30px;
     font-weight: 700;
 }
 
 .card-text-2 {
     color: white;
-    padding: 0 0 0 25px ;
-    margin-top: -10px;
+    position: absolute;
+    bottom: 3%;
+    left: 30px;
 }
 
 .card-date-3 {
     color: rgb(2, 213, 90);
-    padding: 45px 25px;
+    position: absolute;
+    top: 10%;
+    left: 30px;
     font-weight: 600px;
 }
 
 .card-title-3 {
     color: #d5467d;
-    padding: 20px 0 0 25px;
+    position: absolute;
+    bottom: 17%;
+    left: 30px;
     font-weight: 700;
 }
 
 .card-text-3 {
     color: white;
-    padding: 0 0 0 25px ;
-    margin-top: -10px;
+    position: absolute;
+    bottom: 3%;
+    left: 30px;
 }
 
 .people {

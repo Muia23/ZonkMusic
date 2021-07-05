@@ -14,16 +14,52 @@
         </div>
     </div>  
     <div class="about-content">
-        <div class="container" style="text-align: center;">
+        <div class="container">
             <br><br>
-            <h1 class="about-title ">OUR MISSION</h1><!--anim-typewriter-->
-            <p class="about-text ">Growing Entertainment market across the world through the production, promotion and recording of high quaility entertainment</p><!--anim-typewriter-->
+            <div class="about-container">
+                <h1 class="about-title">
+                    <a class="mission" data-period="2000" data-type='[ "OUR MISSION", "OUR MISSION", "OUR MISSION" ]' >
+                        <span class="wrap"></span>                        
+                    </a>
+                </h1>
+            </div>   
+            <div class="about-container">
+                <p class="about-text">
+                    <a class="mission" data-period="2000" data-type='[ "Growing Entertainment market across the world through the production, promotion and recording of high quality entertainment. Zonk Music; we are all about taking Africans music to the world, with the continent having diverse rich culture", "Zonk Music and its multi-platform approach respond to take the needs and interests of Africans. We seek to empower artist and inspire to democratize trends and offer concrete African Music in style. Zonk Music will own and have control over all masters in Zonk Music, copyrights and licenses will be fully owned by Zonk Music" ]' >
+                        <span class="wrap"></span>                        
+                    </a>                                        
+                </p>
+            </div>              
             <br><br>
-            <h1 class="about-title">MARKETING</h1>
-            <p class="about-text">Zonk Music will distribute, produce, manufacture, market, promote and enforce its masters owner</p>
+            <div class="about-container">
+                <h1 class="about-title">
+                    <a class="mission" data-period="2000" data-type='[ "MARKETING", "MARKETING", "MARKETING" ]' >
+                        <span class="wrap"></span>                        
+                    </a>                    
+                </h1>
+            </div>    
+            <div class="about-container">
+                <p class="about-text">
+                    <a class="mission" data-period="2000" data-type='[ "We will have multi-faceted promotional strategy and hire independent record promoters, with having other platforms inhouse such as Zonk Magazine, Zonk Tv, Zonk News and Zonk Radio this gives Zonk Music a strong promotional print, video and medium.", "Zonk Music will distribute, produce, manufacture, market, promote and enforce its masters owned 100% through various platforms." ]' >
+                        <span class="wrap"></span>                        
+                    </a>                                        
+                </p>
+            </div>                    
             <br><br>
-            <h1 class="about-title">EXECUTIVE SUMMARY</h1>
-            <p class="about-text">Zonk Music, chairman Andrew Chimpondah a qualified chartered accountant who will oversee all our</p>            
+            <div class="about-container">
+                <h1 class="about-title">
+                    <a class="mission" data-period="2000" data-type='[ "EXECUTIVE SUMMARY", "EXECUTIVE SUMMARY", "EXECUTIVE SUMMARY" ]' >
+                        <span class="wrap"></span>                        
+                    </a>                                        
+                </h1>
+            </div>      
+            <div class="about-container">
+                <p class="about-text">
+                    <a class="mission" data-period="2000" data-type='[ "Our Head of Zonk Music Martin Wanga known as Pinto IQ is a music specialist who believes music heals and connects the world, having him on board indeed is a privilege and at Zonk Music we fully support him.", "Zonk Music, chairman Andrew Chimpondah a qualified chartered accountant who will oversee all our financials. He maintains strong affiliations in the industry and with his hard work, dedication and humbleness we believe Africa is in good hands.", "C.E.O Dineo Mante Phasha a black woman who is holding a Bachelor degree in accounting and also her being a public figure we at Zonk Music believe our artist will be protected and be treated with fairness." ]' >
+                        <span class="wrap"></span>                        
+                    </a>                                                                            
+                </p>
+            </div>                  
         </div>    
         <br>    
     </div>
@@ -35,32 +71,32 @@
 
             <div class="row">                      
                 <div class="col-md-4" style="text-align: center;">
-                    <img class="staff-img" src="{% static 'images/pinto.23cf2d80.jpg' %}">
+                    <div class="staff-card1 card"></div>  
                     <h5 class="staff-name">PINTO IQ</h5>
-                    <p class="staff-pos">Zonkmusic Head</p>
+                    <p class="staff-pos">Zonkmusic Head</p>                    
                 </div>
-                <div class="col-md-4">
-                    <img class="staff-img" src="{% static 'images/bl2.6084eded.jpg' %}">
+                <div class="col-md-4"> 
+                    <div class="staff-card2 card"></div>
                     <h5 class="staff-name">Fikile Madinoge</h5>
                     <p class="staff-pos">Founder</p>
                 </div>
                 <div class="col-md-4">
-                    <img class="staff-img" src="{% static 'images/staf8.e753bf8a.jpg' %}">
+                    <div class="staff-card3 card"></div>                    
                     <h5 class="staff-name">Winnie Jesca</h5>
                     <p class="staff-pos">Events Manager</p>
                 </div>                 
                 <div class="col-md-4" style="text-align: center;">
-                    <img class="staff-img" src="{% static 'images/staf5.2cfe582b.jpg' %}">
+                    <div class="staff-card4 card"></div>                                        
                     <h5 class="staff-name">Dj Shinsky</h5>
                     <p class="staff-pos">Producer</p>
                 </div>
                 <div class="col-md-4">
-                    <img class="staff-img" src="{% static 'images/staf6.cee5c200.jpg' %}">
+                    <div class="staff-card5 card"></div>                                        
                     <h5 class="staff-name">Dj Zozo</h5>
                     <p class="staff-pos">Videographer</p>
                 </div>
                 <div class="col-md-4">
-                    <img class="staff-img" src="{% static 'images/zonk1.1774abb0.jpg' %}">
+                    <div class="staff-card6 card"></div>                                        
                     <h5 class="staff-name">Dj Flip</h5>
                     <p class="staff-pos">Photographer</p>
                 </div>                 
@@ -93,8 +129,115 @@
             to {background-position: 0 -180px;}            
         }          
         
+        .staff-card1 {
+            background: url(" {% static 'images/pinto.23cf2d80.jpg' %}");
+            background-size: cover;  
+            background-repeat: no-repeat;             
+            height: 52vh;
+            width: 100%;
+        }
+
+        .staff-card2 {
+            background: url(" {% static 'images/bl2.6084eded.jpg' %}");
+            background-size: cover; 
+            background-repeat: no-repeat;       
+            height: 52vh;
+            width: 100%;
+        }
+
+        .staff-card3 {
+            background: url(" {% static 'images/staf8.e753bf8a.jpg' %}");            
+            background-size: cover;   
+            background-repeat: no-repeat;           
+            height: 52vh;
+            width: 100%;
+        }
+
+        .staff-card4 {
+            background: url("{% static 'images/staf5.2cfe582b.jpg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;               
+            height: 52vh;
+            width: 100%;
+        }
+
+        .staff-card5 {
+            background: url(" {% static 'images/staf6.cee5c200.jpg' %}");
+            background-size: cover;  
+            background-repeat: no-repeat;            
+            height: 52vh;
+            width: 100%;
+        }
+
+        .staff-card6 {
+            background: url(" {% static 'images/zonk1.1774abb0.jpg' %}");
+            background-size: cover; 
+            background-repeat: no-repeat;             
+            height: 52vh;
+            width: 100%;
+        }
+        
     </style>
 
-    <script src="{% static 'js/about.js' %}"></script>
+    <script src="{% static 'js/about.js' %}">
+    </script>
+    <script>
+        var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('mission');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".mission > .wrap { border-right: 0.04em solid #c7c7c7  }";
+        document.body.appendChild(css);
+    };
+    </script>
 
 {% endblock %}

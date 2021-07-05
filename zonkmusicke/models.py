@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.fields import BLANK_CHOICE_DASH
 
 # Create your models here.
 class HomeLanding(models.Model):
@@ -22,6 +23,7 @@ class HomeAbout(models.Model):
     def get_homeabout(cls):
         homabout = cls.objects.get(pk=1)
         return homabout
+
 
 class HomeShows(models.Model):
     showdate = models.CharField(max_length= 60)

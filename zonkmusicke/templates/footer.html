@@ -27,30 +27,30 @@
                 <div class="row">
                     <div class="col">
                         <p class="footer-title">ABOUT</p>
-                        <a href="{% url 'about'%}" ><p class="footer-text">Who we are</p></a>
-                        <a href="{% url 'about'%}" ><p class="footer-text-1">Our staff</p></a>
+                        <p><a class="footer-text" href="{% url 'about'%}" >Who we are</a></p>
+                        <p class="footer-text-1"><a href="{% url 'about'%}" >Our staff</a></p>
                     </div>
                     <div class="col">
                         <p class="footer-title">BLOG</p>
-                        <a href="{% url 'blog'%}" ><p class="footer-text">Articles</p></a>                            
+                        <a class="footer-text" href="{% url 'blog'%}" >Articles</a>                            
                     </div>
                     <div class="col">
                         <p class="footer-title">SHOWS</p>
-                        <a href="{% url 'shows'%}" ><p class="footer-text">Our shows</p></a> 
+                        <a class="footer-text" href="{% url 'shows'%}" >Our shows</a> 
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <p class="footer-title">EVENTS</p>
-                        <a href="{% url 'events'%}" ><p class="footer-text">Our Events</p></a>
+                        <a class="footer-text" href="{% url 'events'%}" >Our Events</a>
                     </div>
                     <div class="col">
                         <p class="footer-title">GALLERY</p>
-                        <a href="{% url 'gallery'%}" ><p class="footer-text">Photos</p></a>
+                        <a class="footer-text" href="{% url 'gallery'%}" >Photos</a>
                     </div>
                     <div class="col">
                         <p class="footer-title">CONTACTS</p>
-                        <a href="{% url 'contact'%}" ><p class="footer-text">Contact Info</p></a>
+                        <a class="footer-text" href="{% url 'contact'%}" >Contact Info</a>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,16 @@
         .footer-icon {
             height: 80px;
             width: 80px;
-
+            animation: animRotat 5s linear infinite;                     
+        }
+        
+        @keyframes animRotat {
+            0%{
+                transform: rotateY(0deg);
+            }
+            100%{
+                transform: rotateY(360deg);
+               }    
         }
 
         .rights-text {
@@ -90,17 +99,21 @@
 
         .footer-text {
             color: rgb(100, 100, 100);
-            font-size: 20px;
+            font-size: 15px;
             padding: 0;
             font-weight: 700;
+            text-decoration: none !important;
         }
 
-        .footer-text-1 {
+        .footer-text-1 {            
+            margin-top: -17px;
+        }
+        .footer-text-1 a{
             color: rgb(100, 100, 100);
-            font-size: 20px;
+            font-size: 15px;
             padding: 0;
             font-weight: 700;
-            margin-top: -15px;
+            text-decoration: none !important;
         }
 </style>   
 {% endblock %}
