@@ -1,0 +1,43 @@
+.landing-title {
+    color: #f7567e;
+    font-size: 56px;
+    font-weight: 400;
+    margin-top: 30vh;
+    padding-left: 10px;
+}
+
+.landing-text-1 {            
+    color: #d6d2d2;
+    display: inline-block;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.landing-text-2 {
+    color: #32ea91;
+    display: inline-block;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+.events {
+    background: #424549;
+}
+
+.section-title {
+    text-align: center;
+    color: #c2c2c5;
+    font-size: 56px;
+    font-weight: 400;
+}
+
+.event-img {
+    width: 21.5vw;
+    height: 40vh;
+}
+
+.event-name {
+    color: white;
+    font-weight: 600;
+    padding-top: 4px;
+}

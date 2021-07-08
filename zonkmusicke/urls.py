@@ -11,7 +11,4 @@ urlpatterns =[
     url(r'^contact$',views.contact,name ='contact'),
     url(r'^events$',views.events,name ='events'),
     url(r'^gallery$',views.gallery,name ='gallery'),
-]
-
-if settings.DEBUG:
-    urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 import os
 import dj_database_url
+from django.conf import settings
 import django_heroku
 from decouple import config,Csv
 from pathlib import Path
