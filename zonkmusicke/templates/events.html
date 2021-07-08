@@ -7,40 +7,53 @@
     {{block.super}}                     
     {% include "nav.html" %}    
     <div class="landing">
-        <div class="container">        
-            <h2 class="landing-title">Events</h2>
-            <p class="landing-text-1">Home  / </p>
-            <p class="landing-text-2"> Events</p>
-        </div>        
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-11">
+                <div class="container">        
+                    <h2 class="landing-title">Events</h2>
+                    <p class="landing-text-1">Home  / </p>
+                    <p class="landing-text-2"> Events</p>
+                </div>        
+            </div>
+        </div>
     </div>  
 
     <div class="events">
-        <div class="container">
-            <br>
-            <h1 class="section-title">Events</h1>
-            <div class="row">
-                <div class="col">
-                    <img class="event-img" src="{% static 'images/party.6df1c8c1.jpg' %}">
-                    <h5 class="event-name">Village Girls at K.O.G Party</h5>
-                </div>
-                <div class="col">
-                    <img class="event-img" src="{% static 'images/event2.efc7aa12.jpg' %}">
-                    <h5 class="event-name">Opening Party</h5>
-                </div>
-                <div class="col">
-                    <img class="event-img" src="{% static 'images/cool2.893cb390.jpg' %}">
-                    <h5 class="event-name">K.O.G(Kenyans On Gram Party)</h5>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="container">
+                    <br>
+                    <h1 class="section-title">Events</h1>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card event-img1"></div>                    
+                            <h5 class="event-name">Village Girls at K.O.G Party</h5>
+                        </div>
+                        <div class="col-md-4">  
+                            <div class="card event-img2"></div>                                     
+                            <h5 class="event-name">Opening Party</h5>
+                        </div>
+                        <div class="col-md-4"> 
+                            <div class="card event-img3"></div>                                       
+                            <h5 class="event-name">K.O.G(Kenyans On Gram Party)</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="col-md-1"></div>            
         </div>
+        <br><br><br>
     </div>
 
     {% include "footer.html" %}    
 
     <style>
         .landing {
-            height: 55vh;
-            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/show.c2789dd3.jpg' %}");
+            height: 61vh;
+            background: linear-gradient(#0a0a0a77,#0a0a0a77,#0a0a0a77),url("{% static 'images/show.c2789dd3.jpg' %}");
             background-repeat: repeat;
             background-attachment: fixed;            
             background-size: cover;
@@ -58,6 +71,30 @@
         @keyframes backgroundScroll {
             from {background-position: 0 5%;}
             to {background-position: 0 -180px;}            
+        }
+
+        .event-img1 {
+            background:url("{% static 'images/party.6df1c8c1.jpg' %}");  
+            width: 100%;          
+            height: 40vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .event-img2 {
+            background:url("{% static 'images/event2.efc7aa12.jpg' %}");  
+            width: 100%;          
+            height: 40vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .event-img3 {
+            background:url("{% static 'images/cool2.893cb390.jpg' %}");  
+            width: 100%;          
+            height: 40vh;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
         
     </style>

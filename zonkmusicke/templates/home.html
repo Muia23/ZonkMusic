@@ -22,14 +22,14 @@
                         <div class="row">
                             <div class="col"></div>
                             <div class="col-md-8">
-                                <div class="container-fluid">
-                                    <div class="word w1">
-                                        <h3 class="landing-heading1">{{homland.landingheading}}</h3>
-                                        <h5 class="landing-text1">{{homland.landingtext}}</h5>
+                                <div class="container">
+                                    <div class="word w1 ">
+                                        <h3 class="landing-heading">{{homland.landingheading}}</h3>
+                                        <h5 class="landing-text">{{homland.landingtext}}</h5>
                                     </div>
-                                    <div class="word w2">
-                                        <h3 class="landing-heading2">Promoting Africa Local Content</h3>
-                                        <h5 class="landing-text2">Showcasing thr best of African untapped artistic talent</h5>
+                                    <div class="word w2 ">
+                                        <h3 class="landing-heading">Promoting Africa Local Content</h3>
+                                        <h5 class="landing-text">Showcasing the best of African untapped artistic talent</h5>
                                     </div>
                                 </div>                                
                             </div>
@@ -39,7 +39,7 @@
                 </div>
             </div>
 
-            <div class="container-fluid genre-background">
+            <div class="container-fluid genre-background" style=" width: 100vw !important;">
                 <h1 class="genre-text">Music Genres</h1>
             </div>   
             
@@ -131,7 +131,7 @@
             <div class="container-fluid about">
                 <br><br>
                 <div class="container">                    
-                    <div class="row" style="padding:20px;">
+                    <div class="row">
                         <div class="row" style="width: 100%;">
                             <div class="col-md-1"></div>                    
                             <div class="col-md-10">                                
@@ -142,137 +142,143 @@
                                     </div>
                                     <div class="col-md-1"></div>
                                     <div class="col-md-6">
-                                        <br><br>
+                                        <br>
                                         <h1 class="about-title">
-                                            <a class="mission" data-period="3000" data-type='[ "{{homabout.abouttitle}}", "What we do!" ]' >
+                                            <a class="mission" data-period="3000" data-type='[ "Who We Are!", "What We Do!" ]' >
                                                 <span class="wrap"></span>                        
                                             </a>                                                    
                                         </h1>
                                         <p class="about-text">{{homabout.aboutpara1}}</p>
                                         <p class="about-text">{{homabout.aboutpara2}}</p>                        
-                                        <a href="{% url 'about'%}" ><button class="btn btn-danger about-button">Curious?</button></a>
+                                        <a href="{% url 'about'%}" ><button class="btn btn-danger about-button"><span class="padding: 0 35px;">Curious?</span></button></a>
                                     </div>
                                 </div>
                             </div>                    
                             <div class="col-md-1"></div>                    
                         </div>                                                
                     </div>
-                    <br><br>    
+                    <br><br><br>   
                 </div>        
-            </div>
-            
+            </div>            
             <div class="shows row">   
                 <div class="container">
                 <br><br>
-                    <div class="container">                    
-                        <h1 class="shows-title">Your Fav Shows</h1>            
-                        <div class="shows-table">
-                            {% for homshow in homshows %}                        
-                            <div class="row shows-row">
-                                <div class="col-md-3 row-date">
-                                    <p class="date-text">{{homshow.showdate}}</p>
-                                </div>
-                                <div class="col-md-3 row-show">
-                                    <h4 class="show-name">{{homshow.showtitle}}</h4>
-                                    <p class="show-host">{{homshow.showhost}}</p>
-                                </div>  
-                                <div class="col-md-3 row-time">
-                                    <p class="show-time">{{homshow.eattime}}</p>
-                                    <p class="show-time">{{homshow.cattime}}</p>
-                                </div>                                      
-                                <div class="col-md-3 row-detail">
-                                    <button class="btn details-btn">Find Details</button>                                
-                                </div>                            
-                            </div>                                                 
-                            {% endfor %}               
-                            <!--<tr class="shows-row">                    
-                            <td class="row-date">
-                                <p class="date-text">MON-FRI</p>
-                            </td>
-                            <td class="row-show">
-                                <h4 class="show-name">Morning Jungle with John</h4>
-                                <p class="show-host">John</p>
-                            </td>  
-                            <td class="row-time">
-                                <p class="show-time">4:00AM - 7:00AM EAT</p>
-                                <p class="show-time">3:00AM - 6:00PM CAT</p>
-                            </td>                                      
-                            <td class="row-detail">
-                                <button class="btn details-btn">Find Details</button>
-                            </td>                  
-                        </tr>
-                        <tr class="shows-row">
-                            <td class="row-date">
-                                <p class="date-text">MON-SUN</p>
-                            </td>
-                            <td class="row-show">
-                                <h4 class="show-name">3G's</h4>
-                                <p class="show-host">Teddy, Honey and Gigi</p>
-                            </td>  
-                            <td class="row-time">
-                                <p class="show-time">1:00PM - 4:00PM EAT</p>
-                                <p class="show-time">12:00PM - 3:00PM CAT</p>
-                            </td>                                      
-                            <td class="row-detail">
-                                <button class="btn details-btn">Find Details</button>
-                            </td>
-                        </tr>
-                        <tr class="shows-row">                                        
-                            <td class="row-date">
-                                <p class="date-text">MON-FRI</p>
-                            </td>
-                            <td class="row-show">
-                                <h4 class="show-name">Monchoka</h4>
-                                <p class="show-host">Zozo, Kyle & Jeff</p>
-                            </td>  
-                            <td class="row-time">
-                                <p class="show-time">4:00PM - 7:00PM EAT</p>
-                                <p class="show-time">3:00PM - 6:00PM CAT</p>
-                            </td>                                      
-                            <td class="row-detail">
-                                <button class="btn details-btn">Find Details</button>
-                            </td>
-                        </tr>
-                        <tr class="shows-row">
-                            <td class="row-date">
-                                <p class="date-text">MON-FRI & SAT-SUN</p>
-                            </td>
-                            <td class="row-show">
-                                <h4 class="show-name">Them Boys</h4>
-                                <p class="show-host">Tim and Pablo</p>
-                            </td>  
-                            <td class="row-time">
-                                <p class="show-time">1:00AM - 4:00AM EAT</p>
-                                <p class="show-time">12:00PM - 3:00AM CAT</p>
-                            </td>                                      
-                            <td class="row-detail">
-                                <button class="btn details-btn">Find Details</button>
-                            </td>
-                        </tr>
-                        <tr class="shows-row">
-                            <td class="row-date">
-                                <p class="date-text">SAT-SUN</p>
-                            </td>
-                            <td class="row-show">
-                                <h4 class="show-name">PINTO IQ ON THE DECKS</h4>
-                                <p class="show-host">Pinto</p>
-                            </td>  
-                            <td class="row-time">
-                                <p class="show-time">10PM - 1AM</p>                        
-                            </td>                                      
-                            <td class="row-detail">
-                                <button class="btn details-btn">Find Details</button>
-                            </td>
-                        </tr>-->
-                        </div> 
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <h1 class="shows-title">Your Fav Shows</h1>            
+                            <div class="shows-table">
+                                {% for homshow in homshows %}                        
+                                <div class="row shows-row">
+                                    <div class="col-md-3 row-date">
+                                        <p class="date-text">{{homshow.showdate}}</p>
+                                    </div>
+                                    <div class="col-md-3 row-show">
+                                        <h4 class="show-name">{{homshow.showtitle}}</h4>
+                                        <p class="show-host">{{homshow.showhost}}</p>
+                                    </div>  
+                                    <div class="col-md-3 row-time">
+                                        <h5 class="show-time">{{homshow.eattime}}</h5>
+                                        <h5 class="show-time">{{homshow.cattime}}</h5>
+                                    </div>                                      
+                                    <div class="col-md-3 row-detail">
+                                        <button class="btn details-btn">Find Details</button>                                
+                                    </div>                            
+                                </div>                                                 
+                                {% endfor %}               
+                                <!--<tr class="shows-row">                    
+                                <td class="row-date">
+                                    <p class="date-text">MON-FRI</p>
+                                </td>
+                                <td class="row-show">
+                                    <h4 class="show-name">Morning Jungle with John</h4>
+                                    <p class="show-host">John</p>
+                                </td>  
+                                <td class="row-time">
+                                    <p class="show-time">4:00AM - 7:00AM EAT</p>
+                                    <p class="show-time">3:00AM - 6:00PM CAT</p>
+                                </td>                                      
+                                <td class="row-detail">
+                                    <button class="btn details-btn">Find Details</button>
+                                </td>                  
+                            </tr>
+                            <tr class="shows-row">
+                                <td class="row-date">
+                                    <p class="date-text">MON-SUN</p>
+                                </td>
+                                <td class="row-show">
+                                    <h4 class="show-name">3G's</h4>
+                                    <p class="show-host">Teddy, Honey and Gigi</p>
+                                </td>  
+                                <td class="row-time">
+                                    <p class="show-time">1:00PM - 4:00PM EAT</p>
+                                    <p class="show-time">12:00PM - 3:00PM CAT</p>
+                                </td>                                      
+                                <td class="row-detail">
+                                    <button class="btn details-btn">Find Details</button>
+                                </td>
+                            </tr>
+                            <tr class="shows-row">                                        
+                                <td class="row-date">
+                                    <p class="date-text">MON-FRI</p>
+                                </td>
+                                <td class="row-show">
+                                    <h4 class="show-name">Monchoka</h4>
+                                    <p class="show-host">Zozo, Kyle & Jeff</p>
+                                </td>  
+                                <td class="row-time">
+                                    <p class="show-time">4:00PM - 7:00PM EAT</p>
+                                    <p class="show-time">3:00PM - 6:00PM CAT</p>
+                                </td>                                      
+                                <td class="row-detail">
+                                    <button class="btn details-btn">Find Details</button>
+                                </td>
+                            </tr>
+                            <tr class="shows-row">
+                                <td class="row-date">
+                                    <p class="date-text">MON-FRI & SAT-SUN</p>
+                                </td>
+                                <td class="row-show">
+                                    <h4 class="show-name">Them Boys</h4>
+                                    <p class="show-host">Tim and Pablo</p>
+                                </td>  
+                                <td class="row-time">
+                                    <p class="show-time">1:00AM - 4:00AM EAT</p>
+                                    <p class="show-time">12:00PM - 3:00AM CAT</p>
+                                </td>                                      
+                                <td class="row-detail">
+                                    <button class="btn details-btn">Find Details</button>
+                                </td>
+                            </tr>
+                            <tr class="shows-row">
+                                <td class="row-date">
+                                    <p class="date-text">SAT-SUN</p>
+                                </td>
+                                <td class="row-show">
+                                    <h4 class="show-name">PINTO IQ ON THE DECKS</h4>
+                                    <p class="show-host">Pinto</p>
+                                </td>  
+                                <td class="row-time">
+                                    <p class="show-time">10PM - 1AM</p>                        
+                                </td>                                      
+                                <td class="row-detail">
+                                    <button class="btn details-btn">Find Details</button>
+                                </td>
+                            </tr>-->
+                            </div> 
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                        
                         <br><br>                    
-                    </div>   
+                    
                 </div>     
             </div>
 
             <div class="blogs">
-                <br>
-                <p class="blog-title"> Blogs & Articles</p>
+                <br><br>
+                <h3 class="blog-title"> Blogs & Articles</h3>
+                <br><br>
                 <div class="row" style="width: 100vw;">
                     <div class="col-md-1"></div>
                     <div class="col-md-11">
@@ -390,12 +396,20 @@
                     background-size: cover;
                     background-position: center;
                     background-attachment: fixed;
+                    background-repeat: no-repeat;
                     height: max-content;
+                    margin-top: -1px;
                 }
 
                 .details-btn {                                
                     background: black;
-                    color: white;
+                    font-size: 16px;
+                    color: #ffffff;
+                    font-family: 'Roboto';
+                }
+
+                .details-btn:hover {
+                    color: #ffffff;
                 }
 
                 .mag-card-1 {
@@ -532,7 +546,7 @@
                 // INJECT CSS
                 var css = document.createElement("style");
                 css.type = "text/css";
-                css.innerHTML = ".mission > .wrap { border-right: 0.04em solid #e9528cf8; animation-name: blinking; animation-duration: 1s; animation-iteration-count: 100;}";
+                css.innerHTML = ".mission > .wrap { border-right: 0.04em solid #f7567e; animation-name: blinking; animation-duration: 1s; animation-iteration-count: 100;}";
                 document.body.appendChild(css);
             };
             </script>

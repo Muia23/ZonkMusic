@@ -1,27 +1,34 @@
 .landing-title {
-    padding: 25vh 0 0 0;
-    color: #d5467d;
-    font-size: 45px;
+    color: #f7567e;
+    font-size: 56px;
+    font-weight: 400;
+    margin-top: 30vh;
+    padding-left: 10px;
 }
 
 .landing-text-1 {            
-    color: white;
+    color: #d6d2d2;
     display: inline-block;
+    font-size: 16px;
+    padding-left: 10px;
 }
 
 .landing-text-2 {
-    color: #0beb82;
+    color: #32ea91;
     display: inline-block;
     padding-left: 15px;
+    font-size: 16px;
 }
 
 .events {
-    background: #575757;
+    background: #424549;
 }
 
 .section-title {
     text-align: center;
-    color: #c0c0c0;
+    color: #c2c2c5;
+    font-size: 56px;
+    font-weight: 400;
 }
 
 .event-img {

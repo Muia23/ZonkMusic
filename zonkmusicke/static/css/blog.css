@@ -1,18 +1,23 @@
 .landing-title {
-    padding: 25vh 0 0 0;
-    color: #d5467d;
-    font-size: 45px;
+    color: #f7567e;
+    font-size: 56px;
+    font-weight: 400;
+    margin-top: 30vh;
+    padding-left: 10px;
 }
 
 .landing-text-1 {            
-    color: white;
+    color: #d6d2d2;
     display: inline-block;
+    font-size: 16px;
+    padding-left: 10px;
 }
 
 .landing-text-2 {
-    color: #0beb82;
+    color: #32ea91;
     display: inline-block;
     padding-left: 15px;
+    font-size: 16px;
 }
 
 .content {
@@ -25,15 +30,12 @@
 
 .blog-img {
     display: inline-block;
+    margin-top: -7px;
 }
 
 .blog-text {
     color: white;
     display: inline-block;
+    margin-top: 15px;
 }
 
-.more-btn {
-    color: white;
-    border: solid rgba(155, 155, 155, 0.652) 0.01rem;
-    margin: 10px 0;
-}

@@ -7,7 +7,7 @@
 <div class="footer">
     <br><br><br><br>
     <div class="row" style="width: 100%;">
-        <div class="col-md-6">
+        <div class="col-md-5">
             <div class="container">
                 <div class="row">
                     <div class="col"></div>
@@ -22,33 +22,33 @@
                 </div>                    
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-7">
             <div class="container" style="width: 60%;">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-md-4">
                         <p class="footer-title">ABOUT</p>
                         <p><a class="footer-text" href="{% url 'about'%}" >Who we are</a></p>
                         <p class="footer-text-1"><a href="{% url 'about'%}" >Our staff</a></p>
                     </div>
-                    <div class="col">
+                    <div class="col-md-4">
                         <p class="footer-title">BLOG</p>
                         <a class="footer-text" href="{% url 'blog'%}" >Articles</a>                            
                     </div>
-                    <div class="col">
+                    <div class="col-md-4">
                         <p class="footer-title">SHOWS</p>
                         <a class="footer-text" href="{% url 'shows'%}" >Our shows</a> 
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-md-4">
                         <p class="footer-title">EVENTS</p>
                         <a class="footer-text" href="{% url 'events'%}" >Our Events</a>
                     </div>
-                    <div class="col">
+                    <div class="col-md-4">
                         <p class="footer-title">GALLERY</p>
                         <a class="footer-text" href="{% url 'gallery'%}" >Photos</a>
                     </div>
-                    <div class="col">
+                    <div class="col-md-4">
                         <p class="footer-title">CONTACTS</p>
                         <a class="footer-text" href="{% url 'contact'%}" >Contact Info</a>
                     </div>
@@ -67,7 +67,7 @@
         .footer-icon {
             height: 80px;
             width: 80px;
-            animation: animRotat 5s linear infinite;                     
+            animation: animRotat 10s linear infinite;                     
         }
         
         @keyframes animRotat {
@@ -93,15 +93,18 @@
 
         .footer-title {
             color: white;
-            font-size: 17px;
-            font-weight: bold;
+            font-size: 16px;
+            font-weight: 500;
+            font-family: 'Roboto';
         }
 
         .footer-text {
-            color: rgb(100, 100, 100);
-            font-size: 15px;
+            color: #808080;
+            font-size: 16px;
             padding: 0;
-            font-weight: 700;
+            margin: 0;
+            font-weight: 400;
+            font-family: 'Roboto';
             text-decoration: none !important;
         }
 
@@ -115,5 +118,22 @@
             font-weight: 700;
             text-decoration: none !important;
         }
+
+        .footer-text:hover {
+            color: rgb(100, 100, 100);
+        }
+
+        .footer-text:focus {
+            color: rgb(100, 100, 100);
+        }
+
+        .footer-text-1 a:hover {
+            color: rgb(100, 100, 100);
+        }
+
+        .footer-text-1 a:focus {
+            color: rgb(100, 100, 100);
+        }
+        
 </style>   
 {% endblock %}

@@ -6,149 +6,181 @@
 {% block content %}                     
     {{block.super}}     
     {% include "nav.html" %}    
-
+\
     <div class="landing">
-        <div class="container">        
-            <h2 class="landing-title">Gallery</h2>
-            <p class="landing-text-1">Home  / </p>
-            <p class="landing-text-2"> Gallery</p>
-        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-9">
+                <div class="container">        
+                    <h2 class="landing-title">Gallery</h2>
+                    <p class="landing-text-1">Home  / </p>
+                    <p class="landing-text-2"> Gallery</p>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>        
     </div>    
     <div class="images">
         <br><br>
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-6">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6" >
                     <div class="row">
                         <div class="over-lay">
-                            <div class="container gal-img">
-                                <img class="gallery-img" src="{% static 'images/back.80078029.jpg' %}">                          
-                                <div class="social">
-                                    <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
-                                    <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
-                                </div>                                
+                            <div class="container gall-img">
+                                <div class="card gal-img1">
+                                    <div class="social">
+                                        <p><i class="fab fa-instagram"></i></p>
+                                        <p><i class="fab fa-facebook-f"></i></p>                                    
+                                    </div>                                    
+                                    <!--<div class="social">
+                                        <div class="row" style="width: 100%;">
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-4">
+                                                <div class="container gi">
+                                                    <p class="gram-icon"><i class="fab fa-instagram"></i></p>
+                                                </div>                                           
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="container gi">
+                                                    <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
+                                                </div>                                            
+                                            </div>
+                                            <div class="col-md-2"></div>
+                                        </div>                                                                        
+                                    </div>     -->                          
+                                </div>                                                                
                             </div>                            
                         </div>
                     </div>
                     <div class="row">
                         <div class="over-lay">
-                            <div class="container gal-img">
-                                <img class="gallery-img" src="{% static 'images/inst3.0775580f.jpg' %}">  
-                                <div class="social">
-                                    <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
-                                    <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
-                                </div>                                
+                            <div class="container gall-img">
+                                <div class="card gal-img2">
+                                    <div class="social">
+                                        <p class="gram-icon"><i class="fab fa-instagram"></i></p>
+                                        <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
+                                    </div>                                
+                                </div>                                                                
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
                     <div class="over-lay">
-                        <div class="container gal-img">
-                            <img class="gallery-img" src="{% static 'images/zonk3.bede8716.jpg' %}">  
-                            <div class="social">
-                                <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
-                                <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
-                            </div>                                
+                        <div class="container gall-img">
+                            <div class="card gal-img3">
+                                <div class="social">
+                                    <p class="gram-icon"><i class="fab fa-instagram"></i></p>
+                                    <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
+                                </div>                                
+                            </div>                            
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
                     <div class="row">
                         <div class="over-lay">
-                            <div class="container gal-img">
-                                <img class="gallery-img" src="{% static 'images/inst2.b18d0733.jpg' %}">  
+                            <div class="container gall-img">
+                                <div class="card gal-img4"></div>
                                 <div class="social">
-                                    <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
-                                    <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
+                                    <p class="gram-icon"><i class="fab fa-instagram"></i></p>
+                                    <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
                                 </div>     
                             </div>
                         </div>                
                     </div>
                     <div class="row">
                         <div class="over-lay">
-                            <div class="container gal-img">
-                                <img class="gallery-img" src="{% static 'images/inst1.beaa679f.jpg' %}">  
+                            <div class="container gall-img">
+                                <div class="card gal-img5"></div>
                                 <div class="social">
-                                    <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
-                                    <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
+                                    <p class="gram-icon"><i class="fab fa-instagram"></i></p>
+                                    <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
                                 </div>     
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
                     <div class="over-lay">
-                        <div class="container gal-img">
-                            <img class="gallery-img" src="{% static 'images/3gs.1180f2f2.jpg' %}">   
+                        <div class="container gall-img">
+                            <div class="card gal-img6"></div>
                             <div class="social">
-                                <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
-                                <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
+                                <p class="gram-icon"><i class="fab fa-instagram"></i>></p>
+                                <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
                             </div>                            
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
                     <div class="row">
                         <div class="over-lay">
-                            <div class="container gal-img">
-                                <img class="gallery-img" src="{% static 'images/event2.efc7aa12.jpg' %}">                          
+                            <div class="container gall-img">
+                                <div class="card gal-img7"></div>
                                 <div class="social">
-                                    <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
-                                    <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
+                                    <p class="gram-icon"><i class="fab fa-instagram"></i></p>
+                                    <p class="fb-icon"><i class="fab fa-facebook-f"></i>></p>
                                 </div>                            
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="over-lay">
-                            <div class="container gal-img">
-                                <img class="gallery-img" src="{% static 'images/zonk1.1774abb0.jpg' %}">                          
+                            <div class="container gall-img">
+                                <div class="card gal-img8"></div>
                                 <div class="social">
-                                    <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
-                                    <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
+                                    <p class="gram-icon"><i class="fab fa-instagram"></i></p>
+                                    <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
                                 </div>                            
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
                    <div class="row">
                         <div class="over-lay">
-                            <div class="container gal-img">
-                                <img class="gallery-img" src="{% static 'images/monchoka.2863542a.jpg' %}">                          
+                            <div class="container gall-img">
+                                <div class="card gal-img9"></div>
                                 <div class="social">
-                                    <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
-                                    <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
+                                    <p class="gram-icon"><i class="fab fa-instagram"></i></p>
+                                    <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
                                 </div>
                             </div>
                         </div>
                    </div> 
                    <div class="row">
                         <div class="over-lay">
-                            <div class="container gal-img">
-                                <img class="gallery-img" src="{% static 'images/house.6bee06fc.jpg' %}">                         
-                                <div class="social">
-                                    <p class="gram-icon"><!--<i class="fab fa-instagram">-->@</p>
-                                    <p class="fb-icon"><!--<i class="fab fa-facebook-f">-->@</p>
-                                </div>
+                            <div class="container gall-img">
+                                <div class="card gal-img10">
+                                    <div class="social">
+                                        <p class="gram-icon"><i class="fab fa-instagram"></i></p>
+                                        <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
+                                    </div>
+                                </div>                                
                             </div>
                         </div>
                    </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <br><br>
+            <div class="col-md-1"></div>
+            </div>
+            <br><br>
+        </div>        
     </div>
 
     {% include "footer.html" %}    
 
     <style>
         .landing {
-            height: 55vh;
-            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/recos.95899684.jpg' %}");
+            height: 61vh;
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/gale9.5aafd3d4.jpg' %}");
             background-repeat: repeat;
             background-attachment: fixed;            
             background-size: cover;
@@ -166,6 +198,205 @@
         @keyframes backgroundScroll {
             from {background-position: 0 0;}
             to {background-position: 0 -180px;}            
-        }                   
+        }  
+        
+        .gall-img {
+            border: solid 0.01rem gray;
+            padding: 10px;
+        }        
+        
+        .gal-img1 {
+            background: url("{% static 'images/back.80078029.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            height: 28vh;                       
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .gal-img1:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/back.80078029.jpg' %}");            
+            background-size: 120%;            
+            background-position: center;
+        }
+        
+        
+
+        .gal-img2 {
+            background: url("{% static 'images/inst3.0775580f.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            height: 40.8vh;                       
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .gal-img2:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/inst3.0775580f.jpg' %}");            
+            background-size: 120%;            
+            background-position: center;
+        }
+
+        .gal-img3 {
+            background: url("{% static 'images/zonk3.bede8716.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            height: 49vh;                       
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .gal-img3:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/zonk3.bede8716.jpg' %}");            
+            background-size: 120%;            
+            background-position: center;
+        }
+
+        .gal-img4 {
+            background: url("{% static 'images/inst2.b18d0733.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            height: 40vh;                       
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .gal-img4:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/inst2.b18d0733.jpg' %}");            
+            background-size: 120%;            
+            background-position: center;
+        }
+
+        .gal-img5 {
+            background: url("{% static 'images/inst1.beaa679f.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            height: 40vh;                       
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .gal-img5:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/inst1.beaa679f.jpg' %}");            
+            background-size: 120%;            
+            background-position: center;
+        }
+
+        .gal-img6 {
+            background: url("{% static 'images/3gs.1180f2f2.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            height: 38.5vh;                                   
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .gal-img6:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/3gs.1180f2f2.jpg' %}");            
+            background-size: 120%;            
+            background-position: center;
+        }
+
+        .gal-img7 {
+            background: url("{% static 'images/event2.efc7aa12.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            height: 38.5vh;     
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .gal-img7:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/event2.efc7aa12.jpg' %}");            
+            background-size: 120%;            
+            background-position: center;
+        }
+
+        .gal-img8 {
+            background: url("{% static 'images/zonk1.1774abb0.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            height: 38.5vh;     
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .gal-img8:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/zonk1.1774abb0.jpg' %}");            
+            background-size: 120%;            
+            background-position: center;
+        }
+
+        .gal-img9 {
+            background: url("{% static 'images/monchoka.2863542a.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            height: 38.5vh;     
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .gal-img9:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/monchoka.2863542a.jpg' %}");            
+            background-size: 120%;            
+            background-position: center;
+        }
+
+        .gal-img10 {
+            content: '';
+            background: url("{% static 'images/house.6bee06fc.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            height: 38.5vh;     
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+            color: white;
+        }
+
+        .gal-img10:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/house.6bee06fc.jpg' %}");            
+            background-size: 120%;            
+            background-position: center;
+        }
     </style>
 {% endblock %}

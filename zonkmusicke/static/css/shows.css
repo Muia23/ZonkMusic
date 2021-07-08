@@ -1,50 +1,64 @@
-.landing-title {
-    padding: 25vh 0 0 0;
-    color: #d5467d;
-    font-size: 45px;
+.landing-title {    
+    color: #f7567e;
+    font-size: 56px;
+    font-weight: 400;
+    margin-top: 30vh;
+    padding-left: 10px;
 }
 
 .landing-text-1 {            
-    color: white;
+    color: #d6d2d2;
     display: inline-block;
+    font-size: 16px;
+    padding-left: 10px;
 }
 
 .landing-text-2 {
-    color: #0beb82;
+    color: #32ea91;
     display: inline-block;
     padding-left: 15px;
+    font-size: 16px;
 }
 
 .shows {
-    background: #575757;
+    background: #424549;
 }
 
 .section-title {
     text-align: center;
-    color: #c0c0c0;
+    color: #c2c2c5;
+    font-size: 56px;
+    font-weight: 400;
 }
 
 .show-img {
-    height: 32vh;
-    width: 16vw;
+    min-height: 32vh;
+    height: auto;
+    width: 100%;
 }
 
 .show-title {
     color: white;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 24px;
+    padding-top: 3px;    
 }
 
 .show-period {            
-    color: #d5467d;
-    font-weight: 550;
+    color: #e437a1;
+    font-weight: 400;
+    font-size: 16px;    
 }
 
 .show-time {
-    color: #0beb82;                      
+    color: #32ea91;                      
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .show-text {
-    color: rgb(157, 157, 157);
+    color: #a7a7a8;
     font-size: 16px;            
+    font-weight: 400;
 }
 

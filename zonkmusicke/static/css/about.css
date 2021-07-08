@@ -1,18 +1,23 @@
 .landing-title {
-    padding: 25vh 0 0 0;
-    color: #d5467d;
-    font-size: 45px;
+    color: #f7567e;
+    font-size: 56px;
+    font-weight: 400;
+    margin-top: 30vh;
+    padding-left: 10px;
 }
 
 .landing-text-1 {            
-    color: white;
+    color: #d6d2d2;
     display: inline-block;
+    font-size: 16px;
+    padding-left: 10px;
 }
 
 .landing-text-2 {
-    color: #0beb82;
+    color: #32ea91;
     display: inline-block;
     padding-left: 15px;
+    font-size: 16px;
 }
 
 .about-content {
@@ -25,14 +30,18 @@
     justify-content: center;
 }
 
-.about-title1 {               
-    height: 10vh;
+.about-title {               
+    height: max-content;        
+    min-height: 11vh;
 }
 
 .about-title a {
-    color: #c7c7c7 !important;
+    color: #c2c2c5 !important;
     text-decoration: none !important;
+    font-size: 56px;
+    font-weight: 400;    
     animation: blink .5s step-end infinite alternate;
+    position: relative;
 }
 
 @keyframes typing {
@@ -48,13 +57,17 @@
 }
 
 .about-text {
-    color: #d0d0d0;
+    color: #c2c2c5;    
 }
 
 .about-text a {
-    color: #d0d0d0 !important;
+    color: #c2c2c5 !important;
     text-decoration: none !important;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
 }
+
 .staff {
     background: #575757;
     padding: 0;

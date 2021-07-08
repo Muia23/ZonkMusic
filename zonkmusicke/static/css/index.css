@@ -2,18 +2,18 @@
     position: relative;
     overflow: hidden;
     min-height: 60vh;
-    height: 70vh;
+    height: 69.5vh;
     width: 100%;
     padding: 0;
     margin: 0;
     background-color: gray;            
 }
 .first-icon {
-    height: 80px;
-    width: 80px;   
+    height: 85px;
+    width: 85px;   
     padding-left: 6px;
-    padding-top: -30px;        
-    animation: animRotat 5s linear infinite;        
+    margin-top: -10px;        
+    animation: animRotat 8s linear infinite;        
 }
 
 @keyframes animRotat {
@@ -65,31 +65,41 @@
 
 
 .w1 {
-    -webkit-animation: w1anim 4s infinite;
-            animation: w1anim 4s infinite;
+    position: absolute;
+    width: 90%;
+    -webkit-animation: w1anim 5s infinite;
+            animation: w1anim 5s infinite;
 }
 
 .w2 {
-    margin-top: -70px;
-    -webkit-animation: w2anim 4s infinite;
-            animation: w2anim 4s infinite;
+    position: absolute;
+    -webkit-animation: w2anim 5s infinite;
+            animation: w2anim 5s infinite;
 }
 
 
-.landing-heading1 {            
-    font-weight: 700;
+.landing-heading {            
+    font-weight: 700;   
+    font-size: 30px;
+}
+
+.landing-text {
+    font-weight: 500;   
+    font-size: 22px;
+    width: 100%;
 }
 
 .landing{
     color: #ffffff95;
     margin-top: 10vh;
     align-items: center;    
+    font-family: 'Roboto';    
+    line-height: 36px;
 }
 
 #videobg {
-    width: 100%;           
-    height: auto;
-    margin: auto;
+    width: 100%;               
+    margin: none;
     display: block;
 }
 
@@ -101,9 +111,10 @@
 }
 @media (max-aspect-ratio: 16/9) {
     #videobg {                
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 69.5vh;        
     }
+
 }
 
 .video-overlay {
@@ -118,14 +129,16 @@
 }
 
 .genre-background {
-    background-color: #575757;
+    background-color: #424549;
     text-align: center;
 }
 
 .genre-text {
-    font-size: 55px;
+    font-family: 'Roboto';    
+    font-size: 56px;    
     color: #c2c2c5;
-    padding-bottom: 0;
+    font-family: Roboto;
+    padding-bottom: 5px;
 }
 
 .slider {
@@ -200,16 +213,17 @@
 }
 
 .about {
-    background: #3a3a3a;
+    background: #424549;
 }
 
 .about-title {
-    color: #e9528cf8;
-    height: 6vh;
+    color: #f7567e;
+    font-family: 'Roboto';
+    font-size: 56px;
 }
 
 .about-title a {
-    color: #e9528cf8 !important;
+    color: #f7567e !important;
     text-decoration: none !important;
     animation: blink .8s step-end infinite alternate;
 }
@@ -221,22 +235,27 @@
 }
 
 .about-text {
-    color: white;
+    color: #c2c2c5;
+    font-family: 'Roboto';
+    font-size: 16px;    
 }
 
 .about-button {
-    margin-top: 35px;
+    margin-top: 35px;    
+    width: 110px;
 }
 
 
 .shows-title {
     text-align: center;
-    color: white;
+    color: #e9e3e3;
+    font-family: 'Roboto';
+    font-size: 56px;
+    padding-bottom: 10px;
 }
 
 .shows-table {
-    width: 100%;
-    color: white;
+    width: 100%;    
 }
 
 .shows-row {
@@ -250,6 +269,7 @@
 }
 
 .date-text {
+    font-family: 'Roboto';
     color: rgb(11, 235, 130);                
 }
 
@@ -258,18 +278,29 @@
 }
 
 .show-name {
-    font-weight: 600;
+    font-weight: bold;
+    font-family: 'Roboto';
     padding-top: 10px; 
     padding-right: 30px;
+    font-size: 24px;
+    color: #e9e3e3;
+}
+
+.show-host {
+    font-family: 'Roboto';
+    font-size: 12.8px;
+    color: #dad2d2;
 }
 
 .row-time {
-    width: 15vw;
+    width: 15vw;    
 }
 
 .show-time {
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Roboto';
+    color: #e9e3e3;
 }
 
 .row-detail {
@@ -278,10 +309,10 @@
 
 .blog-title {
     text-align: center;
-    font-size: 50px;
-    font-weight: 200px;
-    color: white;
-    padding: 10px 5px;
+    font-size: 56px;
+    font-weight: 200 !important;
+    color: #c2c2c5;
+    font-family: 'Roboto';            
 }
 
 .card-date-1 {
