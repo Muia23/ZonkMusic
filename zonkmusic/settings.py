@@ -156,4 +156,8 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # media files upload directory
+MEDIA_URL = '/media/' # media files retrive directory
+
+
 django_heroku.settings(locals())
