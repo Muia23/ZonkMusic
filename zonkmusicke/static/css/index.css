@@ -526,7 +526,7 @@
     height: 575px;    
     background-size: cover;
     background-position: 100% 98%;
-    background-image: linear-gradient(#0a0a0a5f,#0000006e,#0000006e),url('http://127.0.0.1:8000/static/images/pic.44405192.png');
+    background-image: url('http://127.0.0.1:8000/static/images/pic.44405192.png');
     border-radius: 50%;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
@@ -551,19 +551,19 @@
     transform: translate(-50%, -50%);    
   }
   .genre-list li:nth-child(2) {
-    background-image: linear-gradient(#0a0a0a5f,#0000006e,#0000006e),url('http://127.0.0.1:8000/static/images/zonk2.0775580f.jpg');
+    background-image: url('http://127.0.0.1:8000/static/images/zonk2.0775580f.jpg');
     background-position: 100% 30%;
   }
   .genre-list li:nth-child(3) {
-    background-image: linear-gradient(#0a0a0a5f,#0000006e,#0000006e),url('http://127.0.0.1:8000/static/images/monchoka.2863542a.jpg');
+    background-image: url('http://127.0.0.1:8000/static/images/monchoka.2863542a.jpg');
     background-position: 100% 0%;
   }
   .genre-list li:nth-child(4) {
-    background-image: linear-gradient(#0a0a0a5f,#0000006e,#0000006e),url('http://127.0.0.1:8000/static/images/zonk1.1774abb0.jpg');
+    background-image: url('http://127.0.0.1:8000/static/images/zonk1.1774abb0.jpg');
     background-position: 100% 22%;
   }
   .genre-list li:nth-child(5) {
-    background-image: linear-gradient(#0a0a0a5f,#0000006e,#0000006e),url('http://127.0.0.1:8000/static/images/3gs.1180f2f2.jpg');
+    background-image: url('http://127.0.0.1:8000/static/images/3gs.1180f2f2.jpg');
     background-position: 100% 0%;
   }
   
