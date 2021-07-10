@@ -11,10 +11,10 @@
             <div class="col-sm-11 col-md-11">
                 <div class="container-fluid">
                     <a class="nav-link" id="icnlink1" href="{% url 'home'%}">ZonkMusic</a>
-                    <a class="btn navbar-toggler" role="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <a class="btn navbar-toggler" role="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </a>
-                    <div class="collapse navbar-collapse" id="navbarScroll">
+                    <div class="navbar-collapse collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav navbar-nav-scroll">                
                             <li class="nav-item">
                                 <a class="nav-link" id="icnlink" aria-current="page" href="{% url 'home'%}">Home <span class="sr-only">(current)</span></a>                               
@@ -97,4 +97,11 @@
             })
         })
     </script>-->
+    <script>        
+        $('.navbar-collapse').on('show.bs.collapse', function () {
+          $(this).addClass("show");
+        }).on('hide.bs.collapse', function () {
+          $(this).removeClass("show");
+        })
+    </script>
 {% endblock %}
