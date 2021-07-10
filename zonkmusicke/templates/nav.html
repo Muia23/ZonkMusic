@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}    
-    {% block styles %}                    
+    {% block styles %}                            
         <link href="{% static 'css/nav.scss' %}" rel="stylesheet"/>           
     {% endblock %}          
 {% block content %}  
@@ -14,16 +14,30 @@
                     <a class="btn navbar-toggler" role="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </a>
-                    <div class="navbar-collapse collapse" id="navbarScroll">
-                        <div class="navbar-nav navbar-nav-scroll">                
-                            <a class="nav-link" id="icnlink" aria-current="page" href="{% url 'home'%}">Home <span class="sr-only">(current)</span></a>                               
-                            <a class="nav-link" id="icnlink" href="{% url 'gallery'%}">Gallery</a>                               
-                            <a class="nav-link" id="icnlink" href="{% url 'shows'%}">Shows</a>                                
-                            <a class="nav-link" id="icnlink" href="{% url 'blog'%}">Blog</a>                                
-                            <a class="nav-link" id="icnlink" href="{% url 'events'%}">Events</a>                
-                            <a class="nav-link" id="icnlink" href="{% url 'about'%}">About Us</a>            
-                            <a class="nav-link" id="icnlink" href="{% url 'contact'%}">Contact Us</a>                
-                        </div>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="nav navbar-nav navbar-nav-scroll">                
+                            <li class="nav-item">
+                                <a class="nav-link" id="icnlink" aria-current="page" href="{% url 'home'%}">Home <span class="sr-only">(current)</span></a>                               
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="icnlink" href="{% url 'gallery'%}">Gallery</a>                               
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="icnlink" href="{% url 'shows'%}">Shows</a>                                
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="icnlink" href="{% url 'blog'%}">Blog</a>                                
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="icnlink" href="{% url 'events'%}">Events</a>                
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="icnlink" href="{% url 'about'%}">About Us</a>            
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="icnlink" href="{% url 'contact'%}">Contact Us</a>                
+                            </li>
+                        </ul>
                     </div>
                 </div>               
             </div>
@@ -63,4 +77,24 @@
             padding-left: 10px;
         }
     </style>    
+    <!--<script>
+        $(document).ready(function(){
+            var movement = document.getElementsById("navbarScroll");
+            $(".nav-tog").click(function(){                
+                if(movement.className == "collapse"){
+                    movement.classList.remove("collapse");
+                    movement.classList.add("show");
+                } else {
+                    movement.className == "collapse";
+                }
+
+                if(movement.className == "show"){
+                    movement.classList.remove("show");
+                    movement.classList.add("collapse");
+                } else {
+                    movement.className == "show";
+                }
+            })
+        })
+    </script>-->
 {% endblock %}

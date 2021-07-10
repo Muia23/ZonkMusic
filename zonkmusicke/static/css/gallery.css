@@ -34,8 +34,15 @@
     opacity: 0.3;
 }
 
-.gal-img:hover .social {
-    opacity: 1;
+.socials li a {
+    display: inline;
+    color: #f8f9fa;    
+    border: solid orange 0.01rem;
+    position: absolute;  
+    left: 40%;    
+    top: 45%;    
+    transform: translate(-45%, -40%);      
+    z-index: 1;
 }
 
 .gallery-img {
