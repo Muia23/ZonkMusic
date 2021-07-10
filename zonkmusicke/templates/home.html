@@ -12,7 +12,7 @@
 
             <div class="videowrapper">        
                 <video id="videobg" role="presentation" preload="auto" playsinline crossorigin="anonymous" autoplay muted loop>
-                    <source src="{% static '/media/vidone.0c01e9ca.9f67b59c0352.webm'%}" type='video/webm'>
+                    <source src="{% static 'media/vidone.0c01e9ca.9f67b59c0352.webm' %}" type='video/webm'>
                     Your browser does not support the video tag.
                 </video>
                 <div class="video-overlay">
@@ -43,14 +43,62 @@
             <div class="container-fluid genre-background" style=" width: 100vw !important;">
                 <h1 class="genre-text">Music Genres</h1>
             </div>   
+            <div class="genre-section full-height over-hide px-4 px-sm-0">
+                <div class="container-fluid">
+                    <br><br>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-11 col-xl-9 align-self-center padding-tb">
+                            <div class="section mx-auto text-center slider-height-padding">
+                                    <input class="checkbox frst" type="radio" id="slide-1" name="slider" checked/>
+                                    <label for="slide-1"></label>
+                                    <input class="checkbox scnd" type="radio" name="slider" id="slider-2"/>
+                                    <label for="slider-2"></label>
+                                    <input class="checkbox thrd" type="radio" name="slider" id="slider-3"/>
+                                    <label for="slider-3"></label>
+                                    <input class="checkbox foth" type="radio" name="slider" id="slider-4"/>
+                                    <label for="slider-4"></label>
+                                    <input class="checkbox ffth" type="radio" name="slider" id="slider-5"/>
+                                    <label for="slider-5"></label>
+                                        <ul class="genre-list">
+                                    <li>
+                                        <p>                                            
+                                            Zonk <span id="spin"></span> Music
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>                                            
+                                            Zonk <span id="spin"></span> Music
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>                                            
+                                            Zonk <span id="spin"></span> Music
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>                                            
+                                            Zonk <span id="spin"></span> Music
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>                                            
+                                            Zonk <span id="spin"></span> Music
+                                        </p>
+                                    </li>
+                                        </ul>            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            <div class="container-fluid slider">         
+                <!--<div class="container-fluid slider">         
                 <div id="genreCarousel" class="carousel slide container-fluid" data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
                           <div class="row" style="width: 100%;">
                               <div class="col">
-                                    <!--<h5 class="slider-title">Genre</h5>-->
+                                    <!--<h5 class="slider-title">Genre</h5>--
                                     <h5 class="slider-text">R&B and HipHop</h5>
                               </div>
                               <div class="col-sm-12 col-md-4">
@@ -64,7 +112,7 @@
                       <div class="carousel-item">                            
                             <div class="row">
                                 <div class="col">
-                                    <!--<h5 class="slider-text">Genre</h5>-->
+                                    <!--<h5 class="slider-text">Genre</h5>--
                                     <h5 class="slider-text">House and Pop</h5>
                                 </div>
                                 <div class="col-sm-12 col-md-4">
@@ -78,7 +126,7 @@
                       <div class="carousel-item">
                           <div class="row">
                               <div class="col">
-                                <!--<h5 class="slider-text">Genre</h5>-->
+                                <!--<h5 class="slider-text">Genre</h5>--
                                 <h5 class="slider-text">Gospel Music</h5>
                               </div>
                               <div class="col-sm-12 col-md-4">
@@ -92,7 +140,7 @@
                       <div class="carousel-item">                            
                         <div class="row">
                             <div class="col">
-                                <!--<h5 class="slider-text">Genre</h5>-->
+                                <!--<h5 class="slider-text">Genre</h5>--
                                 <h5 class="slider-text">Jazz Music</h5>
                             </div>
                             <div class="col-sm-12 col-md-4">
@@ -106,7 +154,7 @@
                         <div class="carousel-item">                            
                             <div class="row">
                                 <div class="col">
-                                    <!--<h5 class="slider-text">Genre</h5>-->
+                                    <!--<h5 class="slider-text">Genre</h5>--
                                     <h5 class="slider-text">Rock Music</h5>
                                 </div>
                                 <div class="col-sm-12 col-md-4">
@@ -127,46 +175,42 @@
                       <span class="sr-only">Next</span>
                     </a>
                 </div>                                                                    
-            </div>
+                </div>-->
 
             <div class="container-fluid about">
                 <br><br>
-                <div class="container">                    
-                    <div class="row">
-                        <div class="row" style="width: 100%;">
-                            <div class="col-md-1"></div>                    
-                            <div class="col-md-10">                                
-                                <hr style="border-top: 2px solid white;">                                
-                                <div class="row">
-                                    <div class="col-md-5">
-                                        <div class="card about-card-img"></div>                            
-                                    </div>
-                                    <div class="col-md-1"></div>
-                                    <div class="col-md-6">
-                                        <br>
-                                        <h1 class="about-title">
-                                            <a class="mission" data-period="3000" data-type='[ "Who We Are!", "What We Do!" ]' >
-                                                <span class="wrap"></span>                        
-                                            </a>                                                    
-                                        </h1>
-                                        <p class="about-text">{{homabout.aboutpara1}}</p>
-                                        <p class="about-text">{{homabout.aboutpara2}}</p>                        
-                                        <a href="{% url 'about'%}" ><button class="btn btn-danger about-button"><span class="padding: 0 35px;">Curious?</span></button></a>
-                                    </div>
+                <div class="container">                                       
+                    <div class="row" style="width: 100%;">                            
+                        <div class="col-md-12">                                
+                            <hr style="border-top: 2px solid white;">                                
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="card about-card-img"></div>                            
                                 </div>
-                            </div>                    
-                            <div class="col-md-1"></div>                    
-                        </div>                                                
-                    </div>
-                    <br><br><br>   
-                </div>        
+                                <div class="col-md-1"></div>
+                                <div class="col-md-6">
+                                    <br>
+                                    <h3 class="about-title font-weight-normal">
+                                        <a class="mission" data-period="3000" data-type='[ "Who We Are!", "What We Do!" ]' >
+                                            <span class="wrap"></span>                        
+                                        </a>                                                    
+                                    </h3>
+                                    <p class="about-text">{{homabout.aboutpara1}}</p>
+                                    <p class="about-text">{{homabout.aboutpara2}}</p>                        
+                                    <a href="{% url 'about'%}" ><button class="btn btn-danger about-button"><span class="padding: 0 35px;">Curious?</span></button></a>
+                                </div>
+                            </div>
+                        </div>                                               
+                    </div>                                                                    
+                    <br><br><br> 
+                </div>                         
             </div>            
             <div class="shows row">   
-                <div class="container">
+                <div class="container-fluid">
                 <br><br>
                     <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-10">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
                             <h1 class="shows-title">Your Fav Shows</h1>            
                             <div class="shows-table">
                                 {% for homshow in homshows %}                        
@@ -187,7 +231,24 @@
                                     </div>                            
                                 </div>                                                 
                                 {% endfor %}               
-                                <!--<tr class="shows-row">                    
+                                <!--
+                                    <div class="row shows-row">
+                                        <div class="col-md-3 row-date">
+                                            <p class="date-text">MON-FRI</p>
+                                        </div>
+                                        <div class="col-md-3 row-show">
+                                            <h4 class="show-name">Morning Jungle with John</h4>
+                                            <p class="show-host">John</p>
+                                        </div>  
+                                        <div class="col-md-3 row-time">
+                                            <p class="show-time">4:00AM - 7:00AM EAT</p>
+                                            <p class="show-time">3:00AM - 6:00PM CAT</p>
+                                        </div>                                      
+                                        <div class="col-md-3 row-detail">
+                                            <button class="btn details-btn">Find Details</button>                                
+                                        </div>                            
+                                    </div>
+                                    <tr class="shows-row">                    
                                 <td class="row-date">
                                     <p class="date-text">MON-FRI</p>
                                 </td>
@@ -268,7 +329,7 @@
                             </tr>-->
                             </div> 
                         </div>
-                        <div class="col-md-1"></div>
+                        <div class="col-md-2"></div>
                     </div>
                         
                         <br><br>                    
@@ -278,7 +339,7 @@
 
             <div class="blogs">
                 <br><br>
-                <h3 class="blog-title"> Blogs & Articles</h3>
+                <h3 class="blog-title">Blogs & Articles</h3>
                 <br><br>
                 <div class="row" style="width: 100vw;">
                     <div class="col-md-1"></div>
@@ -288,23 +349,23 @@
                             <div class="col-md-5 col-sm-12">
                                 <div class="card mag-card-1">
                                     <p class="card-date-1">May 13, Saturday</p>
-                                    <h4 class="card-title-1">Zonk Magazine</h4>
-                                    <p class="card-text-1">Maiden Issue</p>
+                                    <a href="http://www.zonkmusicke.com/blog"><h4 class="card-title-1" >Zonk Magazine</h4></a>
+                                    <a href="http://www.zonkmusicke.com/blog"><p class="card-text-1">Maiden Issue</p></a>
                                 </div>                    
                             </div>                
                             <div class="col-md-6 col-sm-12">
                                 <div class="row" style="width: 100%;">
                                     <div class="card mag-card-2">
                                         <p class="card-date-2">Coming soon</p>
-                                        <h4 class="card-title-2">ZOPI LOUNGE</h4>
-                                        <p class="card-text-2">Defined by status</p>
+                                        <a href="http://www.zonkmusicke.com/blog"><h4 class="card-title-2">ZOPI LOUNGE</h4></a>
+                                        <a href="http://www.zonkmusicke.com/blog"><p class="card-text-2">Defined by status</p></a>
                                     </div>                    
                                 </div>
                                 <div class="row" style="width: 100%;">
                                     <div class="card mag-card-3">
                                         <p class="card-date-3">August 04, Friday</p>
-                                        <h4 class="card-title-3">Zonk Music</h4>
-                                        <p class="card-text-3">New Studio Launch</p>
+                                        <a href="http://www.zonkmusicke.com/blog"><h4 class="card-title-3">Zonk Music</h4></a>
+                                        <a href="http://www.zonkmusicke.com/blog"><p class="card-text-3">New Studio Launch</p></a>
                                     </div>                    
                                 </div>
                             </div>
@@ -388,8 +449,8 @@
             <div class="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.812613154016!2d36.77751754121329!3d-1.2864886841487644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a07aeb497ad%3A0x24dad9c87bb9cef1!2sHamisi%20Rd%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1625381184697!5m2!1sen!2ske" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
-
-            {% include "footer.html" %}    
+            
+            {% include "footer.html" %}                    
 
             <style>
                 .shows {
@@ -551,337 +612,7 @@
                 document.body.appendChild(css);
             };
             </script>
-            <!--<style>        
-            .videowrapper {
-                position: relative;
-                overflow: hidden;
-                min-height: 70vh;
-                height: 70vh;
-                width: 100%;
-                padding: 0;
-                margin: 0;
-                background-color: gray;            
-            }
-            .first-icon {
-                height: 80px;
-                width: 80px;                        
-            }
 
-            .landing-heading {            
-                font-weight: 700;
-            }
-
-            .landing{
-                color: white;
-                margin-top: 10vh;
-            }
-
-            #videobg {
-                width: 100%;           
-                height: auto;
-                margin: auto;
-                display: block;
-            }
-
-            @media (min-aspect-ratio: 16/9) {
-                #videobg {
-                    width: 100%;
-                    height: auto;
-                }
-            }
-            @media (max-aspect-ratio: 16/9) {
-                #videobg {                
-                    width: 100%;
-                    height: auto;
-                }
-            }
-
-            .video-overlay {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: flex;
-                flex-direction: column;
-                background: rgba(0, 0, 0, 0.33);
-            }
-
-            .genre-background {
-                background-color: #575757;
-                text-align: center;
-            }
-
-            .genre-text {
-                font-size: 55px;
-                color: #c2c2c5;
-                padding-bottom: 0;
-            }
-
-            .slider {
-                background: black;   
-                margin-top: -8px;         
-            }
-            .slider-img {
-                width: 100%;
-                height: auto;            
-
-            }
-
-            .slider-title {
-                color: rgb(143, 6, 211);
-                position: absolute;
-                bottom: 10px;
-            }
-
-            .slider-text {
-                color: white;
-                position: absolute;
-                bottom: 5px;
-            }
-
-            .about {
-                background: rgb(58, 58, 58);
-            }
-
-            .about-title {
-                color: #e42f5f;
-            }
-
-            .about-text {
-                color: white;
-            }
-
-            .about-button {
-                margin-top: 35px;
-            }
-
-            .shows {
-                background:linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/pic.c1745088.jpg' %}");
-                background-size: cover;
-                height: max-content;
-            }
-
-            .shows-title {
-                text-align: center;
-                color: white;
-            }
-
-            .shows-table {
-                width: 100%;
-                color: white;
-            }
-
-            .shows-row {
-                border-bottom: solid white 1px;
-                height: 16vh;            
-            }
-
-            .blogs {
-                background: black;
-            }
-
-            .date-text {
-                color: rgb(11, 235, 130);            
-                margin-top: -30px;
-            }
-
-            .row-show {
-                width: 20vw;
-            }
-
-            .show-name {
-                font-weight: 600;
-                padding-top: 10px; 
-                padding-right: 30px;
-            }
-
-            .row-time {
-                width: 15vw;
-            }
-
-            .show-time {
-                font-weight: 600;
-                font-size: 18px;
-            }
-
-            .row-detail {
-                width: 15vw;
-            }
-        
-            .details-btn {            
-                margin-top: -50px;
-                background: black;
-                color: white;
-            }
-        
-            .blog-title {
-                text-align: center;
-                font-size: 50px;
-                font-weight: 200px;
-                color: white;
-                padding: 10px 5px;
-            }
-        
-            .mag-card-1 {
-                background:linear-gradient(#0a0a0ab3,#0a0a0ab3,#0a0a0ab3),url("{% static 'images/sec4d.55be5228.jpg' %}");
-                background-position: 0 42%;
-                height: 65vh;
-                border-radius: 0;
-            }
-            
-            .card-date-1 {
-                color: rgb(2, 213, 90);
-                padding: 45px 25px;
-                font-weight: 600px;
-            }
-        
-            .card-title-1 {
-                color: rgb(218, 115, 197);
-                padding: 220px 0 0 25px;
-                font-weight: 700;
-            }
-        
-            .card-text-1 {
-                color: white;
-                padding: 0 0 0 25px ;
-                margin-top: -10px;
-            }
-        
-            .mag-card-2 {
-                background:linear-gradient(#0a0a0ab3,#0a0a0ab3,#0a0a0ab3),url("{% static 'images/cool1.64138fc0.jpg' %}");
-                background-position: 0 55%;
-                background-size: cover;
-                height: 31vh; 
-                width: 30vw;           
-                margin-left: 15px;      
-                border-radius: 0;
-            }
-        
-            .card-date-2 {
-                color: rgb(2, 213, 90);
-                padding: 45px 25px;
-                font-weight: 600px;
-            }
-        
-            .card-title-2 {
-                color: #d5467d;
-                padding: 20px 0 0 25px;
-                font-weight: 700;
-            }
-        
-            .card-text-2 {
-                color: white;
-                padding: 0 0 0 25px ;
-                margin-top: -10px;
-            }
-        
-            .mag-card-3 {
-                background:linear-gradient(#0a0a0ab3,#0a0a0ab3,#0a0a0ab3),url("{% static 'images/sec4c.ae7c09db.webp' %}");
-                background-position: 0 42%;
-                background-size: cover;
-                height: 31vh;
-                margin-top: 25px;
-                width: 30vw;     
-                margin-left: 15px;      
-                border-radius: 0;
-            }
-        
-            .card-date-3 {
-                color: rgb(2, 213, 90);
-                padding: 45px 25px;
-                font-weight: 600px;
-            }
-        
-            .card-title-3 {
-                color: #d5467d;
-                padding: 20px 0 0 25px;
-                font-weight: 700;
-            }
-        
-            .card-text-3 {
-                color: white;
-                padding: 0 0 0 25px ;
-                margin-top: -10px;
-            }
-        
-            .people {
-                background: black;            
-            }
-        
-            .people-title {
-                color:#d5467d;
-                font-weight: 700;
-                padding: 0 15px;
-            }
-        
-            .people-img {
-                height: 100px;
-                width: 100px;
-                margin-left: 15px;
-            }
-        
-            .people-text {
-                color: white;
-                font-size: 14px;
-                padding: 20px 85px;
-            }
-        
-            .instagram {
-                background: rgb(58, 58, 58);
-            }
-        
-            .instagram-title {
-                color: white;
-                font-size: 50px;            
-            }
-        
-            .instagram-btn {
-                background: black;
-                color: white;
-                margin-top: 5px; 
-                padding: 10px;
-            }
-        
-            .insta-pic-1 {
-                padding: 12px;
-                width: 16.3vw;
-                height: 33vh;
-                display: inline-block;
-            }
-        
-            .insta-pic-2 {
-                padding: 12px;
-                width: 16.3vw;
-                height: 33vh;
-                display: inline-block;
-            }
-        
-            .insta-pic-3 {
-                padding: 12px;
-                width: 16.3vw;
-                height: 33vh;
-                display: inline-block;
-            }
-        
-            .insta-pic-4 {
-                padding: 12px;
-                width: 16.3vw;
-                height: 38vh;
-                display: inline-block;
-            }
-        
-            .map {
-                background: #575757;
-                height: 50vh;
-            }
-        
-            .map-text {
-                color: white;
-                padding: 24vh 40vw;
-            }
-        
-            </style>-->
 
         {% endblock %}
     

@@ -13,7 +13,7 @@
             <div class="col-md-9">
                 <div class="container">        
                     <h2 class="landing-title">Gallery</h2>
-                    <p class="landing-text-1">Home  / </p>
+                    <a href="{% url 'home'%}"><p class="landing-text-1">Home  / </p></a>
                     <p class="landing-text-2"> Gallery</p>
                 </div>
             </div>
@@ -24,152 +24,165 @@
         <br><br>
         <div class="container">
             <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6" >
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
                     <div class="row">
-                        <div class="over-lay">
-                            <div class="container gall-img">
-                                <div class="card gal-img1">
-                                    <div class="social">
-                                        <p><i class="fab fa-instagram"></i></p>
-                                        <p><i class="fab fa-facebook-f"></i></p>                                    
-                                    </div>                                    
-                                    <!--<div class="social">
-                                        <div class="row" style="width: 100%;">
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-4">
-                                                <div class="container gi">
-                                                    <p class="gram-icon"><i class="fab fa-instagram"></i></p>
-                                                </div>                                           
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="container gi">
-                                                    <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
+                        <div class="col-md-4 col-sm-6" >
+                            <div class="row">
+                                <div class="over-lay">
+                                    <div class="container gall-img">
+                                        <div class="card gal-img1">
+                                            <!--<div class="social row" style="width: 100vw;">                                        
+                                                <div class="col-sm-2 col-md-3"></div>
+                                                <div class="col-sm-4 col-md-3">
+                                                    <div class="container icon-border">
+                                                        <!--<p><i class="fab fa-instagram"></i></p>--
+                                                    </div>                                     
                                                 </div>                                            
-                                            </div>
-                                            <div class="col-md-2"></div>
-                                        </div>                                                                        
-                                    </div>     -->                          
+                                                <div class="col-sm-4 col-md-3">
+                                                    <div class="container icon-border">
+                                                        <!--<p><i class="fab fa-facebook-f"></i></p>--
+                                                    </div>                                           
+                                                </div>
+                                                <div class="col-sm-2 col-md-3"></div>
+                                            </div>-->                                        
+                                        </div>                                    
+                                        <!--<div class="social">
+                                                <div class="row" style="width: 100%;">
+                                                    <div class="col-md-2"></div>
+                                                    <div class="col-md-4">
+                                                        <div class="container gi">
+                                                            <p class="gram-icon"><i class="fab fa-instagram"></i></p>
+                                                        </div>                                           
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="container gi">
+                                                            <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
+                                                        </div>                                            
+                                                    </div>
+                                                    <div class="col-md-2"></div>
+                                                </div>                                                                        
+                                            </div>     --> 
+                                    </div>                         
                                 </div>                                                                
-                            </div>                            
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="over-lay">
-                            <div class="container gall-img">
-                                <div class="card gal-img2">
-                                    <div class="social">
-                                        <p class="gram-icon"><i class="fab fa-instagram"></i></p>
-                                        <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
-                                    </div>                                
-                                </div>                                                                
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                    <div class="over-lay">
-                        <div class="container gall-img">
-                            <div class="card gal-img3">
-                                <div class="social">
-                                    <p class="gram-icon"><i class="fab fa-instagram"></i></p>
-                                    <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
-                                </div>                                
-                            </div>                            
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                    <div class="row">
-                        <div class="over-lay">
-                            <div class="container gall-img">
-                                <div class="card gal-img4"></div>
-                                <div class="social">
-                                    <p class="gram-icon"><i class="fab fa-instagram"></i></p>
-                                    <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
-                                </div>     
-                            </div>
-                        </div>                
-                    </div>
-                    <div class="row">
-                        <div class="over-lay">
-                            <div class="container gall-img">
-                                <div class="card gal-img5"></div>
-                                <div class="social">
-                                    <p class="gram-icon"><i class="fab fa-instagram"></i></p>
-                                    <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
-                                </div>     
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                    <div class="over-lay">
-                        <div class="container gall-img">
-                            <div class="card gal-img6"></div>
-                            <div class="social">
-                                <p class="gram-icon"><i class="fab fa-instagram"></i>></p>
-                                <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
-                            </div>                            
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                    <div class="row">
-                        <div class="over-lay">
-                            <div class="container gall-img">
-                                <div class="card gal-img7"></div>
-                                <div class="social">
-                                    <p class="gram-icon"><i class="fab fa-instagram"></i></p>
-                                    <p class="fb-icon"><i class="fab fa-facebook-f"></i>></p>
-                                </div>                            
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="over-lay">
-                            <div class="container gall-img">
-                                <div class="card gal-img8"></div>
-                                <div class="social">
-                                    <p class="gram-icon"><i class="fab fa-instagram"></i></p>
-                                    <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
-                                </div>                            
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                   <div class="row">
-                        <div class="over-lay">
-                            <div class="container gall-img">
-                                <div class="card gal-img9"></div>
-                                <div class="social">
-                                    <p class="gram-icon"><i class="fab fa-instagram"></i></p>
-                                    <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
+                            </div>  
+                            <div class="row">
+                                <div class="over-lay">
+                                    <div class="container gall-img">
+                                        <div class="card gal-img2">
+                                            <!--<div class="social">
+                                                <p class="gram-icon"><i class="fab fa-instagram"></i></p>
+                                                <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
+                                            </div>-->
+                                        </div>                                                                
+                                    </div>
+                                </div>
+                            </div>                          
+                        </div>                                                               
+                        <div class="col-md-4 col-sm-6">
+                            <div class="over-lay">
+                                <div class="container gall-img">
+                                    <div class="card gal-img3">
+                                        <!--<div class="social">
+                                            <p class="gram-icon"><i class="fab fa-instagram"></i></p>
+                                            <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
+                                        </div>-->                    
+                                    </div>                            
                                 </div>
                             </div>
                         </div>
-                   </div> 
-                   <div class="row">
-                        <div class="over-lay">
-                            <div class="container gall-img">
-                                <div class="card gal-img10">
-                                    <div class="social">
-                                        <p class="gram-icon"><i class="fab fa-instagram"></i></p>
-                                        <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="over-lay">
+                                    <div class="container gall-img">
+                                        <div class="card gal-img4"></div>
+                                        <!--<div class="social">
+                                            <p class="gram-icon"><i class="fab fa-instagram"></i></p>
+                                            <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
+                                        </div>-->
                                     </div>
-                                </div>                                
+                                </div>                
+                            </div>
+                            <div class="row">
+                                <div class="over-lay">
+                                    <div class="container gall-img">
+                                        <div class="card gal-img5"></div>
+                                        <!--<div class="social">
+                                            <p class="gram-icon"><i class="fab fa-instagram"></i></p>
+                                            <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
+                                        </div>-->     
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                   </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="over-lay">
+                                <div class="container gall-img">
+                                    <div class="card gal-img6">
+                                        <!--<div class="social">
+                                            <p class="gram-icon"><i class="fab fa-instagram"></i></p>
+                                            <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
+                                        </div>-->
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="over-lay">
+                                    <div class="container gall-img">
+                                        <div class="card gal-img7">
+                                            <!--<div class="social">
+                                                <p class="gram-icon"><i class="fab fa-instagram"></i></p>
+                                                <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
+                                            </div>-->
+                                        </div>                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="over-lay">
+                                    <div class="container gall-img">
+                                        <div class="card gal-img8"></div>
+                                        <!--<div class="social">
+                                            <p class="gram-icon"><i class="fab fa-instagram"></i></p>
+                                            <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
+                                        </div>-->                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="row">
+                                <div class="over-lay">
+                                    <div class="container gall-img">
+                                        <div class="card gal-img9">
+                                            <!--<div class="social">
+                                                <p class="gram-icon"><i class="fab fa-instagram"></i></p>
+                                                <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
+                                            </div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <div class="over-lay">
+                                    <div class="container gall-img">
+                                        <div class="card gal-img10">
+                                            <!--<div class="social">
+                                                <p class="gram-icon"><i class="fab fa-instagram"></i></p>
+                                                <p class="fb-icon"><i class="fab fa-facebook-f"></i></p>
+                                            </div>-->
+                                        </div>                        
+                                    </div>
+                                </div>                        
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-1"></div>
+                <div class="col-md-1"></div>
             </div>
             <br><br>
         </div>        
@@ -203,6 +216,7 @@
         .gall-img {
             border: solid 0.01rem gray;
             padding: 10px;
+            position: relative;
         }        
         
         .gal-img1 {
@@ -222,9 +236,7 @@
             background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/back.80078029.jpg' %}");            
             background-size: 120%;            
             background-position: center;
-        }
-        
-        
+        }        
 
         .gal-img2 {
             background: url("{% static 'images/inst3.0775580f.jpg' %}");
@@ -397,6 +409,27 @@
             background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/house.6bee06fc.jpg' %}");            
             background-size: 120%;            
             background-position: center;
+        }
+
+        .icon-border {            
+            border: solid 0.01rem orange;
+            height: 40px;
+            width: 40px;
+            opacity: 0;
+            text-align: center;
+            
+            
+        }
+
+        .gall-img:hover .icon-border {
+            opacity: 1;    
+        }
+
+        .icon-border i {
+            position: absolute;
+            top: 26%;
+            left: 55%;
+            color: #f8f9fa !important;                                     
         }
     </style>
 {% endblock %}
