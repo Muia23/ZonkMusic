@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
-{% load static %}    
-    {% block styles %}                            
-        <link href="{% static 'css/nav.scss' %}" rel="stylesheet"/>           
-    {% endblock %}          
+{% load static %}   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>                   
+    {% load bootstrap4 %}
+    <script src="{% static 'nav.js' %}"></script>           
 {% block content %}  
 {{block.super}}     
     <nav class="navbar navbar-expand-sm fixed-top navbar-dark" style="background-color: black; ">        
@@ -14,8 +14,9 @@
                     <a class="btn navbar-toggler" role="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </a>
-                    <div class="navbar-collapse collapse" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav navbar-nav-scroll">                
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav navbar-nav-scroll">
+                            <p id="close">Close</p>
                             <li class="nav-item">
                                 <a class="nav-link" id="icnlink" aria-current="page" href="{% url 'home'%}">Home <span class="sr-only">(current)</span></a>                               
                             </li>
@@ -42,7 +43,7 @@
                 </div>               
             </div>
         </div>        
-    </nav>
+    </nav>    
     <style>        
 
         .navbar {
@@ -76,6 +77,11 @@
             font-weight: 700;
             padding-left: 10px;
         }
+
+        #close {
+            color: black;
+            font-weight: 700;               
+        }
     </style>    
     <!--<script>
         $(document).ready(function(){
@@ -96,12 +102,5 @@
                 }
             })
         })
-    </script>-->
-    <script>        
-        $('.navbar-collapse').on('show.bs.collapse', function () {
-          $(this).addClass("show");
-        }).on('hide.bs.collapse', function () {
-          $(this).removeClass("show");
-        })
-    </script>
+    </script>-->    
 {% endblock %}
