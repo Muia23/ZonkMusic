@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}       
+    <script src="{% static 'js/home.js' %}"></script>
             {% block styles %}                    
                 <link href="{% static 'css/index.css' %}" rel="stylesheet"/>           
             {% endblock %}                                 
@@ -43,7 +44,42 @@
                 <h1 class="genre-text">Music Genres</h1>
             </div>   
             <div class="genre-section full-height over-hide px-4 px-sm-0">
-                <div class="container-fluid">
+                <section class="slides"> 
+  
+                    <section class="slides-nav">
+                      <nav class="slides-nav__nav">
+                        <button class="slides-nav__prev js-prev">Prev</button>
+                        <button class="slides-nav__next js-next">Next</button>
+                      </nav>
+                    </section>
+                  
+                    <section class="slide is-active">
+                      <div class="slide__content">
+                        <figure class="slide__figure"><div class="slide__img" style="background-image: url(https://source.unsplash.com/nfTA8pdaq9A/2000x1100)"></div></figure>      
+                      </div>
+                    </section>
+                  
+                    <section class="slide">
+                      <div class="slide__content">
+                        <figure class="slide__figure"><div class="slide__img" style="background-image: url(https://source.unsplash.com/okmtVMuBzkQ/2000x1100)"></div></figure>
+                        
+                      </div>
+                    </section>
+                  
+                    <section class="slide">
+                      <div class="slide__content">
+                        <figure class="slide__figure"><div class="slide__img" style="background-image: url(https://source.unsplash.com/WuQME0I_oZA/2000x1100)"></div></figure>      
+                      </div>
+                    </section>
+                  
+                    <section class="slide">
+                      <div class="slide__content">
+                        <figure class="slide__figure"><div class="slide__img" style="background-image: url(https://source.unsplash.com/NsWcRlBT_74/2000x1100)"></div></figure>      
+                      </div>
+                    </section>
+
+                </section>
+                <!--<div class="container-fluid">
                     <br><br>
                     <div class="row justify-content-center">
                         <div class="col-lg-11 col-xl-9 align-self-center padding-tb">
@@ -88,7 +124,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
             
                 <!--<div class="container-fluid slider">         
