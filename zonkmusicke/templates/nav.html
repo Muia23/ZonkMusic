@@ -1,93 +1,82 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    </head>    
-    <body>
-        {% load bootstrap4 %}
-        <nav class="navbar navbar-expand-sm fixed-top navbar-dark" style="background-color: black; ">        
-            <div class="row" style="width: 100vw;">
-                <div class="col-sm-1 col-md-1"></div>
-                <div class="col-sm-11 col-md-11">
-                    <div class="container-fluid">
-                        <a class="nav-link" id="icnlink1" href="{% url 'home'%}">ZonkMusic</a>
-                        <a class="btn navbar-toggler" role="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </a>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="nav navbar-nav navbar-nav-scroll">
-                                <p id="close">Close</p>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="icnlink" aria-current="page" href="{% url 'home'%}">Home <span class="sr-only">(current)</span></a>                               
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="icnlink" href="{% url 'gallery'%}">Gallery</a>                               
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="icnlink" href="{% url 'shows'%}">Shows</a>                                
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="icnlink" href="{% url 'blog'%}">Blog</a>                                
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="icnlink" href="{% url 'events'%}">Events</a>                
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="icnlink" href="{% url 'about'%}">About Us</a>            
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="icnlink" href="{% url 'contact'%}">Contact Us</a>                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>               
-                </div>
-            </div>        
-        </nav>    
-        <style>        
-    
-            .navbar {
-                width: 100vw !important;
-            }        
-    
-            #icnlink1 {
-                color: #a3a8ac;
-                font-weight: 700;
-                padding-left: 10px;
-                font-family: 'Roboto';
-                font-size: 16px;
-            }        
-    
-            #icnlink {
-                color: #a3a8ac;
-                font-weight: 700;
-                padding-left: 10px;
-                font-family: 'Roboto';
-                font-size: 16px;
-            }
-    
-            #icnlink1:hover {
-                color: #e43c5c;
-                font-weight: 700;
-                padding-left: 10px;
-            }
-    
-            #icnlink:hover {
-                color: #e43c5c;
-                font-weight: 700;
-                padding-left: 10px;
-            }
-    
-            #close {
-                color: black;
-                font-weight: 700;               
-            }
-        </style>    
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    </body>        
-</html>
-      
+{% extends 'base.html' %}
+{% load static %}    
+    {% block styles %}                            
+        <link href="{% static 'css/nav.scss' %}" rel="stylesheet"/>           
+    {% endblock %}          
+{% block content %}  
+{{block.super}}     
+    <nav class="navbar navbar-expand-sm fixed-top navbar-dark" style="background-color: black; ">        
+        <div class="row" style="width: 100vw;">
+            <div class="col-sm-1 col-md-1"></div>
+            <div class="col-sm-11 col-md-11">
+                <div class="container-fluid">
+                    <a class="nav-link" id="icnlink1" href="{% url 'home'%}">ZonkMusic</a>
+                    <a class="btn navbar-toggler" role="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </a>
+                    <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav navbar-nav-scroll">                
+                            <li class="nav-item">
+                                <a class="nav-link" id="icnlink" aria-current="page" href="{% url 'home'%}">Home <span class="sr-only">(current)</span></a>                               
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="icnlink" href="{% url 'gallery'%}">Gallery</a>                               
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="icnlink" href="{% url 'shows'%}">Shows</a>                                
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="icnlink" href="{% url 'blog'%}">Blog</a>                                
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="icnlink" href="{% url 'events'%}">Events</a>                
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="icnlink" href="{% url 'about'%}">About Us</a>            
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="icnlink" href="{% url 'contact'%}">Contact Us</a>                
+                            </li>
+                        </ul>
+                    </div>
+                </div>               
+            </div>
+        </div>        
+    </nav>
+    <style>        
+
+        .navbar {
+            width: 100vw !important;
+        }        
+
+        #icnlink1 {
+            color: #a3a8ac;
+            font-weight: 700;
+            padding-left: 10px;
+            font-family: 'Roboto';
+            font-size: 16px;
+        }        
+
+        #icnlink {
+            color: #a3a8ac;
+            font-weight: 700;
+            padding-left: 10px;
+            font-family: 'Roboto';
+            font-size: 16px;
+        }
+
+        #icnlink1:hover {
+            color: #e43c5c;
+            font-weight: 700;
+            padding-left: 10px;
+        }
+
+        #icnlink:hover {
+            color: #e43c5c;
+            font-weight: 700;
+            padding-left: 10px;
+        }
+    </style>    
     <!--<script>
         $(document).ready(function(){
             var movement = document.getElementsById("navbarScroll");
@@ -107,4 +96,12 @@
                 }
             })
         })
-    </script>-->    
+    </script>-->
+    <script>        
+        $('.navbar-collapse').on('show.bs.collapse', function () {
+          $(this).addClass("show");
+        }).on('hide.bs.collapse', function () {
+          $(this).removeClass("show");
+        })
+    </script>
+{% endblock %}
