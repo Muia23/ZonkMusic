@@ -239,13 +239,13 @@
                             <hr style="border-top: 2px solid white;">                                
                             <div class="row">
                                 <div class="col-sm-6 col-md-5">
-                                    <div class="card about-card-img"></div>                            
+                                    <div class="card about-card-img" style="background-image:url({{homabout.aboutimg}})"></div>                            
                                 </div>
                                 <div class="col-md-1"></div>
                                 <div class="col-sm-6 col-md-6">
                                     <br>
                                     <h3 class="about-title font-weight-normal">
-                                        <a class="mission" data-period="3000" data-type='[ "{{homabout.abouttitle}}", "{{homabout.abouttitle}}" ]' >
+                                        <a class="mission" data-period="3000" data-type='[ "{{homabout.abouttitle}}", "What we do!" ]' >
                                             <span class="wrap"></span>                        
                                         </a>                                                    
                                     </h3>
@@ -592,8 +592,7 @@
                     }
                 }
 
-                .about-card-img {
-                    background:url("{% static 'images/bl2.6084eded.jpg' %}");                    
+                .about-card-img {                    
                     background-size: cover;
                     background-repeat: no-repeat;
                     height: 50vh;

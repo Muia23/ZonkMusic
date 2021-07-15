@@ -43,15 +43,18 @@ class HomeBlogs(models.Model):
     blogimg1 = models.FileField(upload_to = 'media')
     blogheading1 = models.CharField(max_length= 60)
     blogtext1 = models.CharField(max_length= 60)
-    blogdate1 = models.CharField(max_length= 60)    
+    blogdate1 = models.CharField(max_length= 60)  
+    blogurl1 = models.URLField(max_length = 200)  
     blogimg2 = models.FileField(upload_to = 'media')
     blogheading2 = models.CharField(max_length= 60)
     blogtext2 = models.CharField(max_length= 60)
-    blogdate2 = models.CharField(max_length= 60)    
+    blogdate2 = models.CharField(max_length= 60)   
+    blogurl2 = models.URLField(max_length = 200)   
     blogimg3 = models.FileField(upload_to = 'media')
     blogheading3 = models.CharField(max_length= 60)
     blogtext3 = models.CharField(max_length= 60)
     blogdate3 = models.CharField(max_length= 60)
+    blogurl3 = models.URLField(max_length = 200)  
 
     @classmethod
     def get_homeblogs(cls):
