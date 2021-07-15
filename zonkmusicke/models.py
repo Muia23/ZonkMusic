@@ -58,7 +58,7 @@ class HomeBlogs(models.Model):
 
     @classmethod
     def get_homeblogs(cls):
-        homeblogs = cls.objects.all().order_by('id')
+        homeblogs = cls.objects.get(pk=1)
         return homeblogs    
 
 class Shows(models.Model):
