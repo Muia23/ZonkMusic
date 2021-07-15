@@ -5,8 +5,10 @@ from django.db.models.fields import BLANK_CHOICE_DASH
 class HomeLanding(models.Model):
     landingbackground = models.FileField(upload_to = 'media')
     landinglogo = models.FileField(upload_to = 'images')
-    landingheading = models.CharField(max_length=100)
-    landingtext = models.TextField()
+    landingheading1 = models.CharField(max_length=100)
+    landingtext1 = models.TextField()
+    landingheading2 = models.CharField(max_length=100)
+    landingtext2 = models.TextField()
 
     @classmethod
     def get_homelanding(cls):
@@ -34,7 +36,7 @@ class HomeShows(models.Model):
 
     @classmethod
     def get_homeshows(cls):
-        homshow = cls.objects.all()
+        homshow = cls.objects.all().order_by('id')
         return homshow
 
 class HomeBlogs(models.Model):
@@ -67,7 +69,7 @@ class Shows(models.Model):
 
     @classmethod
     def get_allshows(cls):
-        allshows = cls.objects.all().order_by('-id')
+        allshows = cls.objects.all().order_by('id')
         return allshows
 
 class Events(models.Model):
