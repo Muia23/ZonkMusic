@@ -86,11 +86,15 @@ class Events(models.Model):
 
 class About(models.Model):
     abouttitle1 = models.CharField(max_length= 60)
-    abouttext1 = models.TextField()    
+    abouttexta = models.TextField()    
+    abouttextb = models.TextField()    
     abouttitle2 = models.CharField(max_length= 60)
-    abouttext2 = models.TextField()    
+    abouttextc = models.TextField()    
+    abouttextd = models.TextField()    
     abouttitle3 = models.CharField(max_length= 60)
-    abouttext3 = models.TextField()    
+    abouttexte = models.TextField()    
+    abouttextf = models.TextField()    
+    abouttextg = models.TextField()    
 
 class Staff(models.Model):
     staffimg = models.FileField(upload_to = 'media')
