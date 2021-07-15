@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import HomeLanding,HomeAbout, HomeShows
+from .models import HomeLanding,HomeAbout, HomeShows,HomeBlogs,Shows,Events,About,Contact
 
 # Create your views here.
 def home(request):
@@ -10,7 +10,8 @@ def home(request):
     return render(request,'home.html', { "homland":homland , "homabout":homabout, "homshows":homshows})
 
 def shows(request):
-    return render(request, 'shows.html')
+    shows = Shows.get_allshows()
+    return render(request, 'shows.html', { "shows":shows})
 
 def about(request):
     return render(request, 'about.html')

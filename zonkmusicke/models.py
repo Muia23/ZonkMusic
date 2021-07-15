@@ -52,13 +52,24 @@ class HomeBlogs(models.Model):
     blogdate3 = models.CharField(max_length= 60)    
 
 class Shows(models.Model):
-    showimg = models.FileField(upload_to = 'media')
-    showtitle = models.CharField(max_length= 60)
-    showperiod = models.CharField(max_length= 60)  
-    showtime = models.CharField(max_length= 60)  
-    showabout = models.TextField()    
-    showurl = models.URLField(max_length = 200)
- 
+    showimg1 = models.FileField(upload_to = 'media')
+    showtitle1 = models.CharField(max_length= 60)
+    showperiod1 = models.CharField(max_length= 60)  
+    showtime1 = models.CharField(max_length= 60)  
+    showabout1 = models.TextField()    
+    showurl1 = models.URLField(max_length = 200)
+    showimg2 = models.FileField(upload_to = 'media')
+    showtitle2 = models.CharField(max_length= 60)
+    showperiod2 = models.CharField(max_length= 60)  
+    showtime2 = models.CharField(max_length= 60)  
+    showabout2 = models.TextField()    
+    showurl2 = models.URLField(max_length = 200)
+
+    @classmethod
+    def get_allshows(cls):
+        allshows = cls.objects.all()
+        return allshows
+
 class Events(models.Model):
     eventimg = models.FileField(upload_to = 'media')
     eventtxt = models.CharField(max_length= 60)  

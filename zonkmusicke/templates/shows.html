@@ -23,6 +23,7 @@
         <div class="container">
             <h2 class="section-title">Our Shows</h2>
             <br>
+            {% for show in shows %}
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
@@ -33,12 +34,12 @@
                                     <img class="show-img" src="{% static 'images/Africa.ffdbe221.jpg' %}">
                                 </div>
                                 <div class="col-md-6">
-                                    <h4 class="show-title">Africa Connect</h4>
-                                    <p class="show-period">Morning Show</p>
-                                    <p class="show-time">10AM - 1PM</p>
-                                    <p class="show-text">Africa Connect is a morning Show that happens from Monday to Friday. 
-                                        From 10 am - 1 pm. It is brought to you with Grace and Charles.</p>
-                                    <a class="btn check-btn" role="button" href="https://zonkradio.com/program/297826/africa-connect-with-charles-and-grace/" target="_blank">Check Out</a>
+                                    <h4 class="show-title">{{show.showtitle}}</h4><!--Africa Connect-->
+                                    <p class="show-period">{{show.showperiod}}</p><!--Morning Show</p>-->
+                                    <p class="show-time">{{show.showtime}}</p> <!--10AM - 1PM</p>-->
+                                    <p class="show-text">{{show.showabout}}</p> <!--Africa Connect is a morning Show that happens from Monday to Friday. 
+                                        From 10 am - 1 pm. It is brought to you with Grace and Charles.</p>-->
+                                    <a class="btn check-btn" role="button" href="{{show.showurl}}" target="_blank">Check Out</a>
                                 </div>
                                 <br><br>                        
                             </div>                    
@@ -60,8 +61,9 @@
                         </div>
                     </div>
                     <hr style=" background:white;">
-                    <br>            
-                    <div class="row">
+                    <br>
+            {% endfor %}            
+                    <!--<div class="row">
                         <div class="col-md-6" style="padding-top: 5px;">
                             <div class="row">
                                 <div class="col-md-6">
@@ -94,7 +96,7 @@
                         </div>
                     </div>
                     <hr style=" background:white;">
-                    <br>
+                    <br>-->
                     <div class="row">
                         <div class="col-md-6" style="padding-top: 5px;">
                             <div class="row">
