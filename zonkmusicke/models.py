@@ -38,10 +38,18 @@ class HomeShows(models.Model):
         return homshow
 
 class HomeBlogs(models.Model):
-    blogimg = models.FileField(upload_to = 'media')
-    blogheading = models.CharField(max_length= 60)
-    blogtext = models.CharField(max_length= 60)
-    blogdate = models.CharField(max_length= 60)    
+    blogimg1 = models.FileField(upload_to = 'media')
+    blogheading1 = models.CharField(max_length= 60)
+    blogtext1 = models.CharField(max_length= 60)
+    blogdate1 = models.CharField(max_length= 60)    
+    blogimg2 = models.FileField(upload_to = 'media')
+    blogheading2 = models.CharField(max_length= 60)
+    blogtext2 = models.CharField(max_length= 60)
+    blogdate2 = models.CharField(max_length= 60)    
+    blogimg3 = models.FileField(upload_to = 'media')
+    blogheading3 = models.CharField(max_length= 60)
+    blogtext3 = models.CharField(max_length= 60)
+    blogdate3 = models.CharField(max_length= 60)    
 
 class Shows(models.Model):
     showimg = models.FileField(upload_to = 'media')
