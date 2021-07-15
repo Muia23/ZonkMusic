@@ -416,7 +416,7 @@
 
 .map {
     background: #575757;
-    height: 50vh;
+    height: 50vh;    
 }
 
 .map-text {
@@ -426,10 +426,7 @@
 
 /* Genre Section*/
 
-.genre-section{
-    position: relative;
-    width: 100%;
-    display: block;
+.genre-section{        
     background: #1c1b1b;
     margin-top: -15px;    
 }

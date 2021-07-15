@@ -42,17 +42,60 @@
 
             <div class="container-fluid genre-background" style=" width: 100vw !important;">
                 <h1 class="genre-text">Music Genres</h1>
-            </div>   
-            <div class="genre-section full-height over-hide px-4 px-sm-0">
-                <div class="container">
+            </div>  
+            <div class="genre-section">                               
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active genre1 genresize"> 
+                                <div class="genretxt">
+                                    <p style="color: #f7567e; font-weight: bold; margin: 0;">Genre:</p>
+                                    <h4>R&B and HipHop</h4>  
+                                </div>
+                            </div>
+                            <div class="carousel-item genre2 genresize">
+                                <div class="genretxt">
+                                    <p style="color: #f7567e; font-weight: bold; margin: 0;">Genre:</p>
+                                    <h4>House and Pop</h4> 
+                                </div>                                
+                            </div>
+                            <div class="carousel-item genre3 genresize">
+                                <div class="genretxt">                                    
+                                    <p style="color: #f7567e; font-weight: bold; margin: 0;">Genre:</p>
+                                    <h4>Gospel Music</h4> 
+                                </div>
+                            </div>
+                            <div class="carousel-item genre4 genresize">
+                                <div class="genretxt">
+                                    <p style="color: #f7567e; font-weight: bold; margin: 0;">Genre:</p>
+                                    <h4>Jazz Music</h4> 
+                                </div>
+                            </div>
+                            <div class="carousel-item genre5 genresize">
+                                <div class="genretxt">
+                                    <p style="color: #f7567e; font-weight: bold; margin: 0;">Genre:</p>
+                                    <h4>Rock Music</h4> 
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>                
+            </div>
+            <!--<div class="genre-section full-height over-hide px-4 px-sm-0">                
                     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">                        
                         <div class="carousel-inner">
                             <div class="carousel-item active">   
-                                <div class="genre1 ">
-                                    <div class="genretxt">
-                                        <h4>R&B and HipHop</h4>  
-                                        <p></p>                                      
-                                    </div>
+                                <div class="genretxt">
+                                    <h4>R&B and HipHop</h4>  
+                                    <p></p>                                      
+                                </div>
+                                <div class="genre1 d-block w-100">                                    
                                 </div>                                                 
                             </div>
                             <div class="carousel-item">
@@ -97,7 +140,7 @@
                           <span class="sr-only">Next</span>
                         </a>
                     </div>
-                </div>   
+                
                 <!--<div class="container-fluid">
                     <br><br>
                     <div class="row justify-content-center">
@@ -105,8 +148,8 @@
                             
                         </div>
                     </div>
-                </div>-->
-            </div>
+                </div>--
+            </div>-->
             
                 <!--<div class="container-fluid slider">         
                 <div id="genreCarousel" class="carousel slide container-fluid" data-ride="carousel">
@@ -356,11 +399,8 @@
             <div class="blogs">
                 <br><br>
                 <h3 class="blog-title">Blogs & Articles</h3>
-                <br><br>
-                <div class="row" style="width: 100vw;">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-11">
-                    <div class="container-md">
+                <br><br>                
+                    <div class="container">
                         <div class="row" >
                             <div class="col-md-5 col-sm-12">
                                 <div class="card mag-card-1">
@@ -385,12 +425,11 @@
                                     </div>                    
                                 </div>
                             </div>
-                            <div class="col-md-1"></div>
-                        </div>
-                    </div>
-                    </div>                    
-                </div>
-                <br><br>
+                            <div class="col-md-1"></div>                            
+                        </div>                        
+                    </div>  
+                    <br><br>                                    
+                </div>                
             </div>
 
             <!--<div class="people">
@@ -570,85 +609,57 @@
 
                 .genretxt {
                     position: absolute;
-                    margin: 5px 0 0 1%;
+                    margin: 5px 0 0 10%;
                     color: white;
                     font-size: 20px;
                 }
 
+                .genresize {
+                    height: 77vh;
+                }
+
                 .genre1 {
-                    background: radial-gradient(at top left,#0a0a0ade,#0a0a0a4f,#0a0a0a4f),url("{% static 'images/pic.44405192.jpg' %}");                    
-                    background-size: cover;
+                    background: url("{% static 'images/pic.44405192.jpg' %}");                    
+                    background-size: contain;   
                     background-repeat: no-repeat;
-                    background-position: 100% 100%;
-                    position: relative;
-                    height: 60vh;
-                    padding: 30px 0;
+                    background-position: center;                                        
                 }
 
                 .genre2 {
-                    background:linear-gradient(#0a0a0a4f,#0a0a0a4f,#0a0a0a4f),url("{% static 'images/zonk2.0775580f.jpg' %}");                    
-                    background-size: cover;
+                    background:url("{% static 'images/zonk2.0775580f.jpg' %}");                    
+                    background-size: contain;
                     background-repeat: no-repeat;
-                    background-position: 100% 30%;
-                    height: 60vh;
-                    padding: 30px 0;
+                    background-position: center;                                             
                 }
 
                 .genre3 {
-                    background:linear-gradient(#0a0a0a4f,#0a0a0a4f,#0a0a0a4f),url("{% static 'images/monchoka.2863542a.jpg' %}");                    
-                    background-size: cover;
+                    background:url("{% static 'images/monchoka.2863542a.jpg' %}");                    
+                    background-size: contain;   
                     background-repeat: no-repeat;
-                    background-position: 100% 2%;
-                    height: 60vh;
-                    padding: 30px 0;
+                    background-position: center;                                             
                 }
 
                 .genre4 {
-                    background:linear-gradient(#0a0a0a4f,#0a0a0a4f,#0a0a0a4f),url("{% static 'images/zonk1.1774abb0.jpg' %}");                    
-                    background-size: cover;
+                    background:url("{% static 'images/zonk1.1774abb0.jpg' %}");                    
+                    background-size: contain;   
                     background-repeat: no-repeat;
-                    background-position: 100% 25%;
-                    height: 60vh;
-                    padding: 30px 0;
+                    background-position: center;                                                                              
                 }
 
                 .genre5 {
-                    background:linear-gradient(#0a0a0a4f,#0a0a0a4f,#0a0a0a4f),url("{% static 'images/3gs.1180f2f2.jpg' %}");                    
-                    background-size: cover;
+                    background:url("{% static 'images/3gs.1180f2f2.jpg' %}");                    
+                    background-size: contain;   
                     background-repeat: no-repeat;
-                    background-position: 100% 2%;
-                    height: 60vh;
-                    padding: 30px 0;
+                    background-position: center;                                                                      
                 }
 
                 @media screen and (min-width: 200px) and (max-width:480px){
-                    .genre1 {
-                        width: 100%;
-                        height: 35vh;
+                    .genresize {
+                        height: 65vh;
                     }
-
-                    .genre2 {
-                        width: 100%;
-                        height: 35vh;
-                    }
-
-                    .genre3 {
-                        width: 100%;
-                        height: 35vh;
-                    }
-
-                    .genre4 {
-                        width: 100%;
-                        height: 35vh;
-                    }
-
-                    .genre5 {
-                        width: 100%;
-                        height: 35vh;
-                    }
-
+                    
                     .genretxt {
-                        font-size: 2px;
+                        margin: -45px 0 0 15%;
                     }
                 }
 
