@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import HomeLanding,HomeAbout, HomeShows,HomeBlogs,Shows,Events,About,Contact
+from .models import HomeLanding,HomeAbout, HomeShows,HomeBlogs,Shows,Events,About,Contact,Staff
 
 # Create your views here.
 def home(request):

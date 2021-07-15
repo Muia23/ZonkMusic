@@ -91,6 +91,8 @@ class About(models.Model):
     abouttext2 = models.TextField()    
     abouttitle3 = models.CharField(max_length= 60)
     abouttext3 = models.TextField()    
+
+class Staff(models.Model):
     staffimg = models.FileField(upload_to = 'media')
     staffname = models.CharField(max_length= 60)
     stafftitle = models.CharField(max_length= 60)
