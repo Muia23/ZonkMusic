@@ -22,24 +22,24 @@
         <br>
         <div class="container">
             <h2 class="section-title">Our Shows</h2>
-            <br>
-            {% for show in shows %}
+            <br>            
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <div class="row">
+                    {% for show in shows %}
+                    <div class="row">                    
                         <div class="col-md-6" style="padding-top: 5px;">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img class="show-img" src="{% static 'images/Africa.ffdbe221.jpg' %}">
+                                    <img class="show-img" src="{{show.showimg1.url}}">
                                 </div>
                                 <div class="col-md-6">
-                                    <h4 class="show-title">{{show.showtitle}}</h4><!--Africa Connect-->
-                                    <p class="show-period">{{show.showperiod}}</p><!--Morning Show</p>-->
-                                    <p class="show-time">{{show.showtime}}</p> <!--10AM - 1PM</p>-->
-                                    <p class="show-text">{{show.showabout}}</p> <!--Africa Connect is a morning Show that happens from Monday to Friday. 
+                                    <h4 class="show-title">{{show.showtitle1}}</h4><!--Africa Connect-->
+                                    <p class="show-period">{{show.showperiod1}}</p><!--Morning Show</p>-->
+                                    <p class="show-time">{{show.showtime1}}</p> <!--10AM - 1PM</p>-->
+                                    <p class="show-text">{{show.showabout1}}</p> <!--Africa Connect is a morning Show that happens from Monday to Friday. 
                                         From 10 am - 1 pm. It is brought to you with Grace and Charles.</p>-->
-                                    <a class="btn check-btn" role="button" href="{{show.showurl}}" target="_blank">Check Out</a>
+                                    <a class="btn check-btn" role="button" href="{{show.showurl1}}" target="_blank">Check Out</a>
                                 </div>
                                 <br><br>                        
                             </div>                    
@@ -47,14 +47,14 @@
                         <div class="col-md-6" style="padding-top: 5px;">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img class="show-img" src="{% static 'images/monchoka.2863542a.jpg' %}">
+                                    <img class="show-img" src="{{show.showimg2.url}}">
                                 </div>
                                 <div class="col-md-6">
-                                    <h4 class="show-title">Monchoka</h4>
-                                    <p class="show-period">Evening Show</p>
-                                    <p class="show-time">4pm - 7PM</p>
-                                    <p class="show-text">Monchoka is an evening Show that happens from Monday to Sunday. From 4 pm - 7 pm. It is brought to you with Jeff, Kyle and Zozo.</p>
-                                    <a class="btn check-btn" role="button" href="https://zonkradio.com/program/297820/monchoka-with-zozo/" target="_blank">Check Out</a>
+                                    <h4 class="show-title">{{show.showtitle2}}</h4><!--Monchoka</h4>-->
+                                    <p class="show-period">{{show.showperiod2}}</p><!--Evening Show</p>-->
+                                    <p class="show-time">{{show.showtime2}}</p><!--4pm - 7PM</p>-->
+                                    <p class="show-text">{{show.showabout2}}</p><!--Monchoka is an evening Show that happens from Monday to Sunday. From 4 pm - 7 pm. It is brought to you with Jeff, Kyle and Zozo.</p>-->
+                                    <a class="btn check-btn" role="button" href="{{show.showurl2}}" target="_blank">Check Out</a>
                                 </div>
                                 <br><br>                        
                             </div>                    
@@ -62,7 +62,7 @@
                     </div>
                     <hr style=" background:white;">
                     <br>
-            {% endfor %}            
+                    {% endfor %}            
                     <!--<div class="row">
                         <div class="col-md-6" style="padding-top: 5px;">
                             <div class="row">
@@ -96,7 +96,7 @@
                         </div>
                     </div>
                     <hr style=" background:white;">
-                    <br>-->
+                    <br>
                     <div class="row">
                         <div class="col-md-6" style="padding-top: 5px;">
                             <div class="row">
@@ -130,7 +130,7 @@
                         </div>
                     </div>
                     <hr style=" background:white;">
-                    <br>
+                    <br>-->
                 </div>
                 <div class="col-md-1"></div>
             </div>            

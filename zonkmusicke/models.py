@@ -67,7 +67,7 @@ class Shows(models.Model):
 
     @classmethod
     def get_allshows(cls):
-        allshows = cls.objects.all()
+        allshows = cls.objects.all().order_by('-id')
         return allshows
 
 class Events(models.Model):
