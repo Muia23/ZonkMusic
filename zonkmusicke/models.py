@@ -51,7 +51,12 @@ class HomeBlogs(models.Model):
     blogimg3 = models.FileField(upload_to = 'media')
     blogheading3 = models.CharField(max_length= 60)
     blogtext3 = models.CharField(max_length= 60)
-    blogdate3 = models.CharField(max_length= 60)    
+    blogdate3 = models.CharField(max_length= 60)
+
+    @classmethod
+    def get_homeblogs(cls):
+        homeblogs = cls.objects.all().order_by('id')
+        return homeblogs    
 
 class Shows(models.Model):
     showimg1 = models.FileField(upload_to = 'media')

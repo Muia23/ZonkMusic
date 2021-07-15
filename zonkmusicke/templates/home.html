@@ -12,12 +12,12 @@
 
             <div class="videowrapper">        
                 <video id="videobg" role="presentation" preload="auto" playsinline crossorigin="anonymous" autoplay muted loop>
-                    <source src="{% static 'media/vidone.0c01e9ca.9f67b59c0352.webm' %}" type='video/webm'>
+                    <source src="{{homland.landingbackground.url}}" type='video/webm'>
                     Your browser does not support the video tag.
                 </video>
                 <div class="video-overlay">
                     <div class="container-fluid" >
-                        <img class="first-icon" src="{% static 'images/zonk-music.d8b24ab9.png' %}">
+                        <img class="first-icon" src="{{homland.landinglogo.url}}">
                     </div>
                     <div class="container landing">
                         <div class="row">
@@ -25,12 +25,12 @@
                             <div class="col-md-8">
                                 <div class="container">
                                     <div class="word w1 ">
-                                        <h3 class="landing-heading">Black to the Future </h3><!--{{homland.landingheading}}-->
-                                        <h5 class="landing-text">ZonkMusic - Introducing African culture and diversity through  music to the World </h5> <!--{{homland.landingtext}}-->
+                                        <h3 class="landing-heading">{{homland.landingheading1}}</h3><!--Black to the Future </h3>-->
+                                        <h5 class="landing-text">{{homland.landingtext1}}</h5><!--ZonkMusic - Introducing African culture and diversity through  music to the World </h5> -->
                                     </div>
                                     <div class="word w2 ">
-                                        <h3 class="landing-heading">Promoting Africa Local Content</h3>
-                                        <h5 class="landing-text">Showcasing the best of African untapped artistic talent</h5>
+                                        <h3 class="landing-heading">{{homland.landingheading2}}</h3><!--Promoting Africa Local Content</h3>-->
+                                        <h5 class="landing-text">{{homland.landingtext2}}</h5><!--Showcasing the best of African untapped artistic talent</h5>-->
                                     </div>
                                 </div>                                
                             </div>
