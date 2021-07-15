@@ -239,7 +239,7 @@
                             <hr style="border-top: 2px solid white;">                                
                             <div class="row">
                                 <div class="col-sm-6 col-md-5">
-                                    <div class="card about-card-img" style="background-image:url({{homabout.aboutimg}})"></div>                            
+                                    <div class="card about-card-img"></div>                            
                                 </div>
                                 <div class="col-md-1"></div>
                                 <div class="col-sm-6 col-md-6">
@@ -399,9 +399,9 @@
                         <div class="row" >
                             <div class="col-md-5 col-sm-12">
                                 <div class="card mag-card-1">
-                                    <p class="card-date-1">May 13, Saturday</p>
-                                    <a href="http://www.zonkmusicke.com/blog"><h4 class="card-title-1" >Zonk Magazine</h4></a>
-                                    <a href="http://www.zonkmusicke.com/blog"><p class="card-text-1">Maiden Issue</p></a>
+                                    <p class="card-date-1">{{homeblog.blogdate1}}</p><!--May 13, Saturday</p>-->
+                                    <a href="{{homeblog.blogurl1}}"><h4 class="card-title-1" >{{homeblog.blogheading1}} <!--Zonk Magazine--></h4></a>
+                                    <a href="{{homeblog.blogurl1}}"><p class="card-text-1">{{homeblog.blogtext1}} <!--Maiden Issue--></p></a>
                                 </div>                    
                             </div>                
                             <div class="col-md-6 col-sm-12">
@@ -592,7 +592,8 @@
                     }
                 }
 
-                .about-card-img {                    
+                .about-card-img {
+                    background:url("{% static 'images/bl2.6084eded.jpg' %}");                    
                     background-size: cover;
                     background-repeat: no-repeat;
                     height: 50vh;

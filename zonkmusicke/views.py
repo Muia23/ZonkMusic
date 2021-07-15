@@ -7,7 +7,8 @@ def home(request):
     homland = HomeLanding.get_homelanding()
     homabout = HomeAbout.get_homeabout()
     homshows = HomeShows.get_homeshows()
-    return render(request,'home.html', { "homland":homland , "homabout":homabout, "homshows":homshows})
+    homeblog = HomeBlogs.get_homeblogs()
+    return render(request,'home.html', { "homland":homland , "homabout":homabout, "homshows":homshows, "homeblog":homeblog})
 
 def shows(request):
     shows = Shows.get_allshows()
