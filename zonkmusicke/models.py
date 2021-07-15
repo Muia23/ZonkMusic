@@ -94,12 +94,36 @@ class About(models.Model):
     abouttitle3 = models.CharField(max_length= 60)
     abouttexte = models.TextField()    
     abouttextf = models.TextField()    
-    abouttextg = models.TextField()    
+    abouttextg = models.TextField()
+
+    @classmethod
+    def get_aboutcontent(cls):
+        about = cls.objects.get(pk=1)
+        return about    
 
 class Staff(models.Model):
-    staffimg = models.FileField(upload_to = 'media')
-    staffname = models.CharField(max_length= 60)
-    stafftitle = models.CharField(max_length= 60)
+    staffimg1 = models.FileField(upload_to = 'media')
+    staffname1 = models.CharField(max_length= 60)
+    stafftitle1 = models.CharField(max_length= 60)
+    staffimg2 = models.FileField(upload_to = 'media')
+    staffname2 = models.CharField(max_length= 60)
+    stafftitle2 = models.CharField(max_length= 60)
+    staffimg3 = models.FileField(upload_to = 'media')
+    staffname3 = models.CharField(max_length= 60)
+    stafftitle3 = models.CharField(max_length= 60)
+    staffimg4 = models.FileField(upload_to = 'media')
+    staffname4 = models.CharField(max_length= 60)
+    stafftitle4 = models.CharField(max_length= 60)
+    staffimg5 = models.FileField(upload_to = 'media')
+    staffname5 = models.CharField(max_length= 60)
+    stafftitle5 = models.CharField(max_length= 60)
+    staffimg6 = models.FileField(upload_to = 'media')
+    staffname6 = models.CharField(max_length= 60)
+    stafftitle6 = models.CharField(max_length= 60)
+
+    def get_staffinfo(cls):
+        staff = cls.objects.get(pk=1)
+        return staff
 
 class Contact(models.Model):
     contactbuilding = models.CharField(max_length= 60)

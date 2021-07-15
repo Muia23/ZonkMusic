@@ -15,7 +15,9 @@ def shows(request):
     return render(request, 'shows.html', { "shows":shows})
 
 def about(request):
-    return render(request, 'about.html')
+    about = About.get_aboutcontent()
+    staff = Staff.get_staffinfo()
+    return render(request, 'about.html', {"about":about})
 
 def blog(request):
     return render(request, 'blog.html')
