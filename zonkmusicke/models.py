@@ -37,6 +37,37 @@ class HomeShows(models.Model):
         homshow = cls.objects.all()
         return homshow
 
-    
-    
-    
+class HomeBlogs(models.Model):
+    blogimg = models.FileField(upload_to = 'media')
+    blogheading = models.CharField(max_length= 60)
+    blogtext = models.CharField(max_length= 60)
+    blogdate = models.CharField(max_length= 60)    
+
+class Shows(models.Model):
+    showimg = models.FileField(upload_to = 'media')
+    showtitle = models.CharField(max_length= 60)
+    showperiod = models.CharField(max_length= 60)  
+    showtime = models.CharField(max_length= 60)  
+    showabout = models.TextField()    
+    showurl = models.URLField(max_length = 200)
+ 
+class Events(models.Model):
+    eventimg = models.FileField(upload_to = 'media')
+    eventtxt = models.CharField(max_length= 60)  
+
+class About(models.Model):
+    abouttitle1 = models.CharField(max_length= 60)
+    abouttext1 = models.TextField()    
+    abouttitle2 = models.CharField(max_length= 60)
+    abouttext2 = models.TextField()    
+    abouttitle3 = models.CharField(max_length= 60)
+    abouttext3 = models.TextField()    
+    staffimg = models.FileField(upload_to = 'media')
+    staffname = models.CharField(max_length= 60)
+    stafftitle = models.CharField(max_length= 60)
+
+class Contact(models.Model):
+    contactbuilding = models.CharField(max_length= 60)
+    contactcountry = models.CharField(max_length= 60)
+    contactphone = models.CharField(max_length= 60)
+    contactemail = models.CharField(max_length= 60)
