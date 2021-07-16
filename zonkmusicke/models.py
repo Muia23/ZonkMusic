@@ -81,8 +81,17 @@ class Shows(models.Model):
         return allshows
 
 class Events(models.Model):
-    eventimg = models.FileField(upload_to = 'media')
-    eventtxt = models.CharField(max_length= 60)  
+    eventimg1 = models.FileField(upload_to = 'media')
+    eventtxt1 = models.CharField(max_length= 60)  
+    eventimg2 = models.FileField(upload_to = 'media')
+    eventtxt2 = models.CharField(max_length= 60)  
+    eventimg3 = models.FileField(upload_to = 'media')
+    eventtxt3 = models.CharField(max_length= 60)  
+
+    @classmethod
+    def get_allevents(cls):
+        allevents = cls.objects.all().order_by('id')
+        return allevents
 
 class About(models.Model):
     abouttitle1 = models.CharField(max_length= 60)
@@ -121,6 +130,7 @@ class Staff(models.Model):
     staffname6 = models.CharField(max_length= 60)
     stafftitle6 = models.CharField(max_length= 60)
 
+    @classmethod
     def get_staffinfo(cls):
         staff = cls.objects.get(pk=1)
         return staff
