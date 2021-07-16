@@ -17,6 +17,7 @@ import django_heroku
 from decouple import config,Csv
 from pathlib import Path
 
+MODE='dev'
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -145,7 +146,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-MODE='dev'
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '98j^-8eub-s0ajfkr=m6z)-n&v)roo^lfc7iv*9#qv#4qgl)k4'
