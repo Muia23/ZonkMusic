@@ -23,7 +23,8 @@ def blog(request):
     return render(request, 'blog.html')
 
 def events(request):
-    return render(request, 'events.html')
+    event = Events.get_allevents()
+    return render(request, 'events.html', {"event":event})
 
 def gallery(request):
     return render(request, 'gallery.html')
