@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'zonkmusic.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-if config('MODE')=="dev":
+if MODE=="dev":
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
