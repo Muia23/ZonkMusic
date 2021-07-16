@@ -90,7 +90,7 @@ class Events(models.Model):
 
     @classmethod
     def get_allevents(cls):
-        allevents = cls.objects.all().order_by('id')
+        allevents = cls.objects.get(pk=1)
         return allevents
 
 class About(models.Model):
