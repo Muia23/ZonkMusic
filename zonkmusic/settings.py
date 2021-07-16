@@ -82,10 +82,10 @@ if config('MODE')=="dev":
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': config('DB_NAME'),
-            'USER': config('DB_USER'),
-            'PASSWORD': config('DB_PASSWORD'),
-            'HOST': config('DB_HOST'),
+            'NAME': 'zonk',
+            'USER': 'wil'
+            'PASSWORD': 'wil1234'
+            'HOST': '127.0.0.1'
             'PORT':'',
         }
     }
@@ -145,13 +145,13 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-MODE=config("MODE", default="dev")
+MODE='dev'
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = '98j^-8eub-s0ajfkr=m6z)-n&v)roo^lfc7iv*9#qv#4qgl)k4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
