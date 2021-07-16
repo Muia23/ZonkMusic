@@ -83,9 +83,9 @@ if config('MODE')=="dev":
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'zonk',
-            'USER': 'wil'
-            'PASSWORD': 'wil1234'
-            'HOST': '127.0.0.1'
+            'USER': 'wil',
+            'PASSWORD': 'wil1234',
+            'HOST': '127.0.0.1',
             'PORT':'',
         }
     }
