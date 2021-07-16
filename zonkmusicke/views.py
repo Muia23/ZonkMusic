@@ -30,4 +30,5 @@ def gallery(request):
     return render(request, 'gallery.html')
 
 def contact(request):
-    return render(request, 'contact.html')
+    contact = Contact.get_contacts()
+    return render(request, 'contact.html', {"contact":contact})

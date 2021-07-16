@@ -140,3 +140,8 @@ class Contact(models.Model):
     contactcountry = models.CharField(max_length= 60)
     contactphone = models.CharField(max_length= 60)
     contactemail = models.CharField(max_length= 60)
+
+    @classmethod
+    def get_contacts(cls):
+        contacts = cls.objects.get(pk=1)
+        return contacts
