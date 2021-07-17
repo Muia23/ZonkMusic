@@ -1,0 +1,330 @@
+{% extends 'base.html' %}
+{% load static %}  
+    {% block styles %}
+        <link href="{% static 'css/about.css' %}" rel="stylesheet"/>               
+    {% endblock %}  
+{% block content %}  
+    {{block.super}}                   
+    {% include "nav.html" %}    
+    <div class="landing">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="container">        
+                    <h2 class="landing-title">About Us</h2>
+                    <a href="{% url 'home'%}"><p class="landing-text-1">Home  / </p></a>
+                    <p class="landing-text-2"> About</p>
+                </div>
+            </div>            
+        </div>          
+    </div>  
+    <div class="about-content">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">                
+                <div class="container">
+                    <br><br>
+                    {% if about1 %}
+                        <div class="about-container">
+                            <h1 class="about-title">
+                                <a class="mission" data-period="2000" data-type='[ "{{about1.abouttitle}}", "{{about1.abouttitle}}" ]' >
+                                    <span class="wrap"></span>                        
+                                </a>
+                            </h1>
+                        </div>   
+                        <div class="about-container">
+                            <p class="about-text">
+                                <a class="mission" data-period="2000" data-type='[ "{{about1.abouttexta}}", "{{about1.abouttextb}}" ]' >
+                                    <span class="wrap"></span>                        
+                                </a>                                        
+                            </p>
+                        </div>   
+                    {% else %}
+                        <div class="about-container">
+                            <h1 class="about-title">
+                                <a class="mission" data-period="2000" data-type='[ "OUR MISSION", "OUR MISSION" ]' >
+                                    <span class="wrap"></span>                        
+                                </a>
+                            </h1>
+                        </div>   
+                        <div class="about-container">
+                            <p class="about-text">
+                                <a class="mission" data-period="2000" data-type='[ "Growing Entertainment market across the world through the production, promotion, and recording of high-quality entertainment. Zonk Music; we are all about taking African music to the world, with the continent having diverse rich culture", "Zonk Music and its multi-platform approach respond to take the needs and interests of Africans. We seek to empower artists and inspire them to democratize trends and offer concrete African Music in style. Zonk Music will own and have control over all masters in Zonk Music, copyrights and licenses will be fully owned by Zonk Music" ]' >
+                                    <span class="wrap"></span>                        
+                                </a>                                        
+                            </p>
+                        </div>              
+                    {% endif%}           
+                    <br><br><br>
+                    {% if about2 %}
+                        <div class="about-container">
+                            <h1 class="about-title">
+                                <a class="mission" data-period="2000" data-type='[ "{{about2.abouttitle}}", "{{about2.abouttitle}}" ]' >
+                                    <span class="wrap"></span>                        
+                                </a>                    
+                            </h1>
+                        </div>    
+                        <div class="about-container">
+                            <p class="about-text">
+                                <a class="mission" data-period="2000" data-type='[ "{{about2.abouttexta}}", "{{about2.abouttextb}}" ]' >
+                                    <span class="wrap"></span>                        
+                                </a>                                        
+                            </p>
+                        </div>      
+                    {% else %}
+                        <div class="about-container">
+                            <h1 class="about-title">
+                                <a class="mission" data-period="2000" data-type='[ "MARKETING", "MARKETING" ]' >
+                                    <span class="wrap"></span>                        
+                                </a>                    
+                            </h1>
+                        </div>    
+                        <div class="about-container">
+                            <p class="about-text">
+                                <a class="mission" data-period="2000" data-type='[ "We will have a multi-faceted promotional strategy and hire independent record promoters, with having other platforms in-house such as Zonk Magazine, Zonk Tv, Zonk News, and Zonk Radio this gives Zonk Music a strong promotional print, video, and medium.", "Zonk Music will distribute, produce, manufacture, market, promote and enforce its masters owned 100% through various platforms." ]' >
+                                    <span class="wrap"></span>                        
+                                </a>                                        
+                            </p>
+                        </div>                    
+                    {% endif%}              
+                    <br><br><br>   
+                    {% if about3 %}                     
+                        <div class="about-container">
+                            <h1 class="about-title">
+                                <a class="mission" data-period="2000" data-type='[ "{{about3.abouttitle}}", "{{about3.abouttitle}}" ]' >
+                                    <span class="wrap"></span>                        
+                                </a>                                        
+                            </h1>
+                        </div>      
+                        <div class="about-container">
+                            <p class="about-text">
+                                <a class="mission" data-period="2000" data-type='[ "{{about3.abouttexta}}", "{{about3.abouttextb}}", "{{about3.abouttextc}}" ]' >
+                                    <span class="wrap"></span>                        
+                                </a>                                                                            
+                            </p>
+                        </div>  
+                    {% else %}
+                        <div class="about-container">
+                            <h1 class="about-title">
+                                <a class="mission" data-period="2000" data-type='[ "EXECUTIVE SUMMARY", "EXECUTIVE SUMMARY" ]' >
+                                    <span class="wrap"></span>                        
+                                </a>                                        
+                            </h1>
+                        </div>      
+                        <div class="about-container">
+                            <p class="about-text">
+                                <a class="mission" data-period="2000" data-type='[ "Our Head of Zonk Music Martin Wanga known as Pinto IQ is a music specialist who believes music heals and connects the world, having him on board indeed is a privilege and at Zonk Music we fully support him.", "Zonk Music, chairman Andrew Chimpondah a qualified chartered accountant who will oversee all our financials. He maintains strong affiliations in the industry and with his hard work, dedication, and humbleness we believe Africa is in good hands.", "C.E.O Dineo Mante Phasha is a black woman holding a Bachelor degree in accounting and being a public figure. At Zonk Music, believe our artist will be protected and treated with fairness." ]' >
+                                    <span class="wrap"></span>                        
+                                </a>                                                                            
+                            </p>
+                        </div>    
+                    {% endif%}  
+                    <br><br>                        
+                </div>                
+            </div>
+            <div class="col-md-1"></div>
+        </div>        
+        <br>    
+    </div>
+    <div class="staff">
+        <br><br>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="container">
+                    <h5 class="staff-title1">Meet the Team</h5>
+                    <h1 class="staff-title2">Our Staff</h1>
+    
+                    <div class="row">                      
+
+                        {% if staffs %}
+                            {% for staff in staffs %}
+                                <div class="col-md-4" style="text-align: center;">
+                                    <div class="staff-card card" style="background: url({{staff.staffimg1.url}}); background-size: cover; background-repeat: no-repeat;"></div>  
+                                    <h5 class="staff-name">{{staff.staffname1}}</h5>
+                                    <p class="staff-pos">{{staff.stafftitle1}}</p>                    
+                                </div>
+                            {% endfor %}
+                        {% else %}
+
+                            <div class="col-md-4" style="text-align: center;">
+                                <div class="staff-card1 card"></div>  
+                                <h5 class="staff-name">PINTO IQ</h5>
+                                <p class="staff-pos">Zonkmusic Head</p>                    
+                            </div>
+                            <div class="col-md-4"> 
+                                <div class="staff-card2 card"></div>
+                                <h5 class="staff-name">Fikile Madinoge</h5>
+                                <p class="staff-pos">Founder</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="staff-card3 card"></div>                    
+                                <h5 class="staff-name">Winnie Jesca</h5>
+                                <p class="staff-pos">Events Manager</p>
+                            </div>                 
+                            <div class="col-md-4" style="text-align: center;">
+                                <div class="staff-card4 card"></div>                                        
+                                <h5 class="staff-name">Dj Shinsky</h5>
+                                <p class="staff-pos">Producer</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="staff-card5 card"></div>                                        
+                                <h5 class="staff-name">Dj Zozo</h5>
+                                <p class="staff-pos">Videographer</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="staff-card6 card"></div>                                        
+                                <h5 class="staff-name">Dj Flip</h5>
+                                <p class="staff-pos">Photographer</p>
+                            </div>                 
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>            
+        <br><br>
+    </div>
+    
+    {% include "footer.html" %}    
+    <style>
+        .landing {
+            height: 61vh;
+            background: linear-gradient(#0a0a0a77,#0a0a0a77,#0a0a0a77),url("{% static 'images/show.c2789dd3.jpg' %}");
+            background-repeat: repeat;
+            background-attachment: fixed;            
+            background-size: cover;
+            -webkit-animation: backgroundScroll 15s linear 1;
+            -webkit-animation-fill-mode: forwards;
+            animation: backgroundScroll 15s linear 1;
+            animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes backgroundScroll {
+            from {background-position: 0 5%;}
+            to {background-position: 0 -180px;}            
+        }
+
+        @keyframes backgroundScroll {
+            from {background-position: 0 5%;}
+            to {background-position: 0 -180px;}            
+        }          
+        
+
+        .staff-card {            
+            height: 52vh;
+            width: 100%;
+        }
+
+        .staff-card1 {
+            background: url(" {% static 'images/pinto.23cf2d80.jpg' %}");
+            background-size: cover;  
+            background-repeat: no-repeat;             
+            height: 52vh;
+            width: 100%;
+        }
+
+        .staff-card2 {
+            background: url(" {% static 'images/bl2.6084eded.jpg' %}");
+            background-size: cover; 
+            background-repeat: no-repeat;       
+            height: 52vh;
+            width: 100%;
+        }
+
+        .staff-card3 {
+            background: url(" {% static 'images/staf8.e753bf8a.jpg' %}");            
+            background-size: cover;   
+            background-repeat: no-repeat;           
+            height: 52vh;
+            width: 100%;
+        }
+
+        .staff-card4 {
+            background: url("{% static 'images/staf5.2cfe582b.jpg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;               
+            height: 52vh;
+            width: 100%;
+        }
+
+        .staff-card5 {
+            background: url(" {% static 'images/staf6.cee5c200.jpg' %}");
+            background-size: cover;  
+            background-repeat: no-repeat;            
+            height: 52vh;
+            width: 100%;
+        }
+
+        .staff-card6 {
+            background: url(" {% static 'images/staf3.6215f0b5.jpg' %}");
+            background-size: cover; 
+            background-repeat: no-repeat;             
+            height: 52vh;
+            width: 100%;
+        }
+        
+    </style>
+
+    <script src="{% static 'js/about.js' %}">
+    </script>
+    <script>
+        var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('mission');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".mission > .wrap { border-right: 0.04em solid #c7c7c7  }";
+        document.body.appendChild(css);
+    };
+    </script>
+
+{% endblock %}

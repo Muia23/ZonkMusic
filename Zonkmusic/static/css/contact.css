@@ -1,0 +1,63 @@
+.landing-title {
+    color: #c2c2c5;
+    font-size: 56px;
+    font-weight: 400;
+    margin-top: 30vh;
+    padding-left: 10px;
+}
+
+.landing-text-1 {            
+    color: #d6d2d2;
+    display: inline-block;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.landing-text-2 {
+    color: #32ea91;
+    display: inline-block;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+.contact {
+    background: black;
+}
+
+.contact-title1 {
+    color: #f7567e;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.contact-title2 {
+    color: #28a745;          
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.map {
+    background: #343a40;
+}
+
+.map-img {    
+    width: 100%;
+    height: 60vh;
+}        
+
+.map-head {
+    color: #f7567e;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.map-title{
+    color: #f7567e;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.map-text {
+    color: #e9e3e3;
+    font-size: 16px;    
+}

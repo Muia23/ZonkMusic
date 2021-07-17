@@ -1,0 +1,421 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block styles %}
+        <link href="{% static 'css/gallery.css' %}" rel="stylesheet"/>               
+    {% endblock %}
+{% block content %}                     
+    {{block.super}}     
+    {% include "nav.html" %}    
+    <div class="landing">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-9">
+                <div class="container">        
+                    <h2 class="landing-title">Gallery</h2>
+                    <a href="{% url 'home'%}"><p class="landing-text-1">Home  / </p></a>
+                    <p class="landing-text-2"> Gallery</p>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>        
+    </div>    
+    <div class="images">
+        <br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6" >                            
+                            <div class="over-lay">
+                                <div class="container gall-img">
+                                    <div class="card gal-img1">
+                                        <ul class="socials container">                                            
+                                            <li><a href="https://www.facebook.com/zonkmusic.20" class="social-icon" style="padding: 3px 7px;"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="https://www.instagram.com/zonkmusic/" class="social-icon" style="margin-left: 40px; padding: 3px 8.5px;"><i class="fab fa-facebook-f"></i></a></li>
+                                        </ul>                                        
+                                    </div>                                                                        
+                                </div>                         
+                            </div>                                                                                            
+                            <div class="over-lay">
+                                <div class="container gall-img">
+                                    <div class="card gal-img2">
+                                        <ul class="socials container">                                            
+                                            <li><a href="https://www.facebook.com/zonkmusic.20" class="social-icon" style="padding: 3px 7px;"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="https://www.instagram.com/zonkmusic/" class="social-icon" style="margin-left: 40px; padding: 3px 8.5px;"><i class="fab fa-facebook-f"></i></a></li>
+                                        </ul>                                        
+                                    </div>                                                                
+                                </div>
+                            </div>                            
+                        </div>                                                               
+                        <div class="col-md-4 col-sm-6">
+                            <div class="over-lay">
+                                <div class="container gall-img">
+                                    <div class="card gal-img3">
+                                        <ul class="socials container">                                            
+                                            <li><a href="https://www.facebook.com/zonkmusic.20" class="social-icon" style="padding: 3px 7px;"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="https://www.instagram.com/zonkmusic/" class="social-icon" style="margin-left: 40px; padding: 3px 8.5px;"><i class="fab fa-facebook-f"></i></a></li>
+                                        </ul>                                        
+                                    </div>                            
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">                            
+                            <div class="over-lay">
+                                <div class="container gall-img">
+                                    <div class="card gal-img4">
+                                        <ul class="socials container">                                            
+                                            <li><a href="https://www.facebook.com/zonkmusic.20" class="social-icon" style="padding: 3px 7px;"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="https://www.instagram.com/zonkmusic/" class="social-icon" style="margin-left: 40px; padding: 3px 8.5px;"><i class="fab fa-facebook-f"></i></a></li>
+                                        </ul> 
+                                    </div>                                       
+                                </div>
+                            </div>                                            
+                            <div class="over-lay">
+                                <div class="container gall-img">
+                                    <div class="card gal-img5">
+                                        <ul class="socials container">                                            
+                                            <li><a href="https://www.facebook.com/zonkmusic.20" class="social-icon" style="padding: 3px 7px;"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="https://www.instagram.com/zonkmusic/" class="social-icon" style="margin-left: 40px; padding: 3px 8.5px;"><i class="fab fa-facebook-f"></i></a></li>
+                                        </ul>         
+                                    </div>                               
+                                </div>
+                            </div>                           
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="over-lay">
+                                <div class="container gall-img">
+                                    <div class="card gal-img6">
+                                        <ul class="socials container">                                            
+                                            <li><a href="https://www.facebook.com/zonkmusic.20" class="social-icon" style="padding: 3px 7px;"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="https://www.instagram.com/zonkmusic/" class="social-icon" style="margin-left: 40px; padding: 3px 8.5px;"><i class="fab fa-facebook-f"></i></a></li>
+                                        </ul>                                        
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">                            
+                            <div class="over-lay">
+                                <div class="container gall-img">
+                                    <div class="card gal-img7">
+                                        <ul class="socials container">                                            
+                                            <li><a href="https://www.facebook.com/zonkmusic.20" class="social-icon" style="padding: 3px 7px;"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="https://www.instagram.com/zonkmusic/" class="social-icon" style="margin-left: 40px; padding: 3px 8.5px;"><i class="fab fa-facebook-f"></i></a></li>
+                                        </ul>                                        
+                                    </div>                                        
+                                </div>
+                            </div>                            
+                            <div class="over-lay">
+                                <div class="container gall-img">
+                                    <div class="card gal-img8">
+                                        <ul class="socials container">                                            
+                                            <li><a href="https://www.facebook.com/zonkmusic.20" class="social-icon" style="padding: 3px 7px;"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="https://www.instagram.com/zonkmusic/" class="social-icon" style="margin-left: 40px; padding: 3px 8.5px;"><i class="fab fa-facebook-f"></i></a></li>
+                                        </ul>  
+                                    </div>                                      
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="col-md-4 col-sm-6">                            
+                            <div class="over-lay">
+                                <div class="container gall-img">
+                                    <div class="card gal-img9">
+                                        <ul class="socials container">                                            
+                                            <li><a href="https://www.facebook.com/zonkmusic.20" class="social-icon" style="padding: 3px 7px;"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="https://www.instagram.com/zonkmusic/" class="social-icon" style="margin-left: 40px; padding: 3px 8.5px;"><i class="fab fa-facebook-f"></i></a></li>
+                                        </ul>                                        
+                                    </div>
+                                </div>
+                            </div>                            
+                            <div class="over-lay">
+                                <div class="container gall-img">
+                                    <div class="card gal-img10">
+                                        <ul class="socials container">                                            
+                                            <li><a href="https://www.facebook.com/zonkmusic.20" class="social-icon" style="padding: 3px 7px;"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="https://www.instagram.com/zonkmusic/" class="social-icon" style="margin-left: 40px; padding: 3px 8.5px;"><i class="fab fa-facebook-f"></i></a></li>
+                                        </ul>                                        
+                                    </div>                        
+                                </div>
+                            </div>                                                   
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <br><br>
+        </div>        
+    </div>
+
+    {% include "footer.html" %}    
+
+    <style>
+        .landing {
+            height: 61vh;
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/gale9.5aafd3d4.jpg' %}");
+            background-repeat: repeat;
+            background-attachment: fixed;            
+            background-size: cover;
+            -webkit-animation: backgroundScroll 15s linear 1;
+            -webkit-animation-fill-mode: forwards;
+            animation: backgroundScroll 15s linear 1;
+            animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes backgroundScroll {
+            from {background-position: 0 0;}
+            to {background-position: 0 -180px;}            
+        }
+
+        @keyframes backgroundScroll {
+            from {background-position: 0 0;}
+            to {background-position: 0 -180px;}            
+        }  
+        
+        .gall-img {
+            border: solid 0.01rem gray;
+            padding: 10px;
+            position: relative;
+        }        
+        
+        .gal-img1 {
+            background: url("{% static 'images/back.80078029.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            margin: 0;
+            height: 23vh;                       
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .gal-img1:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/back.80078029.jpg' %}");                        
+            background-size: 140%;            
+            background-position: center;            
+        }        
+
+        .socials {
+            opacity: 0;
+            list-style: none;
+        }
+
+        .gal-img1:hover .socials {
+            opacity: 1;
+        }
+        .gal-img2 {
+            background: url("{% static 'images/inst3.0775580f.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            min-width: max-content;
+            height: 33vh;                       
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .gal-img2:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/inst3.0775580f.jpg' %}");            
+            background-size: 120%;            
+            background-position: center;
+        }
+        
+        .gal-img2:hover .socials {
+            opacity: 1;
+        }
+
+        .gal-img3 {
+            background: url("{% static 'images/zonk3.bede8716.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            height: 41vh;                       
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .gal-img3:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/zonk3.bede8716.jpg' %}");            
+            background-size: 120%;            
+            background-position: center;
+        }
+
+        .gal-img3:hover .socials {
+            opacity: 1;
+        }
+
+        .gal-img4 {
+            background: url("{% static 'images/inst2.b18d0733.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            height: 33vh;                       
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .gal-img4:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/inst2.b18d0733.jpg' %}");            
+            background-size: 120%;            
+            background-position: center;
+        }
+
+        .gal-img4:hover .socials {
+            opacity: 1;
+        }
+
+        .gal-img5 {
+            background: url("{% static 'images/inst1.beaa679f.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            height: 33vh;                       
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .gal-img5:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/inst1.beaa679f.jpg' %}");            
+            background-size: 120%;            
+            background-position: center;
+        }
+
+        .gal-img5:hover .socials {
+            opacity: 1;
+        }
+
+        .gal-img6 {
+            background: url("{% static 'images/3gs.1180f2f2.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            height: 33vh;                                   
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .gal-img6:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/3gs.1180f2f2.jpg' %}");            
+            background-size: 120%;            
+            background-position: center;
+        }
+
+        .gal-img6:hover .socials {
+            opacity: 1;
+        }
+
+        .gal-img7 {
+            background: url("{% static 'images/event2.efc7aa12.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            height: 33vh;     
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .gal-img7:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/event2.efc7aa12.jpg' %}");            
+            background-size: 120%;            
+            background-position: center;
+        }
+
+        .gal-img7:hover .socials {
+            opacity: 1;
+        }
+
+        .gal-img8 {
+            background: url("{% static 'images/zonk1.1774abb0.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            height: 33vh;     
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .gal-img8:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/zonk1.1774abb0.jpg' %}");            
+            background-size: 120%;            
+            background-position: center;
+        }
+
+        .gal-img8:hover .socials {
+            opacity: 1;
+        }
+
+        .gal-img9 {
+            background: url("{% static 'images/monchoka.2863542a.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            height: 33vh;     
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .gal-img9:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/monchoka.2863542a.jpg' %}");            
+            background-size: 120%;            
+            background-position: center;
+        }
+
+        .gal-img9:hover .socials {
+            opacity: 1;
+        }
+
+        .gal-img10 {
+            content: '';
+            background: url("{% static 'images/house.6bee06fc.jpg' %}");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            width: 100%;
+            height: 33vh;     
+            border-radius: 0;
+            -webkit-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+            color: white;
+        }
+
+        .gal-img10:hover {
+            background: linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/house.6bee06fc.jpg' %}");            
+            background-size: 120%;            
+            background-position: center;
+        }
+
+        .gal-img10:hover .socials {
+            opacity: 1;
+        }        
+        
+    </style>
+{% endblock %}

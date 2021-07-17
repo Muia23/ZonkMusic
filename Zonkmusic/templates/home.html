@@ -1,0 +1,752 @@
+{% extends 'base.html' %}
+{% load static %}       
+    <script src="{% static 'js/home.js' %}"></script>
+            {% block styles %}                    
+                <link href="{% static 'css/index.css' %}" rel="stylesheet"/>           
+            {% endblock %}                                 
+        
+            {% block content %}    
+            {{block.super}}                    
+                {% include "nav.html" %}                                
+            <br><br>
+
+            <div class="videowrapper">        
+                <video id="videobg" role="presentation" preload="auto" playsinline crossorigin="anonymous" autoplay muted loop>
+                    {% if homland.landingbackground %}
+                        <source src="{{homland.landingbackground.url}}" type='video/webm'>                    
+                    {% else %}
+                        <source src="{% static 'images/vidone.0c01e9ca.webm' %}" type='video/webm'>                    
+                    {% endif %}
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay">
+                    <div class="container-fluid" >
+                        {% if homland.landinglogo %}
+                            <img class="first-icon" src="{{homland.landinglogo.url}}">
+                        {% else %}
+                            <img class="first-icon" src="{% static 'images/zonk-music.d8b24ab9.png' %}">
+                        {% endif %}
+                    </div>
+                    <div class="container landing">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-md-8">
+                                <div class="container">
+                                    {% if homland %}
+                                        <div class="word w1 ">
+                                            <h3 class="landing-heading">{{homland.landingheading1}}</h3>
+                                            <h5 class="landing-text">{{homland.landingtext1}}</h5>
+                                        </div>
+                                        <div class="word w2 ">
+                                            <h3 class="landing-heading">{{homland.landingheading2}}</h3>
+                                            <h5 class="landing-text">{{homland.landingtext2}}</h5>
+                                        </div>
+                                    {% else %}    
+                                        <div class="word w1 ">
+                                            <h3 class="landing-heading">Black to the Future</h3>
+                                            <h5 class="landing-text">ZonkMusic - Introducing African culture and diversity through  music to the World</h5>
+                                        </div>
+                                        <div class="word w2 ">
+                                            <h3 class="landing-heading">Promoting Africa Local Content</h3>
+                                            <h5 class="landing-text">Showcasing the best of African untapped artistic talent</h5>
+                                        </div>                                    
+                                    {% endif %}
+                                </div>                                
+                            </div>
+                            <div class="col"></div>
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid genre-background" style=" width: 100vw !important;">
+                <h1 class="genre-text">Music Genres</h1>
+            </div>  
+            <div class="genre-section">                               
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            {% if genre1 %}
+                                <div class="carousel-item active genresize" style="background: url({{genre1.genreimg.url}}); background-size: contain; background-repeat: no-repeat; background-position: center;"> 
+                                    <div class="genretxt">                                    
+                                        <h4>{{genre1.genretext}}</h4>  
+                                    </div>
+                                </div>                            
+                            {% else %}
+                                <div class="carousel-item active genre1 genresize"> 
+                                    <div class="genretxt">                                    
+                                        <h4>R&B and HipHop</h4>  
+                                    </div>
+                                </div>                            
+                            {% endif %}
+                            {% if genres %}
+                                {% for genre in genres %}
+                                    <div class="carousel-item genresize" style="background: url({{genre.genreimg.url}}); background-size: contain; background-repeat: no-repeat; background-position: center;"> 
+                                        <div class="genretxt">                                    
+                                            <h4>{{genre.genretext}}</h4>  
+                                        </div>
+                                    </div>   
+                                {% endfor %}                         
+                            {% else %}
+                                <div class="carousel-item genre2 genresize">
+                                    <div class="genretxt">                                    
+                                        <h4>House and Pop</h4> 
+                                    </div>                                
+                                </div>
+                                <div class="carousel-item genre3 genresize">
+                                    <div class="genretxt">                                                                        
+                                        <h4>Gospel Music</h4> 
+                                    </div>
+                                </div>
+                                <div class="carousel-item genre4 genresize">
+                                    <div class="genretxt">                                    
+                                        <h4>Jazz Music</h4> 
+                                    </div>
+                                </div>
+                                <div class="carousel-item genre5 genresize">
+                                    <div class="genretxt">                                    
+                                        <h4>Rock Music</h4> 
+                                    </div>
+                                </div>
+                            {% endif%}
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>                
+            </div>
+            
+                <!--<div class="container-fluid slider">         
+                <div id="genreCarousel" class="carousel slide container-fluid" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <div class="row" style="width: 100%;">
+                              <div class="col">
+                                    <!--<h5 class="slider-title">Genre</h5>--
+                                    <h5 class="slider-text">R&B and HipHop</h5>
+                              </div>
+                              <div class="col-sm-12 col-md-4">
+                                <div class="card slider-card">
+                                    <img class="d-block slider-img" src="{% static 'images/pic.44405192.png' %}" alt="First slide">                                                                        
+                                  </div>                                
+                              </div>
+                              <div class="col"></div>
+                          </div>                          
+                      </div>
+                      <div class="carousel-item">                            
+                            <div class="row">
+                                <div class="col">
+                                    <!--<h5 class="slider-text">Genre</h5>--
+                                    <h5 class="slider-text">House and Pop</h5>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <div class="slider-card card">
+                                        <img class="d-block slider-img" src="{% static 'images/zonk2.0775580f.jpg' %}" alt="Second slide">                                                                                        
+                                    </div>
+                                </div>
+                                <div class="col"></div>
+                            </div>                                                            
+                      </div>
+                      <div class="carousel-item">
+                          <div class="row">
+                              <div class="col">
+                                <!--<h5 class="slider-text">Genre</h5>--
+                                <h5 class="slider-text">Gospel Music</h5>
+                              </div>
+                              <div class="col-sm-12 col-md-4">
+                                    <div class="card slider-card">
+                                        <img class="d-block slider-img" src="{% static 'images/monchoka.2863542a.jpg' %}" alt="Third slide">                                                                            
+                                    </div>
+                              </div>
+                              <div class="col"></div>
+                          </div>                            
+                      </div>
+                      <div class="carousel-item">                            
+                        <div class="row">
+                            <div class="col">
+                                <!--<h5 class="slider-text">Genre</h5>--
+                                <h5 class="slider-text">Jazz Music</h5>
+                            </div>
+                            <div class="col-sm-12 col-md-4">
+                                <div class="card slider-card">
+                                    <img class="d-block slider-img" src="{% static 'images/zonk1.1774abb0.jpg' %}" alt="Second slide">                                                                                        
+                                </div>
+                            </div>
+                            <div class="col"></div>
+                        </div>                                                            
+                        </div>
+                        <div class="carousel-item">                            
+                            <div class="row">
+                                <div class="col">
+                                    <!--<h5 class="slider-text">Genre</h5>--
+                                    <h5 class="slider-text">Rock Music</h5>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <div class="card slider-card">
+                                        <img class="d-block slider-img" src="{% static 'images/3gs.1180f2f2.jpg' %}" alt="Second slide">                                                                                        
+                                    </div>
+                                </div>
+                                <div class="col"></div>
+                            </div>                                                            
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#genreCarousel" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#genreCarousel" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                </div>                                                                    
+                </div>-->
+
+            <div class="container-fluid about">
+                <br><br>
+                <div class="container">                                       
+                    <div class="row" style="width: 100%;">                            
+                        <div class="col-md-12">                                
+                            <hr style="border-top: 2px solid white;">                                                            
+                            {% if homabout %}
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-5">
+                                        <div class="card about-card-img1" style="background: url({{homabout.aboutimg.url}}); background-size: cover; background-repeat: no-repeat;"></div>                            
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                    <div class="col-sm-6 col-md-6">
+                                        <br>
+                                        <h3 class="about-title font-weight-normal">
+                                            <a class="mission" data-period="3000" data-type='[ "{{homabout.abouttitle}}", "What we do!" ]' >
+                                                <span class="wrap"></span>                        
+                                            </a>                                                    
+                                        </h3>
+                                        <p class="about-text">{{homabout.aboutpara1}}</p>
+                                        <p class="about-text">{{homabout.aboutpara2}}</p>                        
+                                        <a href="{% url 'about'%}" ><button class="btn btn-danger about-button"><span class="padding: 0 35px;">Curious?</span></button></a>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-5">
+                                        <div class="card about-card-img2"></div>                            
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                    <div class="col-sm-6 col-md-6">
+                                        <br>
+                                        <h3 class="about-title font-weight-normal">
+                                            <a class="mission" data-period="3000" data-type='[ "Who we are!", "What we do!" ]' >
+                                                <span class="wrap"></span>                        
+                                            </a>                                                    
+                                        </h3>
+                                        <p class="about-text">ZonkMusic is a recording label headquartered in South Africa with operations in Kenya and Zimbabwe. Zonk Music will focus on the following genres: House, Pop, HipHop, Gospel, Rock, and Jazz Music.</p>
+                                        <p class="about-text">Zonk Music is a platform that introduces African culture and diversity through music to the world. It helps to showcase the best of African untapped artistic talent. Inspiring and growing African to self-actualization.</p>                        
+                                        <a href="{% url 'about'%}" ><button class="btn btn-danger about-button"><span class="padding: 0 35px;">Curious?</span></button></a>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>                                               
+                    </div>                                                                    
+                    <br><br><br> 
+                </div>                         
+            </div>            
+            <div class="shows row">   
+                <div class="container-fluid">
+                <br><br>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <h1 class="shows-title">Your Fav Shows</h1>            
+                            <div class="shows-table">
+                                {% if shows %}
+                                    {% for homshow in homshows %}                        
+                                        <div class="row shows-row">
+                                            <div class="col-md-3 row-date">
+                                                <p class="date-text">{{homshow.showdate}}</p>
+                                            </div>
+                                            <div class="col-md-3 row-show">
+                                                <h4 class="show-name">{{homshow.showtitle}}</h4>
+                                                <p class="show-host">{{homshow.showhost}}</p>
+                                            </div>  
+                                            <div class="col-md-3 row-time">
+                                                <h5 class="show-time">{{homshow.eattime}}</h5>
+                                                <h5 class="show-time">{{homshow.cattime}}</h5>
+                                            </div>                                      
+                                            <div class="col-md-3 row-detail">
+                                                <button class="btn details-btn">Find Details</button>                                
+                                            </div>                            
+                                        </div>                                                 
+                                    {% endfor %}       
+                                {% else %}        
+                                    <div class="row shows-row">
+                                        <div class="col-md-3 row-date">
+                                            <p class="date-text">MON-FRI</p>
+                                        </div>
+                                        <div class="col-md-3 row-show">
+                                            <h4 class="show-name">Africa Connect</h4>
+                                            <p class="show-host">Charles and Grace</p>
+                                        </div>  
+                                        <div class="col-md-3 row-time">
+                                            <p class="show-time">10:00AM - 1:00PM EAT</p>
+                                            <p class="show-time">9:00AM - 12:00PM CAT</p>
+                                        </div>                                      
+                                        <div class="col-md-3 row-detail">
+                                            <button class="btn details-btn">Find Details</button>                                
+                                        </div>                            
+                                    </div>
+                                    <div class="row shows-row">                    
+                                        <div class="col-md-3 row-date">
+                                            <p class="date-text">MON-FRI</p>
+                                        </div>
+                                        <div class="col-md-3 row-show">
+                                            <h4 class="show-name">Morning Jungle with John</h4>
+                                            <p class="show-host">John</p>
+                                        </div>  
+                                        <div class="col-md-3 row-time">
+                                            <p class="show-time">4:00AM - 7:00AM EAT</p>
+                                            <p class="show-time">3:00AM - 6:00PM CAT</p>
+                                        </div>                                      
+                                        <div class="col-md-3 row-detail">
+                                            <button class="btn details-btn">Find Details</button>
+                                        </div>                  
+                                    </div>
+                                    <div class="row shows-row">
+                                        <div class="col-md-3 row-date">
+                                            <p class="date-text">MON-SUN</p>
+                                        </div>
+                                        <div class="col-md-3 row-show">
+                                            <h4 class="show-name">3G's</h4>
+                                            <p class="show-host">Teddy, Honey and Gigi</p>
+                                        </div>  
+                                        <div class="col-md-3 row-time">
+                                            <p class="show-time">1:00PM - 4:00PM EAT</p>
+                                            <p class="show-time">12:00PM - 3:00PM CAT</p>
+                                        </div>                                      
+                                        <div class="col-md-3 row-detail">
+                                            <button class="btn details-btn">Find Details</button>
+                                        </div>
+                                    </div>
+                                    <div class="row shows-row">                                        
+                                        <div class="col-md-3 row-date">
+                                            <p class="date-text">MON-FRI</p>
+                                        </div>
+                                        <div class="col-md-3 row-show">
+                                            <h4 class="show-name">Monchoka</h4>
+                                            <p class="show-host">Zozo, Kyle & Jeff</p>
+                                        </div>  
+                                        <div class="col-md-3 row-time">
+                                            <p class="show-time">4:00PM - 7:00PM EAT</p>
+                                            <p class="show-time">3:00PM - 6:00PM CAT</p>
+                                        </div>                                      
+                                        <div class="col-md-3 row-detail">
+                                            <button class="btn details-btn">Find Details</button>
+                                        </div>
+                                    </div>
+                                    <div class="row shows-row">
+                                        <div class="col-md-3 row-date">
+                                            <p class="date-text">MON-FRI & SAT-SUN</p>
+                                        </div>
+                                        <div class="col-md-3 row-show">
+                                            <h4 class="show-name">Them Boys</h4>
+                                            <p class="show-host">Tim and Pablo</p>
+                                        </div>  
+                                        <div class="col-md-3 row-time">
+                                            <p class="show-time">1:00AM - 4:00AM EAT</p>
+                                            <p class="show-time">12:00PM - 3:00AM CAT</p>
+                                        </div>                                      
+                                        <div class="col-md-3 row-detail">
+                                            <button class="btn details-btn">Find Details</button>
+                                        </div>
+                                    </div>
+                                    <div class="row shows-row">
+                                        <div class="col-md-3 row-date">
+                                            <p class="date-text">SAT-SUN</p>
+                                        </div>
+                                        <div class="col-md-3 row-show">
+                                            <h4 class="show-name">PINTO IQ ON THE DECKS</h4>
+                                            <p class="show-host">Pinto</p>
+                                        </div>  
+                                        <div class="col-md-3 row-time">
+                                            <p class="show-time">10PM - 1AM</p>                        
+                                        </div>                                      
+                                        <div class="col-md-3 row-detail">
+                                            <button class="btn details-btn">Find Details</button>
+                                        </div>
+                                    </div>
+                            {% endif %}
+                            </div> 
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>                        
+                    <br><br>                                        
+                </div>     
+            </div>
+
+            <div class="blogs">
+                <br><br>
+                <h3 class="blog-title">Blogs & Articles</h3>
+                <br><br>                
+                <div class="container">
+                    <div class="row" >
+                        <div class="col-md-5 col-sm-12">
+                            {% if homeblog1 %}
+                                <div class="card mag-card-1">
+                                    <p class="card-date-1">{{homeblog1.blogdate}}</p>
+                                    <a href="{{homeblog1.blogurl}}"><h4 class="card-title-1" >{{homeblog.blogheading}}</h4></a>
+                                    <a href="{{homeblog1.blogurl}}"><p class="card-text-1">{{homeblog.blogtext}}</p></a>
+                                </div>                                         
+                            {% else %}
+                                <div class="card mag-card-1">
+                                    <p class="card-date-1">May 13, Saturday</p>
+                                    <a href="#"><h4 class="card-title-1" >Zonk Magazine</h4></a>
+                                    <a href="#"><p class="card-text-1">Maiden Issue</p></a>
+                                </div>
+                            {% endif %}
+                        </div>                
+                        <div class="col-md-6 col-sm-12">
+                            <div class="row" style="width: 100%;">
+                            {% if homeblog2 %}
+                                <div class="card mag-card-2">
+                                    <p class="card-date-2">{{homeblog2.blogdate}}</p>
+                                    <a href="{{homeblog2.blogurl}}"><h4 class="card-title-2">{{homeblog2.blogheading}}</h4></a>
+                                    <a href="{{homeblog2.blogurl}}"><p class="card-text-2">{{homeblog2.blogtext}}</p></a>
+                                </div>     
+                            {% else %}     
+                                <div class="card mag-card-2">
+                                    <p class="card-date-2">Coming soon</p>
+                                    <a href="#"><h4 class="card-title-2">ZOPI LOUNGE</h4></a>
+                                    <a href="#"><p class="card-text-2">Defined by status</p></a>
+                                </div>               
+                            {% endif %}
+                            </div>
+                            <div class="row" style="width: 100%;">
+                            {% if homeblog3 %}
+                                <div class="card mag-card-3">
+                                    <p class="card-date-3">{{homeblog3.blogdate}}</p>
+                                    <a href="{{homeblog3.blogurl}}"><h4 class="card-title-3">{{homeblog3.blogheading}}</h4></a>
+                                    <a href="{{homeblog3.blogurl}}"><p class="card-text-3">{{homeblog3.blogtext}}</p></a>
+                                </div>                    
+                            {% else %}
+                                <div class="card mag-card-3">
+                                    <p class="card-date-3">August 04, Friday</p>
+                                    <a href="#"><h4 class="card-title-3">Zonk Music</h4></a>
+                                    <a href="#"><p class="card-text-3">New Studio Launch</p></a>
+                                </div>                    
+                            {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>                            
+                    </div>                        
+                </div>  
+                <br><br>                                    
+            </div>                
+           
+
+            <!--<div class="people">
+                <br>
+                <div class="container">
+                    <h4 class="people-title">What people say</h4>
+                    <br> 
+                </div>                   
+                <div class="container-fluid">
+                    <div id="peopleCarousel" class="carousel slide" data-ride="carousel" style="width: 100%; height: fit-content;">
+                        <div class="catousel-inner ">
+                            <div class="carousel-item active" style="margin-top: -50px;">                                
+                                <div class="container">
+                                    <div class="row ">                                    
+                                        <div class="col-sm-3 col-md-2">
+                                            <img class="people-img" src="{% static 'images/imga.c22b55ad.jpg' %}">
+                                        </div>
+                                        <div class="col-sm-9 col-md-10">
+                                            <p class="people-text"> "Revolutionary. One Of the Best recording label in Africa. 
+                                                Taking African Music to the next levels. Great in Promoting African culture to 
+                                                the world through Music. By Africa, for Africa. In Africa"
+                                            </p>
+                                        </div>
+                                    </div> 
+                                </div>                               
+                            </div>
+                            <div class="carousel-item" style="margin-top: -50px;">
+                                <div class="container">
+                                    <div class="row">                                                                       
+                                        <div class="col-sm-3 col-md-2">
+                                            <img class="people-img" src="{% static 'images/imgb.6f9f456d.jpg' %}">
+                                        </div>
+                                        <div class="col-sm-9 col-md-10">
+                                            <p class="people-text"> "Revolutionary. One Of the Best recording label in Africa. 
+                                                Taking African Music to the next levels. Great in Promoting African culture to 
+                                                the world through Music. By Africa, for Africa. In Africa"
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" style="margin-top: -50px;">
+                                <div class="container">
+                                    <div class="row">                                            
+                                        <div class="col-sm-3 col-md-2">
+                                            <img class="people-img" src="{% static 'images/imgd.6084eded.jpg' %}">
+                                        </div>
+                                        <div class="col-sm-9 col-md-10">
+                                            <p class="people-text"> "Revolutionary. One Of the Best recording label in Africa. 
+                                                Taking African Music to the next levels. Great in Promoting African culture to 
+                                                the world through Music. By Africa, for Africa. In Africa"
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#peopleCarousel" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#peopleCarousel" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                    </div>                    
+                    <br><br><br><br><br><br>
+                </div>        
+                <br><br>
+            </div>-->            
+
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.812613154016!2d36.77751754121329!3d-1.2864886841487644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a07aeb497ad%3A0x24dad9c87bb9cef1!2sHamisi%20Rd%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1625381184697!5m2!1sen!2ske" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            {% include "footer.html" %}                    
+
+            <style>
+                .shows {
+                    background:linear-gradient(#0a0a0aa1,#0a0a0aa1,#0a0a0aa1),url("{% static 'images/pic.c1745088.jpg' %}");
+                    background-size: cover;
+                    background-position: center;
+                    background-attachment: fixed;
+                    background-repeat: no-repeat;
+                    height: max-content;
+                    margin-top: -1px;
+                }
+
+                .details-btn {                                
+                    background: black;
+                    font-size: 16px;
+                    color: #ffffff;
+                    font-family: 'Roboto';
+                }
+
+                .details-btn:hover {
+                    color: #ffffff;
+                }
+
+                .mag-card-1 {
+                    background:linear-gradient(#0a0a0a91,#0a0a0a91,#0a0a0a91),url("{% static 'images/sec4d.55be5228.jpg' %}");
+                    background-position: 50% 57%;
+                    background-size: cover;                    
+                    height: 65vh;
+                    border-radius: 0;
+                    margin-bottom: 15px;
+                    background-color: black;
+                }
+
+                .mag-card-1:hover{
+                    background:linear-gradient(#0a0a0ac9,#0a0a0ac9,#0a0a0ac9),url("{% static 'images/sec4d.55be5228.jpg' %}");                    
+                    background-position: 50%  57%;
+                    background-size: cover;                   
+                }
+
+                .mag-card-2 {
+                    background:linear-gradient(#0a0a0a91,#0a0a0a91,#0a0a0a91),url("{% static 'images/cool1.64138fc0.jpg' %}");
+                    background-position: 50% 55%;
+                    background-size: cover;
+                    height: 31vh; 
+                    width: 100%;           
+                    margin-left: 15px;      
+                    border-radius: 0;
+                }
+
+                .mag-card-2:hover {
+                    background:linear-gradient(#0a0a0ac9,#0a0a0ac9,#0a0a0ac9),url("{% static 'images/cool1.64138fc0.jpg' %}");                    
+                    background-position: 50% 55%;
+                    background-size: cover;                   
+                }
+
+                .mag-card-3 {
+                    background:linear-gradient(#0a0a0a91,#0a0a0a91,#0a0a0a91),url("{% static 'images/sec4c.ae7c09db.webp' %}");
+                    background-position: 50% 42%;
+                    background-size: cover;
+                    height: 31vh;
+                    margin-top: 25px;
+                    width: 100%;     
+                    margin-left: 15px;      
+                    border-radius: 0;
+                }
+
+                .mag-card-3:hover {
+                    background:linear-gradient(#0a0a0ac9,#0a0a0ac9,#0a0a0ac9),url("{% static 'images/sec4c.ae7c09db.webp' %}");                    
+                    background-position: 50% 42%;
+                    background-size: cover;                   
+                }
+
+                .instagram-btn {
+                    background: black;
+                    color: white;
+                    margin: 5px 0 0 70%; 
+                    padding: 10px;
+                }                
+                
+                @keyframes typing {
+                    from {
+                        width: 0
+                    }
+                }
+                
+                @keyframes blink {
+                    50% {        
+                        border-color: transparent;
+                    }
+                }
+
+                .about-card-img1 {                    
+                    height: 50vh;
+                    margin-top: 10px;
+                    width: 100%;                         
+                    border-radius: 0;
+                }
+
+                .about-card-img2 {
+                    background:url("{% static 'images/bl2.6084eded.jpg' %}");                    
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    height: 50vh;
+                    margin-top: 10px;
+                    width: 100%;                         
+                    border-radius: 0;
+                }
+
+
+                .genretxt {
+                    position: absolute;
+                    margin: 10px 0 0 10%;
+                    color: white;
+                    font-size: 20px;
+                }
+
+                .genresize {
+                    height: 77vh;
+                }                
+
+                .genre1 {
+                    background: url("{% static 'images/pic.44405192.jpg' %}");                    
+                    background-size: contain;   
+                    background-repeat: no-repeat;
+                    background-position: center;                                        
+                }
+
+                .genre2 {
+                    background:url("{% static 'images/zonk2.0775580f.jpg' %}");                    
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;                                             
+                }
+
+                .genre3 {
+                    background:url("{% static 'images/monchoka.2863542a.jpg' %}");                    
+                    background-size: contain;   
+                    background-repeat: no-repeat;
+                    background-position: center;                                             
+                }
+
+                .genre4 {
+                    background:url("{% static 'images/zonk1.1774abb0.jpg' %}");                    
+                    background-size: contain;   
+                    background-repeat: no-repeat;
+                    background-position: center;                                                                              
+                }
+
+                .genre5 {
+                    background:url("{% static 'images/3gs.1180f2f2.jpg' %}");                    
+                    background-size: contain;   
+                    background-repeat: no-repeat;
+                    background-position: center;                                                                      
+                }
+
+                @media screen and (min-width: 200px) and (max-width:480px){
+                    .genresize {
+                        height: 65vh;
+                    }
+                    
+                    .genretxt {
+                        margin: -45px 0 0 15%;
+                    }
+                }
+
+            </style>
+            
+            <script src="{% static 'js/home.js' %}"></script>
+            <script>
+                var TxtType = function(el, toRotate, period) {
+                this.toRotate = toRotate;
+                this.el = el;
+                this.loopNum = 0;
+                this.period = parseInt(period, 10) || 2000;
+                this.txt = '';
+                this.tick();
+                this.isDeleting = false;
+            };
+        
+            TxtType.prototype.tick = function() {
+                var i = this.loopNum % this.toRotate.length;
+                var fullTxt = this.toRotate[i];
+        
+                if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+                } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+                }
+        
+                this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+        
+                var that = this;
+                var delta = 200 - Math.random() * 100;
+        
+                if (this.isDeleting) { delta /= 2; }
+        
+                if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+                } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+                }
+        
+                setTimeout(function() {
+                that.tick();
+                }, delta);
+            };
+        
+            window.onload = function() {
+                var elements = document.getElementsByClassName('mission');
+                for (var i=0; i<elements.length; i++) {
+                    var toRotate = elements[i].getAttribute('data-type');
+                    var period = elements[i].getAttribute('data-period');
+                    if (toRotate) {
+                      new TxtType(elements[i], JSON.parse(toRotate), period);
+                    }
+                }
+                // INJECT CSS
+                var css = document.createElement("style");
+                css.type = "text/css";
+                css.innerHTML = ".mission > .wrap { border-right: 0.04em solid #f7567e; animation-name: blinking; animation-duration: 1s; animation-iteration-count: 100;}";
+                document.body.appendChild(css);
+            };
+
+            </script>
+
+
+        {% endblock %}
+    

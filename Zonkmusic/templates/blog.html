@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}    
+    {% block styles %}
+        <link href="{% static 'css/blog.css' %}" rel="stylesheet"/>               
+    {% endblock %}
+{% block content %} 
+    {{block.super}}  
+    {% include "nav.html" %}
+    <div class="landing">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-11">
+                <div class="container">        
+                    <h2 class="landing-title">Blog</h2>
+                    <a href="{% url 'home'%}"><p class="landing-text-1">Home  / </p></a>
+                    <p class="landing-text-2"> Blog</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <br>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="container blog-background">            
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col">
+                    <img class="blog-img" src="{% static 'images/rec.95899684.jpg' %}">
+                    <p class="blog-text">thumbnail</p>
+                    <br>
+                    <button class="btn more-btn"> Continue reading...</button>
+                </div>                  
+            </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+
+    {% include "footer.html" %}    
+    <style>
+        .landing {
+            height: 61vh;
+            background: linear-gradient(#0a0a0a77,#0a0a0a77,#0a0a0a77),url("{% static 'images/blog.2d8b90d8.png' %}");
+            background-repeat: repeat;
+            background-attachment: fixed;            
+            background-size: cover;
+            -webkit-animation: backgroundScroll 15s linear 1;
+            -webkit-animation-fill-mode: forwards;
+            animation: backgroundScroll 15s linear 1;
+            animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes backgroundScroll {
+            from {background-position: 0 33%;}
+            to {background-position: 0 -180px;}            
+        }
+
+        @keyframes backgroundScroll {
+            from {background-position: 0 33%;}
+            to {background-position: 0 -180px;}            
+        }        
+        
+        .more-btn {
+            color: white;
+            border: solid rgba(97, 96, 96, 0.652) 0.005rem;
+            margin-top: -15px;
+        }
+
+        .more-btn:hover {
+            color: white;
+            box-shadow: white !important;
+        }
+
+        .more-btn:focus {
+            color: white;
+            box-shadow: white !important;
+        }
+    </style>
+{% endblock %}

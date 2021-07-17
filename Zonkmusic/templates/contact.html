@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}   
+    {% block styles %}
+        <link href="{% static 'css/contact.css' %}" rel="stylesheet"/>               
+    {% endblock %}
+{% block content %}   
+    {{block.super}}                    
+    {% include "nav.html" %}    
+    <div class="landing">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-11">
+                <div class="container">        
+                    <h2 class="landing-title">Contact Us</h2>
+                    <a href="{% url 'home'%}"><p class="landing-text-1">Home  / </p></a>
+                    <p class="landing-text-2"> Contact</p>
+                </div>
+            </div>            
+        </div>
+    </div>  
+    <div class="contact">
+        <br><br>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="container">
+                    <h5 class="contact-title1">Have a question ?</h5>
+                    <h4 class="contact-title2">Talk to us</h4>
+                    <form>
+                        <div class="form-group">
+                            <label for="username" style="color: #c2c2c5;">User Name</label>
+                            <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="User Name">                    
+                        </div>                    
+                        <div class="form-group">
+                            <label for="EmailInput" style="color: #c2c2c5;">Email address</label>
+                            <input type="email" class="form-control" id="EmailInput" aria-describedby="emailHelp" placeholder="Enter A Valid Email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="messageTextarea" style="color: #c2c2c5;">Enter Message</label>
+                            <textarea class="form-control" id="messageTextarea" rows="3"></textarea>
+                        </div>
+                    
+                    <button class="btn btn-danger" type="button">Submit</button>           
+                    </form>
+                    <hr style="background: white;">
+                    <br><br>
+                </div>  
+            </div>
+            <div class="col-md-1"></div>
+        </div>      
+    </div>    
+    <div class="map">
+        <br><br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="container map-img">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4140.554598842072!2d36.77875000022444!3d-1.2841464773387827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a07377082c1%3A0xf11076ac73674a1d!2sMakueni%20Rd%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1625140241310!5m2!1sen!2ske" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="col">
+                    <br><br>
+                    <h4 class="map-head">Contact Info</h4>
+                    <h6 class="map-title"> Location</h6>
+                    {% if contact %}
+                        <p class="map-text"><i class="fas fa-map-marker-alt" style="padding-right: 10px;"></i> {{contact.contactbuilding}}</p>
+                        <p class="map-text" style="margin-top: -15px;">{{contact.contactcountry}}</p>
+                        <h6 class="map-title"> Phone</h6>
+                        <p class="map-text"><i class="fas fa-phone-alt" style="padding-right: 10px;"></i> {{contact.contactphone}}</p>
+                        <h6 class="map-title"> Email</h6>
+                        <p class="map-text"><i class="far fa-envelope" style="padding-right: 10px;"></i> {{contact.contactemail}}</p>
+                    {% else %}
+                        <p class="map-text"><i class="fas fa-map-marker-alt" style="padding-right: 10px;"></i>Shelter Afrique House,</p>
+                        <p class="map-text" style="margin-top: -15px;">Nairobi, Kenya.</p>
+                        <h6 class="map-title"> Phone</h6>
+                        <p class="map-text"><i class="fas fa-phone-alt" style="padding-right: 10px;"></i>+254724990517</p>
+                        <h6 class="map-title"> Email</h6>
+                        <p class="map-text"><i class="far fa-envelope" style="padding-right: 10px;"></i>info@zonkmusicke.com</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+    
+    {% include "footer.html" %}    
+
+    <style>
+        .landing {
+            height: 61vh;
+            background: linear-gradient(#0a0a0a77,#0a0a0a77,#0a0a0a77),url("{% static 'images/recos.95899684.jpg' %}");
+            background-repeat: repeat;
+            background-attachment: fixed;            
+            background-size: cover;
+            -webkit-animation: backgroundScroll 15s linear 1;
+            -webkit-animation-fill-mode: forwards;
+            animation: backgroundScroll 15s linear 1;
+            animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes backgroundScroll {
+            from {background-position: 0 25%;}
+            to {background-position: 0 -180px;}            
+        }
+
+        @keyframes backgroundScroll {
+            from {background-position: 0 25%;}
+            to {background-position: 0 -180px;}            
+        }        
+
+    </style>
+{% endblock %}
